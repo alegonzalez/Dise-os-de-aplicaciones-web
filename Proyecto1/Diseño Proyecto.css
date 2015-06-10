@@ -1,0 +1,207 @@
+
+h1{
+text-align: center;	
+text-transform: uppercase;
+padding-top: 50px;
+color: #0B0B61;
+}
+#principal_login{
+	background: #0B0B61; 
+width: 249px;
+height: 60px;
+padding-top: 10px;
+color: white;
+position: relative;
+top: -62px;
+right: 2px;
+border-radius: 9px;
+}
+h4{
+	text-align: center;
+	color: white;
+}
+header p{
+	color: white;
+	text-align: center;
+}
+.login{
+	position: relative;
+left: 500px;
+
+padding: 60px 0;
+ width: 250px;
+border-radius: 9px;
+border: 3px solid #0B0B61;
+background: #CECEF6;
+
+}
+input{
+position: relative;
+left: 34px;
+border: 3px solid #0B0B61;
+}
+button{
+background:#0B0B61;
+position: relative;
+left: 34px;
+color: white;
+
+}
+
+
+.principal,.principal_Clientes{
+	background: #0B0B61;
+	height: 50px;
+	width: 1364px;
+position: relative;
+left: 1px;
+padding:1px;
+}
+#clientes,#chambas,#invoices{
+  border-style: dashed;
+  background: #0B0B61;
+width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+
+}
+#clientes{
+	position: absolute;
+left: 75px;
+
+}
+#chambas{
+
+position: absolute;
+left: 200px;	
+
+}
+
+#invoices{
+position: absolute;
+left: 325px;
+
+}
+#sesion{
+text-align: right;
+color: white;
+margin: 10px;
+}
+.clients p{
+text-align: center;
+
+}
+.my-clients{
+	position: absolute;
+	left: 250px;
+}
+.chambas{
+	text-align: center;
+}
+.past-chambas{
+	position: absolute;
+	left: 550px;
+}
+.factura p{
+	text-align: center;
+
+}
+.invoice{
+	position: absolute;
+	left: 800px;
+
+}
+
+#cliente_color{
+  border-style: dashed;
+  background:#00BFFF;
+  width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 75px;
+
+}
+
+#new_cliente{
+border-radius: 9px;
+background:#660066;
+width: 110px;
+height: 40px;
+position: relative;
+left: 1240px;
+top: -110px;
+
+}
+
+#icon_clients{
+	color: #0B0B61;
+	text-transform: uppercase;
+}
+#basurero{
+	position: relative;
+	left: 15px;
+}
+.table{
+	text-align: center;
+
+}
+th{
+text-align: center;	
+}
+#cl{
+	position: relative;
+	top: -10px;
+}
+#first_Name,#last_name,#id{
+position: relative;
+right: 300px;
+}
+#id{
+	position: relative;
+	right: 330px;
+}
+.form-control{
+	width: 700px;
+	position: relative;
+	left: 230px;
+}
+#cancel{
+
+	color: red;
+	position: relative;
+	right: 320px;
+}
+#save{
+	position: relative;
+	left: 330px;
+	top: -30px;
+}
+.container{
+	position: relative;
+	right: 80px;
+
+}
+.container,#question,#name{
+	text-align: center;
+}
+
+#cancelDelete{
+position: relative;
+left: 300px;
+width: 70px;
+height: 40px;
+text-align: center;
+}
+#saveClients{
+	position: relative;
+	left: 780px;
+	width: 70px;
+	height: 40px;
+	
+text-align: center;
+}
