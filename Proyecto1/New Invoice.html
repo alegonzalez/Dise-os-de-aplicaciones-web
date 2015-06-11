@@ -1,6 +1,7 @@
+<!Doctype html>
 <html>
 <head>
-	<title>Chamberos.net-Clients Administration</title>
+	<title>Chamberos.net-New Invoice</title>
 		<meta charset="UTF-8">
 	   <!-- Latest compiled and minified CSS -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -12,40 +13,43 @@
           <link rel="stylesheet" href="Diseño Proyecto.css">
 </head>
 <body>
-   <header class="principal_Clientes">
+  <header class="principal_Clientes">
       <button id="cliente_color">Clients</button>
+        <a href="Invoices.html">
+          <button id="invoices">Invoices</button>  
+        </a>
       <button id="chambas">Chambas</button>
-      <button id="invoices">Invoices</button>
+      
       <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
-   </header>
-
-      <section class="imagen_Cliente"> 
+ </header>
+    
+           
+         <section class="imagen_Cliente"> 
               <h2 id="icon_clients">
               <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
-                   DELETE CLIENT</h2>  
+                   My Invoice</h2>  
            
                     <a href="New clients.html">
-                       <button class="new_cliente"> New client</button>
+                       <button class ="new_cliente"> New Invoice</button>
                     </a>
-      </section>             
-       <section class="container">
-         <h3 id="question">Are you sure want to delete the client with name<br> 
-             	Nicole Barrantes Zuñiga?
-         	    
-         </h3>
-     
-       </section>
-        
-        <section>
-        	<a href="Client_DeleteAction.html">
-               <button class="btn btn-primary" id="saveClients">Yes</button>
-        	</a>
-            <a href="Clientes.html">
-                  <button class="btn btn-danger" id="cancelDelete">No</button> 
-            </a>
-            
+         </section>
+           
+         <section class="container">
+              <label id="select">Select the client</label>
+                <br>
+             <input list="client_invoice">
 
-        </section>
+                 <datalist id="client_invoice">
+                    <option value="Alejandro Alvarado">
+                    <option value="Nicole Barrantes">
+                 </datalist>
+                 <br>
+                <label id="lblDescription">Description of work</label>
+                 <textarea class="form-control" id="description"> </textarea>
+
+
+         </section>  
+
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

@@ -1,4 +1,4 @@
-
+  
 h1{
 text-align: center;	
 text-transform: uppercase;
@@ -7,7 +7,7 @@ color: #0B0B61;
 }
 #principal_login{
 	background: #0B0B61; 
-width: 249px;
+width: 349px;
 height: 60px;
 padding-top: 10px;
 color: white;
@@ -24,12 +24,18 @@ header p{
 	color: white;
 	text-align: center;
 }
+.login,#lblUsername,#lblPassword{
+position: relative;
+left: 5px;
+padding:6px;
+}
+
 .login{
 	position: relative;
 left: 500px;
 
 padding: 60px 0;
- width: 250px;
+ width: 350px;
 border-radius: 9px;
 border: 3px solid #0B0B61;
 background: #CECEF6;
@@ -37,13 +43,14 @@ background: #CECEF6;
 }
 input{
 position: relative;
-left: 34px;
+left:15px;
 border: 3px solid #0B0B61;
+width: 240px;
 }
-button{
+#entrar{
 background:#0B0B61;
 position: relative;
-left: 34px;
+left: 140px;
 color: white;
 
 }
@@ -127,7 +134,7 @@ text-align: center;
 
 }
 
-#new_cliente{
+.new_cliente{
 border-radius: 9px;
 background:#660066;
 width: 110px;
@@ -135,7 +142,7 @@ height: 40px;
 position: relative;
 left: 1240px;
 top: -110px;
-
+color: white;
 }
 
 #icon_clients{
@@ -175,11 +182,12 @@ right: 300px;
 	color: red;
 	position: relative;
 	right: 320px;
+	top: 10px;
 }
 #save{
 	position: relative;
 	left: 330px;
-	top: -30px;
+	top: -10px;
 }
 .container{
 	position: relative;
@@ -204,4 +212,36 @@ text-align: center;
 	height: 40px;
 	
 text-align: center;
+}
+#telefono{
+position: relative;
+right: 310px;
+
+}
+#invoices:active{
+	background: background:#00BFFF;
+
+}
+#client_invoice{
+	position: relative;
+	left: 200px;
+	width: 200px;
+}
+#select{
+	position: relative;
+	left: 20px;
+    top: -5px;
+	padding: 10px;
+	font-size: 14px;
+}
+#description{
+margin: 60px;
+position: relative;
+right: 25px;
+}
+#lblDescription{
+padding: 10px;
+	font-size: 14px;
+	position: relative;
+	top: 60px;
 }

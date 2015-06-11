@@ -1,59 +1,57 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 <head>
-	<title>Chamberos.Net-Clients Administration</title>
-	<meta charset="UTF-8">
-	   <!-- Latest compiled and minified CSS -->
+	<title>Chamberos.net-Clients Administration</title>
+	     <meta charset="UTF-8">
+             <!-- Latest compiled and minified CSS -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
        
           <!-- Optional theme -->
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
-          <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
-          <link rel="stylesheet" href="Diseño Proyecto.css">
-          
-
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+         <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
+         <link rel="stylesheet" href="Diseño Proyecto.css">
 </head>
 <body>
- <header class="principal_Clientes">
-      <button id="cliente_color">Clients</button>
-        <a href="Invoices.html">
-          <button id="invoices">Invoices</button>  
-        </a>
-      <button id="chambas">Chambas</button>
+  <header class="principal_Clientes">
+     <a href="Clientes.html">
+        <button id="cliente_color">Clients</button>
+     </a>
       
+      <button id="chambas">Chambas</button>
+      <button id="invoices">Invoices</button>
       <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
- </header>
-    
-           
-         <section class="imagen_Cliente"> 
+   </header>
+
+   <section class="imagen_Invoice"> 
               <h2 id="icon_clients">
-              <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
-                   My clients</h2>  
+              <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" id="cl"> 
+                   Invoices</h2>  
            
-                    <a href="New clients.html">
-                       <button class ="new_cliente"> New Clients</button>
+                    <a href="New Invoice.html">
+                       <button class ="new_cliente"> New Invoice</button>
                     </a>
 
          </section>
-
-       <section class="container" >
+  
+   <section class="container">
 
               <section class="table-responsive">
 
 
-                    <table class="table table-bordered table-hover ">
+                    <table class="table table-bordered table-hover">
              <tr class="success">
-                <th>ID</th>
-                <th>Full Name</th>
+                <th>Invoice #</th>
+                <th>Client</th>
+                <th>Amount</th>
                 <th>Actions</th>
              </tr>
  
                             <tr>
-               <td>207580495 </td>
-               <td>Alejandro Alvarado Gonzalez </td>
+               <td>2234 </td>
+               <td>Alejandro Alvarado</td>
+               <td>$100</td>
                  <td>
-                     <a href="Edit Clients.html">
+                     <a href="Edit Invoice.html">
                         <img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-32.png">   
                      </a>
                       <a href="Delete client.html" id="basurero">
@@ -64,10 +62,11 @@
                             </tr>
 
              <tr>
-               <td>404580782</td>
-               <td>Nicole Barrantes Zuñiga</td>
+               <td>2235</td>
+               <td>Nicole Barrantes</td>
+               <td>$150</td> 
                  <td>
-                     <a href="Edit Clients.html">
+                     <a href="Edit Invoice.html">
                         <img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-32.png">   
                      </a>
                       <a href="Delete client.html" id="basurero">
@@ -82,7 +81,7 @@
 
    </section>
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
