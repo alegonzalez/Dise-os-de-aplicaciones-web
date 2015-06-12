@@ -11,6 +11,7 @@
 
           <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
           <link rel="stylesheet" href="Diseño Proyecto.css">
+
 </head>
 <body>
   <header class="principal_Clientes">
@@ -37,7 +38,7 @@
          <section class="container">
               <label id="select">Select the client</label>
                 <br>
-             <input list="client_invoice">
+             <input list="client_invoice" id="lista">
 
                  <datalist id="client_invoice">
                     <option value="Alejandro Alvarado">
@@ -45,8 +46,15 @@
                  </datalist>
                  <br>
                 <label id="lblDescription">Description of work</label>
-                 <textarea class="form-control" id="description"> </textarea>
-
+                 <textarea   id="description"> </textarea>
+                  <label id="lblFecha">Fecha</label>
+                  <br>
+                  <input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2013-01-01T12:00" id="fecha">
+                  <label id="lblmonto">Monto</label>
+                  <input name="un_numero_decimal" value="" type="number" id="number_monto">
+                    <a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
+                     <br>
+                     <button class="btn btn-primary" id="confirm_Invoice">Save</button>
 
          </section>  
 
