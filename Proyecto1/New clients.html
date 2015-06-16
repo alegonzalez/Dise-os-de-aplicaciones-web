@@ -36,7 +36,7 @@
       </section>
 
    <section class="container">
-      <form>
+      <form action="ClientSave.html" >
 
            <label id="first_Name">First Name</label>
            <input class="form-control" type="text">
@@ -48,13 +48,34 @@
            <input class="form-control" type="text">
            <br>
             <label id="lbltelefono">Telefono</label>
-           <input type="tel" id="telefono" class="form-control">
+           <input type="tel" id="telefono" class="form-control" required>
            <a href="Clientes.html" id="cancel"><u> Cancel</u></a>
             <br>
-           <a href="ClientSave.html">
-             <button class="btn btn-primary" id="save">Save</button>
-           </a>
-           
+          
+            
+             <a href="#VentanaNewClient" class="btn btn-primary " data-toggle="modal" id="save">Save</a>
+       <section class="modal fade" id="VentanaNewClient">
+         <section class="modal-dialog">
+              <section class="modal-content">
+                  <section class="modal-header">
+                  
+                    
+                      <h3 class="modal-title">Create Invoice</h3>
+                  </section>
+                    <section class="modal-body">
+                        <p>Create the invoice successful</p>
+                    </section>
+                      <section class="modal-footer">
+                        <a href="ClientSave.html">
+                           <button class="btn btn-primary">Accept</button>
+                        </a>
+                         
+                      </section>
+
+              </section>
+         </section>
+  
+       </section>
          
        </form>   
    </section>

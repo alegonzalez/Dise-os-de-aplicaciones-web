@@ -75,53 +75,69 @@ width: 100px;
 
 }
 #clientes{
-	position: absolute;
-left: 75px;
+	position: relative;
+left: 250px;
 
 }
 #chambas{
 
-position: absolute;
-left: 200px;	
+position: relative;
+left: 350px;	
 
 }
 
 #invoices{
-position: absolute;
-left: 325px;
+position: relative;
+left: 440px;
 
 }
 #sesion{
 text-align: right;
 color: white;
 margin: 10px;
+position: relative;
+bottom: 53px;
 }
-.clients p{
-text-align: center;
 
+
+.clients img{
+	position: relative;
+	left: 400px;
 }
-.my-clients{
-	position: absolute;
-	left: 250px;
+#mclient{
+	position: relative;
+	left: 435px;
 }
-.chambas{
+
+
+#welcome{
 	text-align: center;
 }
-.past-chambas{
-	position: absolute;
-	left: 550px;
 
+.chambas img{
+	position: relative;
+	left: 600px;
+	bottom: 158px;
 }
-.factura p{
-	text-align: center;
-
-}
-.invoice{
-	position: absolute;
-	left: 800px;
+#mchambas{
+position: relative;
+left: 620px;
+bottom: 160px;
 
 }
 
+
+.factura img{
+	position: relative;
+	left: 850px;
+	bottom: 315px;
+}
+
+#mfactura{
+		position: relative;
+	left:880px;
+	bottom: 315px;
+}
 #cliente_color{
   border-style: dashed;
   background:#00BFFF;
@@ -130,8 +146,8 @@ text-align: center;
   text-transform: uppercase;
   text-align: center;
   color: white;
-  position: absolute;
-  left: 75px;
+  position: relative;
+  left: 250px;
 
 }
 
@@ -223,10 +239,7 @@ position: relative;
 right: 310px;
 
 }
-#invoices:active{
-	background: background:#00BFFF;
- 
-}
+
 
 #lista{
 	position: relative;
@@ -296,5 +309,9 @@ right: 600px;
 position: relative;
 top: 140px;
 left: 200px;
+}
+#cancel_newInvoice
+{
+	color: red;
 }
 }
