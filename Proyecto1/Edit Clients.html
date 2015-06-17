@@ -3,82 +3,87 @@
 <head>
 	<title>Chamberos.Net-New client</title>
 	<meta charset="UTF-8">
-	   <!-- Latest compiled and minified CSS -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-       
-          <!-- Optional theme -->
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-          <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
-          <link rel="stylesheet" href="Diseño Proyecto.css">
+  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" href="Diseño Proyecto.css">
 </head>
 <body>
-    <header class="principal_Clientes">
-      <button id="cliente_color">Clients</button>
-      <button id="chambas">Chambas</button>
-      <button id="invoices">Invoices</button>
-      <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
-    </header>
+  <header class="principal_Clientes">
+   <nav class="menu">
+    <ul>
+      <li class="active"><a href="Clientes.html">Clients</a></li>
+      <li><a href="Chambas.html">Chambas</a></li>
+      <li><a href="Invoices.html">Invoices</a></li>
+    </ul>
+  </nav>
 
-      <section class="imagen_Cliente"> 
-              <h2 id="icon_clients">
-              <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
-                   EDIT CLIENT</h2>  
-           
-                    <a href="New clients.html">
-                       <button class ="new_cliente"> New client</button>
-                    </a>
+  <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
+</header>
 
-         </section>
+<section class="imagen_Cliente"> 
+  <h2 id="icon_clients">
+    <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
+    EDIT CLIENT</h2>  
+    
+    <a href="New clients.html">
+     <button class ="new_cliente"> New client</button>
+   </a>
 
-<section class="container">
-      <form action="Clientes.html">
+ </section>
 
-           <label id="first_Name">First Name</label>
-           <input class="form-control" type="text" value="Alejandro">
-           <br>
-           <label id="last_name">Last Name</label>
-           <input class="form-control"type="text" value="Alvarado Gonzalez">
-           <br>
-           <label id="id">ID</label>
-           <input class="form-control" type="text" value="207580495">
-          <br>
-           <label id="telefono">Telefono</label>
-           <input type="tel" name="tel" id="telefono" required class="form-control" value="86478354">
-           <br>
-           <a href="Clientes.html" id="cancel"><u> Cancel</u></a>
-            <br>
-        
+ <section class="container">
+  <form action="Clientes.html">
+
+   <label id="first_Name">First Name</label>
+   <input class="form-control" type="text" value="Alejandro">
+   <br>
+   <label id="last_name">Last Name</label>
+   <input class="form-control"type="text" value="Alvarado Gonzalez">
+   <br>
+   <label id="id">ID</label>
+   <input class="form-control" type="text" value="207580495">
+   <br>
+   <label id="telefono">Telefono</label>
+   <input type="tel" name="tel" id="telefono" required class="form-control" value="86478354">
+   <br>
+   <a href="Clientes.html" id="cancel"><u> Cancel</u></a>
+   <br>
+   
 
 
-       <a href="#VentanaEditCliente" class="btn btn-primary " data-toggle="modal" id="save">Yes</a>
-       <section class="modal fade" id="VentanaEditCliente">
-         <section class="modal-dialog">
-              <section class="modal-content">
-                  <section class="modal-header">
-                  
-                    
-                      <h3 class="modal-title">Edit</h3>
-                  </section>
-                    <section class="modal-body">
-                        <p>Client edit was successful</p>
-                    </section>
-                      <section class="modal-footer">
-                        <a href="Cliente.html">
-<button class="btn btn-primary">Accept</button>
-                        </a>
-                         
-                      </section>
+   <a href="#VentanaEditCliente" class="btn btn-primary " data-toggle="modal" id="save">Yes</a>
+   <section class="modal fade" id="VentanaEditCliente">
+     <section class="modal-dialog">
+      <section class="modal-content">
+        <section class="modal-header">
+          
+          
+          <h3 class="modal-title">Edit</h3>
+        </section>
+        <section class="modal-body">
+          <p>Client edit was successful</p>
+        </section>
+        <section class="modal-footer">
+          <a href="Cliente.html">
+            <button class="btn btn-primary">Accept</button>
+          </a>
+          
+        </section>
 
-              </section>
-         </section>
+      </section>
+    </section>
+    
+  </section>
   
-       </section>
-         
-       </form>   
-   </section>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</form>   
+</section>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

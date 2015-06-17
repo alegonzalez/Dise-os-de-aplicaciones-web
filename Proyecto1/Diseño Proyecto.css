@@ -59,84 +59,55 @@ color: white;
 .principal,.principal_Clientes{
 	background: #0B0B61;
 	height: 50px;
-	width: 1364px;
-position: relative;
-left: 1px;
-padding:1px;
 }
-#clientes,#chambas,#invoices{
-  border-style: dashed;
-  background: #0B0B61;
-width: 100px;
-  height: 50px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-
+.menu {
+	float: left;
 }
-#clientes{
-	position: relative;
-left: 250px;
-
+.menu ul {
+	margin: 5px 0 0 0;
+	height: 60px;
 }
-#chambas{
-
-position: relative;
-left: 350px;	
-
+.menu li {
+	display: inline-block;
+	border: 3px dashed #fff;
+	padding: 5px;
+	background: #0B0B61;
+	margin-right: 25px;
 }
-
-#invoices{
-position: relative;
-left: 440px;
-
+.menu ul li a{
+	padding: 5px;
+	text-transform: uppercase;
+  	color: white;
 }
 #sesion{
 text-align: right;
 color: white;
 margin: 10px;
-position: relative;
-bottom: 53px;
+float: right;
 }
-
-
-.clients img{
-	position: relative;
-	left: 400px;
+#contenedor {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	overflow: hidden;
 }
-#mclient{
-	position: relative;
-	left: 435px;
-}
-
-
-#welcome{
+.cuadro_inicio {
+	width: 33.33%;
+	float: left;
 	text-align: center;
 }
-
-.chambas img{
-	position: relative;
-	left: 600px;
-	bottom: 158px;
+.cuadro_inicio img {
+	width: 128px;
 }
-#mchambas{
-position: relative;
-left: 620px;
-bottom: 160px;
-
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
 }
-
-
-.factura img{
-	position: relative;
-	left: 850px;
-	bottom: 315px;
+.active{
+	background: #66CC99!important;
 }
-
-#mfactura{
-		position: relative;
-	left:880px;
-	bottom: 315px;
+#welcome{
+	text-align: center;
 }
 #cliente_color{
   border-style: dashed;

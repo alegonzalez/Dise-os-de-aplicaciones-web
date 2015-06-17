@@ -1,76 +1,81 @@
 <html>
 <head>
 	<title>Chamberos.net-Clients Administration</title>
-		<meta charset="UTF-8">
-	   <!-- Latest compiled and minified CSS -->
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-       
-          <!-- Optional theme -->
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <meta charset="UTF-8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-          <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
-          <link rel="stylesheet" href="Diseño Proyecto.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" href="Diseño Proyecto.css">
 </head>
 <body>
-   <header class="principal_Clientes">
-      <button id="cliente_color">Clients</button>
-      <button id="chambas">Chambas</button>
-      <button id="invoices">Invoices</button>
-      <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
-   </header>
+ <header class="principal_Clientes">
+   <nav class="menu">
+    <ul>
+      <li class="active"><a href="Clientes.html" >Clients</a></li>
+      <li><a href="Chambas.html">Chambas</a></li>
+      <li><a href="Invoices.html">Invoices</a></li>
+    </ul>
+  </nav>
 
-      <section class="imagen_Cliente"> 
-              <h2 id="icon_clients">
-              <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
-                   DELETE CLIENT</h2>  
-           
-                    <a href="New clients.html">
-                       <button class="new_cliente"> New client</button>
-                    </a>
-      </section>             
-       <section class="container">
-         <h3 id="question">Are you sure want to delete the client with name<br> 
-             	Nicole Barrantes Zuñiga?
-         	    
-         </h3>
-     
-       </section>
-        
-        
-        	
-       <a href="#VentanaEliminarCliente" class="btn btn-primary " data-toggle="modal" id="saveClients">Yes</a>
-       <section class="modal fade" id="VentanaEliminarCliente">
-         <section class="modal-dialog">
-              <section class="modal-content">
-                  <section class="modal-header">
-                  
-                    
-                      <h3 class="modal-title">Delete</h3>
-                  </section>
-                    <section class="modal-body">
-                        <p>Client removal was successful</p>
-                    </section>
-                      <section class="modal-footer">
-                        <a href="Client_DeleteAction.html">
-<button class="btn btn-primary">Accept</button>
-                        </a>
-                         
-                      </section>
+  <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
+</header>
 
-              </section>
-         </section>
-  
-       </section>
+<section class="imagen_Cliente"> 
+  <h2 id="icon_clients">
+    <img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
+    DELETE CLIENT</h2>  
+
+    <a href="New clients.html">
+     <button class="new_cliente"> New client</button>
+   </a>
+ </section>             
+ <section class="container">
+   <h3 id="question">Are you sure want to delete the client with name<br> 
+    Nicole Barrantes Zuñiga?
+
+  </h3>
+
+</section>
 
 
-            <a href="Clientes.html">
-                  <button class="btn btn-danger" id="cancelDelete">No</button> 
-            </a>
-            
 
-        </section>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<a href="#VentanaEliminarCliente" class="btn btn-primary " data-toggle="modal" id="saveClients">Yes</a>
+<section class="modal fade" id="VentanaEliminarCliente">
+ <section class="modal-dialog">
+  <section class="modal-content">
+    <section class="modal-header">
+
+
+      <h3 class="modal-title">Delete</h3>
+    </section>
+    <section class="modal-body">
+      <p>Client removal was successful</p>
+    </section>
+    <section class="modal-footer">
+      <a href="Client_DeleteAction.html">
+        <button class="btn btn-primary">Accept</button>
+      </a>
+
+    </section>
+
+  </section>
+</section>
+
+</section>
+
+
+<a href="Clientes.html">
+  <button class="btn btn-danger" id="cancelDelete">No</button> 
+</a>
+
+
+</section>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
