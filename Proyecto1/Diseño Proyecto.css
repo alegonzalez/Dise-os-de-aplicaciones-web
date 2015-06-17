@@ -111,9 +111,7 @@ a:hover {
 #welcome{
 	text-align: center;
 }
-.container{
-padding-left: 10%;
-}
+
 
 .new_cliente{
 border-radius: 9px;
@@ -171,8 +169,9 @@ right: 300px;
 	top: -10px;
 }
 .container{
-	position: relative;
-	right: 80px;
+	
+float: left;
+width: 100%;
 
 }
 .container,#question,#name{
