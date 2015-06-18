@@ -1,20 +1,20 @@
   
 h1{
-text-align: center;	
-text-transform: uppercase;
-padding-top: 50px;
-color: #0B0B61;
+	text-align: center;	
+	text-transform: uppercase;
+	padding-top: 50px;
+	color: #0B0B61;
 }
 #principal_login{
 	background: #0B0B61; 
-width: 349px;
-height: 60px;
-padding-top: 10px;
-color: white;
-position: relative;
-top: -62px;
-right: 2px;
-border-radius: 9px;
+	width: 349px;
+	height: 60px;
+	padding-top: 10px;
+	color: white;
+	position: relative;
+	top: -62px;
+	right: 2px;
+	border-radius: 9px;
 }
 h4{
 	text-align: center;
@@ -25,33 +25,33 @@ header p{
 	text-align: center;
 }
 .login,#lblUsername,#lblPassword{
-position: relative;
-left: 5px;
-padding:6px;
+	position: relative;
+	left: 5px;
+	padding:6px;
 }
 
 .login{
 	position: relative;
-left: 500px;
+	left: 500px;
 
-padding: 60px 0;
- width: 350px;
-border-radius: 9px;
-border: 3px solid #0B0B61;
-background: #CECEF6;
+	padding: 60px 0;
+	width: 350px;
+	border-radius: 9px;
+	border: 3px solid #0B0B61;
+	background: #CECEF6;
 
 }
 input{
-position: relative;
-left:15px;
-border: 3px solid #0B0B61;
-width: 240px;
+	position: relative;
+	left:15px;
+	border: 3px solid #0B0B61;
+	width: 240px;
 }
 #entrar{
-background:#0B0B61;
-position: relative;
-left: 140px;
-color: white;
+	background:#0B0B61;
+	position: relative;
+	left: 140px;
+	color: white;
 
 }
 
@@ -78,14 +78,28 @@ color: white;
 .menu ul li a{
 	padding: 5px;
 	text-transform: uppercase;
-  	color: white;
+	color: white;
 }
+.home{
+	position: relative;
+	right: 10%;
+	border: none!important;
+	float: left;
+padding-bottom: 15%;
 
+}
+ .hm{
+margin: 0 0 1px;
+}
+.hm a img{
+	position: relative;
+	bottom: 5px;
+}
 #sesion{
-text-align: right;
-color: white;
-margin: 10px;
-float: right;
+	text-align: right;
+	color: white;
+	margin: 10px;
+	float: right;
 }
 #contenedor {
 	width: 100%;
@@ -114,14 +128,14 @@ a:hover {
 
 
 .new_cliente{
-border-radius: 9px;
-background:#003333;
-width: 110px;
-height: 40px;
-position: relative;
-left: 1240px;
-top: -110px;
-color: white;
+	border-radius: 9px;
+	background:#003333;
+	width: 110px;
+	height: 40px;
+	position: relative;
+	left: 1240px;
+	top: -110px;
+	color: white;
 }
 
 #icon_clients{
@@ -137,19 +151,19 @@ color: white;
 
 }
 th{
-text-align: center;	
+	text-align: center;	
 }
 #cl{
 	position: relative;
 	top: -10px;
 }
-#first_Name,#last_name,#id{
-position: relative;
-right: 300px;
+#first_Name,#last_name{
+	position: relative;
+	right: 400px;
 }
 #id{
 	position: relative;
-	right: 330px;
+	right: 430px;
 }
 .form-control{
 	width: 700px;
@@ -170,8 +184,8 @@ right: 300px;
 }
 .container{
 	
-float: left;
-width: 100%;
+	float: left;
+	width: 100%;
 
 }
 .container,#question,#name{
@@ -179,11 +193,11 @@ width: 100%;
 }
 
 #cancelDelete{
-position: relative;
-left: 300px;
-width: 70px;
-height: 40px;
-text-align: center;
+	position: relative;
+	left: 300px;
+	width: 70px;
+	height: 40px;
+	text-align: center;
 }
 #saveClients{
 	position: relative;
@@ -191,15 +205,15 @@ text-align: center;
 	width: 70px;
 	height: 40px;
 	
-text-align: center;
+	text-align: center;
 }
 #lbltelefono{
 	position: relative;
-right: 310px;
+	right: 410px;
 }
 #telefono{
-position: relative;
-right: 310px;
+	position: relative;
+	right: 400px;
 
 }
 
@@ -214,17 +228,17 @@ right: 310px;
 #select{
 	position: relative;
 	right:226px;
-    top: -5px;
+	top: -5px;
 	
 
 }
 #description{
 
-position: relative;
-right: 25px;
-top: 40px;
-width: 600px; 
-border-radius: 9px;
+	position: relative;
+	right: 25px;
+	top: 40px;
+	width: 600px; 
+	border-radius: 9px;
 
 
 }
@@ -234,7 +248,7 @@ border-radius: 9px;
 	font-size: 14px;
 	position: relative;
 	left: 110px;
-bottom: 10px;
+	bottom: 10px;
 }
 #lblFecha
 {
@@ -244,11 +258,11 @@ bottom: 10px;
 	
 }
 #fecha{
- position: relative;
-top: 70px;
-border-radius: 9px;
-left:8px;
-border: 1px solid gray; 
+	position: relative;
+	top: 70px;
+	border-radius: 9px;
+	left:8px;
+	border: 1px solid gray; 
 }
 #lblmonto{
 	position: relative;
@@ -264,14 +278,14 @@ border: 1px solid gray;
 	border-radius: 9px;
 }
 #cancel_newInvoice{
-position: relative;
-top: 170px;
-right: 600px;
+	position: relative;
+	top: 170px;
+	right: 600px;
 }
 #confirm_Invoice{
-position: relative;
-top: 140px;
-left: 200px;
+	position: relative;
+	top: 140px;
+	left: 200px;
 }
 #cancel_newInvoice
 {
