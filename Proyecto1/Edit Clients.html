@@ -40,24 +40,26 @@
  <section class="container">
   <form action="Clientes.html">
 
-   <label id="first_Name">First Name</label>
+   <label class="nuevocliente">First Name</label>
    <input class="form-control" type="text" value="Alejandro">
    <br>
-   <label id="last_name">Last Name</label>
+   <label class="nuevocliente">Last Name</label>
    <input class="form-control"type="text" value="Alvarado Gonzalez">
    <br>
-   <label id="id">ID</label>
+   <label class="id">ID</label>
    <input class="form-control" type="text" value="207580495">
    <br>
-   <label id="telefono">Telefono</label>
+   <label class="nuevocliente">Telefono</label>
    <input type="tel" name="tel" id="telefono" required class="form-control" value="86478354">
    <br>
-   <a href="Clientes.html" id="cancel"><u> Cancel</u></a>
+   <a href="Clientes.html" class="cancel"><u> Cancel</u></a>
    <br>
    
 
+<section class="save">
+     <a href="#VentanaEditCliente" class="btn btn-primary " data-toggle="modal" >save</a>
 
-   <a href="#VentanaEditCliente" class="btn btn-primary " data-toggle="modal" id="save">Yes</a>
+</section>
    <section class="modal fade" id="VentanaEditCliente">
      <section class="modal-dialog">
       <section class="modal-content">

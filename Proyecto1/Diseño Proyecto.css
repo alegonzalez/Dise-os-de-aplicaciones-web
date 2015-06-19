@@ -85,11 +85,11 @@ input{
 	right: 10%;
 	border: none!important;
 	float: left;
-padding-bottom: 15%;
+	padding-bottom: 15%;
 
 }
- .hm{
-margin: 0 0 1px;
+.hm{
+	margin: 0 0 1px;
 }
 .hm a img{
 	position: relative;
@@ -157,38 +157,49 @@ th{
 	position: relative;
 	top: -10px;
 }
-#first_Name,#last_name{
-	position: relative;
-	right: 400px;
-}
-#id{
-	position: relative;
-	right: 430px;
-}
-.form-control{
-	width: 700px;
-	position: relative;
-	left: 230px;
-}
-#cancel{
-
-	color: red;
-	position: relative;
-	right: 320px;
-	top: 10px;
-}
-#save{
-	position: relative;
-	left: 330px;
-	top: -10px;
-}
 .container{
 	
 	float: left;
 	width: 100%;
 
 }
-.container,#question,#name{
+.nuevocliente{
+
+	padding-left: 24%;	
+}
+
+.id{
+	
+	padding-left: 24%;
+}
+
+.form-control{
+	
+	width: 55%;
+	margin-left: 23%;
+	
+}
+.cancel{
+	color: red;
+	padding-left: 24%;
+	position: relative;
+	top: 17px;
+
+}
+.cancel:hover{
+	color: red;
+}
+.save{
+    float: left;
+	position: relative;
+	left: 75%;
+	
+
+}
+
+
+
+#question,#name{
 	text-align: center;
 }
 
@@ -207,15 +218,7 @@ th{
 	
 	text-align: center;
 }
-#lbltelefono{
-	position: relative;
-	right: 410px;
-}
-#telefono{
-	position: relative;
-	right: 400px;
 
-}
 
 
 #lista{
@@ -282,10 +285,8 @@ th{
 	top: 170px;
 	right: 600px;
 }
-#confirm_Invoice{
-	position: relative;
-	top: 140px;
-	left: 200px;
+.confirm_Invoice{
+margin: 50%;
 }
 #cancel_newInvoice
 {
