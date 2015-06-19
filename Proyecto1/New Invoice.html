@@ -17,14 +17,14 @@
   <header class="principal_Clientes">
    <nav class="menu">
     <ul>
-    <li class="home"><p class="hm"><a href="Menu.html"><img src="https://cdn2.iconfinder.com/data/icons/snipicons/5000/home-32.png">Home</p></a></li>
-     <li><a href="Clientes.html">Clients</a></li>
-     <li><a href="Invoices.html">Chambas</a></li>
-     <li class="active"><a href="Chambas.html">Invoices</a></li>
-   </ul>
- </nav>
+      <li class="home"><p class="hm"><a href="Menu.html"><img src="https://cdn2.iconfinder.com/data/icons/snipicons/5000/home-32.png">Home</p></a></li>
+      <li><a href="Clientes.html">Clients</a></li>
+      <li><a href="Invoices.html">Chambas</a></li>
+      <li class="active"><a href="Chambas.html">Invoices</a></li>
+    </ul>
+  </nav>
 
- <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
+  <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
 </header>
 
 
@@ -39,7 +39,7 @@
  </section>
 
  <section class="container">
-  <label id="select">Select the client</label>
+  <label class="nueva_factura">Select the client</label>
   <br>
   <input list="client_invoice" id="lista">
 
@@ -47,20 +47,22 @@
     <option value="Alejandro Alvarado">
       <option value="Nicole Barrantes">
       </datalist>
+
       <br>
-      <label id="lblDescription">Description of work</label>
+      <label class="nueva_factura">Description of work</label>
+      <br>
       <textarea   id="description"> </textarea>
-      <label id="lblFecha">Fecha</label>
+      <label class="nueva_factura">Fecha</label>
       <br>
-      <input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2013-01-01T12:00" id="fecha">
-      <label id="lblmonto">Monto</label>
-      <input name="un_numero_decimal" value="" type="number" id="number_monto">
-      <a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
+      <input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2013-01-01T12:00" class="fecha_monto">
       <br>
+      <label class="nueva_factura">Monto</label>
+      <br>
+      <input name="un_numero_decimal" value="" type="number"  class="fecha_monto">
+<br>
+<a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
 
-
-
-      <a href="#VentanaNewInvoice" class="btn btn-primary " data-toggle="modal" id="confirm_Invoice">Save</a>
+      <a href="#VentanaNewInvoice" id="confirm_Invoice" class="btn btn-primary " data-toggle="modal" >Save</a>
       <section class="modal fade" id="VentanaNewInvoice">
        <section class="modal-dialog">
         <section class="modal-content">

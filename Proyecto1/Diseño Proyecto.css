@@ -190,11 +190,9 @@ th{
 	color: red;
 }
 .save{
-    float: left;
+	float: left;
 	position: relative;
 	left: 75%;
-	
-
 }
 
 
@@ -218,78 +216,41 @@ th{
 	
 	text-align: center;
 }
+.nueva_factura{
+	padding-left: 36%;
 
-
-
+}
 #lista{
-	position: relative;
-	left: -162px;
+	margin-left: 35%;
 	border: 1px solid gray; 
 	border-radius: 9px;
-}
-
-#select{
-	position: relative;
-	right:226px;
-	top: -5px;
-	
-
+	margin-bottom: 2%;
 }
 #description{
-
-	position: relative;
-	right: 25px;
-	top: 40px;
-	width: 600px; 
-	border-radius: 9px;
-
-
-}
-#lblDescription{
-
-	
-	font-size: 14px;
-	position: relative;
-	left: 110px;
-	bottom: 10px;
-}
-#lblFecha
-{
-	position: relative;
-	right:634px;
-	top: 70px;
-	
-}
-#fecha{
-	position: relative;
-	top: 70px;
-	border-radius: 9px;
-	left:8px;
-	border: 1px solid gray; 
-}
-#lblmonto{
-	position: relative;
-	top: 104px;
-	right: 240px;
-
-}
-#number_monto{
-	position: relative;
-	top: 130px;
-	left: -285px;
+	padding-left: 30%;
+	margin-left: 36%;
 	border: 1px solid gray; 
 	border-radius: 9px;
+	margin-bottom: 2%;
 }
+
+.fecha_monto{
+	border: 1px solid gray; 
+	border-radius: 9px;
+   margin-bottom: 2%;
+    margin-left: 35%;
+}
+#confirm_Invoice{
+	position: relative;
+	left: 34%;
+	top: 80%;
+
+}
+
 #cancel_newInvoice{
-	position: relative;
-	top: 170px;
-	right: 600px;
-}
-.confirm_Invoice{
-margin: 50%;
-}
-#cancel_newInvoice
-{
 	color: red;
+	padding-left: 36%;
 }
+
+
 }
