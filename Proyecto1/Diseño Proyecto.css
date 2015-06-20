@@ -153,7 +153,7 @@ a:hover {
 th{
 	text-align: center;	
 }
-#cl{
+.cl{
 	position: relative;
 	top: -10px;
 }
@@ -201,17 +201,27 @@ th{
 	text-align: center;
 }
 
-#cancelDelete{
-	position: relative;
-	left: 300px;
-	width: 70px;
+.btn-danger{
+	margin-left: 24%;
+	
+	width: 5%;
 	height: 40px;
 	text-align: center;
 }
 #saveClients{
 	position: relative;
 	left: 780px;
-	width: 70px;
+	margin-left: 3%;
+	width: 5%;
+	height: 40px;
+	
+	text-align: center;
+}
+#save_delete_invoice{
+	position: relative;
+	left: 780px;
+	margin-left: 3%;
+	width: 5%;
 	height: 40px;
 	
 	text-align: center;
@@ -227,7 +237,7 @@ th{
 	margin-bottom: 2%;
 }
 #description{
-	padding-left: 30%;
+	width: 45%;
 	margin-left: 36%;
 	border: 1px solid gray; 
 	border-radius: 9px;
@@ -244,13 +254,24 @@ th{
 	position: relative;
 	left: 34%;
 	top: 80%;
+	bottom: 4px;
 
 }
 
-#cancel_newInvoice{
+#cancel_newInvoice  {
 	color: red;
 	padding-left: 36%;
 }
 
 
+}
+
+#cancel_edit_invoice{
+	color: red;
+	padding-left: 22%;
+
+}
+#confirm_edit_invoice{
+	float:right;
+	margin-right: 22%;
 }

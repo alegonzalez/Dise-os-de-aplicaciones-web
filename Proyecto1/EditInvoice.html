@@ -25,7 +25,7 @@
 	</header>
 	<section class="imagen_Cliente"> 
 		<h2 id="icon_clients">
-			<img src="https://cdn1.iconfinder.com/data/icons/CrystalClear/128x128/apps/Login-Manager.png" id="cl"> 
+			<img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" class="cl"> 
 			Edit Invoice</h2>  
 
 			<a href="New Invoice.html">
@@ -34,28 +34,33 @@
 		</section>
 
 		<section class="container">
-			<label id="select">Select the client</label>
+			<label class="nueva_factura">Select the client</label>
 			<br>
-			<input list="client_invoice" id="lista">
+			<input list="client_invoice" id="lista" value="Alejandro Alvarado">
 
 			<datalist id="client_invoice">
 				<option value="Alejandro Alvarado">
 					<option value="Nicole Barrantes">
 					</datalist>
+
 					<br>
-					<label id="lblDescription">Description of work</label>
-					<textarea   id="description"> </textarea>
-					<label id="lblFecha">Fecha</label>
+					<label class="nueva_factura">Description of work</label>
 					<br>
-					<input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2013-01-01T12:00" id="fecha">
-					<label id="lblmonto">Monto</label>
-					<input name="un_numero_decimal" value="" type="number" id="number_monto">
-					<a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
+					<textarea   id="description">Software engineer </textarea>
+					<label class="nueva_factura">Fecha</label>
+					<br>
+					<input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2015-01-07T11:30" class="fecha_monto"> 
+					<br>
+					<label class="nueva_factura">Monto</label>
+					<br>
+					<input name="un_numero_decimal" value="100" type="number"  class="fecha_monto">
+					<br>
+					<a href="Invoices.html" id="cancel_edit_invoice"><u> Cancel</u></a>
 					<br>
 
 
 
-					<a href="#VentanaEditInvoice" class="btn btn-primary " data-toggle="modal" class="confirm_Invoice">Save</a>
+					<a href="#VentanaEditInvoice" class="btn btn-primary " data-toggle="modal" id="confirm_edit_invoice">Save</a>
 					<section class="modal fade" id="VentanaEditInvoice">
 						<section class="modal-dialog">
 							<section class="modal-content">
