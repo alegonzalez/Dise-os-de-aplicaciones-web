@@ -243,12 +243,26 @@ th{
 	border-radius: 9px;
 	margin-bottom: 2%;
 }
-
+#description_chambas{
+	width: 45%;
+	margin-left: 36%;
+	border: 1px solid gray; 
+	border-radius: 9px;
+	margin-bottom: 2%;
+}
 .fecha_monto{
 	border: 1px solid gray; 
 	border-radius: 9px;
-   margin-bottom: 2%;
-    margin-left: 35%;
+	margin-bottom: 2%;
+	margin-left: 35%;
+
+}
+.monto{
+	border: 1px solid gray; 
+	border-radius: 9px;
+	padding-left: 45%;
+	margin-left: 35%;
+	height: 45px;
 }
 #confirm_Invoice{
 	position: relative;
@@ -274,4 +288,8 @@ th{
 #confirm_edit_invoice{
 	float:right;
 	margin-right: 22%;
+}
+#confirm_chambas{
+	margin-left: 37%;
+	margin-top: 1%;
 }
