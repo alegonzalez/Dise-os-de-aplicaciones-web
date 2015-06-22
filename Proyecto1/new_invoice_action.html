@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Chamberos.net-Clients Administration</title>
+  <meta charset="UTF-8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
+  <link rel="stylesheet" href="Diseño Proyecto.css">
+</head>
+<body>
+  <header class="principal_Clientes">
+    <nav class="menu">
+      <ul>
+        <li class="home"><p class="hm"><a href="Menu.html"><img src="https://cdn2.iconfinder.com/data/icons/snipicons/5000/home-32.png">Home</p></a></li>
+        <li><a href="Clientes.html" >Clients</a></li>
+        <li><a href="Chambas.html">Chambas</a></li>
+        <li class="active"><a href="Invoices.html">Invoices</a></li>
+      </ul>
+    </nav>
+
+    <h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
+  </header>
+
+  <section class="imagen_Invoice"> 
+    <h2 id="icon_clients">
+      <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" id="cl"> 
+      Invoices</h2>  
+
+      <a href="New Invoice.html">
+       <button class ="new_cliente"> New Invoice</button>
+     </a>
+
+   </section>
+
+   <section class="container">
+
+    <section class="table-responsive">
+
+
+      <table class="table table-bordered table-hover">
+       <tr class="success">
+        <th>Invoice #</th>
+        <th>Client</th>
+        <th>Description of work</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Actions</th>
+      </tr>
+
+      <tr>
+       <td>2234 </td>
+       <td>Alejandro Alvarado</td>
+       <td>Software engineer</td>
+       <td>01/07/2015 11:30 00 am</td>
+       <td>$100</td>
+       <td>
+         <a href="EditInvoice.html">
+          <img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-32.png">   
+        </a>
+        <a href="Delete_Invoice.html" id="basurero">
+          <img src="https://cdn1.iconfinder.com/data/icons/material-core/18/delete-32.png">    
+        </a> 
+      </td>
+
+    </tr>
+
+    <tr>
+     <td>2235</td>
+     <td>Nicole Barrantes</td>
+       <td>Software engineer</td>
+       <td>22/07/2015 12:30 00 pm</td>
+     <td>$150</td> 
+     <td>
+       <a href="EditInvoice.html">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-32.png">   
+      </a>
+      <a href="Delete_Invoice.html" id="basurero">
+        <img src="https://cdn1.iconfinder.com/data/icons/material-core/18/delete-32.png">    
+      </a> 
+    </td>
+
+  </tr>
+  <tr>
+       <td>4587 </td>
+       <td>Alejandro Alvarado</td>
+       <td>Software engineer</td>
+       <td>02/08/2015 11:40 00 am</td>
+       <td>$275</td>
+       <td>
+         <a href="EditInvoice.html">
+          <img src="https://cdn4.iconfinder.com/data/icons/miu/22/editor_pencil_pen_edit_write_-32.png">   
+        </a>
+        <a href="Delete_Invoice.html" id="basurero">
+          <img src="https://cdn1.iconfinder.com/data/icons/material-core/18/delete-32.png">    
+        </a> 
+      </td>
+
+    </tr>
+
+</table>
+</section>
+
+</section>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
