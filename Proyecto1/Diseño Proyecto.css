@@ -1,4 +1,6 @@
-  
+  /*
+Login
+*/
 .titulo_pagina{
 	text-align: center;	
 	text-transform: uppercase;
@@ -9,12 +11,10 @@
 	background: #0B0B61; 
 	width: 101%;
 	height: 60px;
-	padding-top: 10px;
+	padding-top: 3%;
 	color: white;
-	position: relative;
-	top: -62px;
-	right: 2px;
-	border-radius: 9px;
+margin-top: -18%;
+	border-radius: 5%;
 }
 #textlogin{
 	text-align: center;
@@ -50,7 +50,9 @@
 	color: white;
 
 }
-
+/*
+Menu
+*/
 
 .principal,.principal_Clientes{
 	background: #0B0B61;
