@@ -86,13 +86,7 @@ Menu
 	padding-bottom: 15%;
 
 }
-.hm{
-	margin: 0 0 1px;
-}
-.hm a img{
-	position: relative;
-	bottom: 5px;
-}
+
 #sesion{
 	text-align: right;
 	color: white;
@@ -111,7 +105,7 @@ Menu
 	text-align: center;
 }
 .cuadro_inicio img {
-	width: 128px;
+	width: 34%;
 }
 a:hover {
 	text-decoration: none;
