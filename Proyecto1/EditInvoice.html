@@ -21,10 +21,10 @@
 			</ul>
 		</nav>
 
-		<h3 id="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
+		<h3 class="sesion">Alejandro<span class="glyphicon glyphicon-user"></span></h3>
 	</header>
 	<section class="imagen_Cliente"> 
-		<h2 id="icon_clients">
+		<h2 class="icon">
 			<img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" class="cl"> 
 			Edit Invoice</h2>  
 
@@ -34,58 +34,65 @@
 		</section>
 
 		<section class="container">
-			<label class="nueva_factura">Select the client</label>
-			<br>
-			<input list="client_invoice" id="lista" value="Alejandro Alvarado">
+			<form action="Invoices.html">
+				<label class="nueva_factura">Select the client</label>
+				<br>
+				<input list="client_invoice" id="lista" value="Alejandro Alvarado">
 
-			<datalist id="client_invoice">
-				<option value="Alejandro Alvarado">
-					<option value="Nicole Barrantes">
-					</datalist>
+				<datalist id="client_invoice">
+					<option value="Alejandro Alvarado">
+						<option value="Nicole Barrantes">
+						</datalist>
 
-					<br>
-					<label class="nueva_factura">Description of work</label>
-					<br>
-					<textarea   id="description">Software engineer </textarea>
-					<label class="nueva_factura">Fecha</label>
-					<br>
-					<input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2015-01-07T11:30" class="fecha_monto"> 
-					<br>
-					<label class="nueva_factura">Monto</label>
-					<br>
-					<input name="un_numero_decimal" value="100" type="number"  class="fecha_monto">
-					<br>
-					<a href="Invoices.html" id="cancel_edit_invoice"><u> Cancel</u></a>
-					<br>
+						<br>
+						<label class="nueva_factura">Description of work</label>
+						<br>
+						<textarea   id="description">Software engineer </textarea>
+						<label class="nueva_factura">Fecha</label>
+						<br>
+						<input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2015-01-07T11:30" class="fecha_monto"> 
+						<br>
+						<label class="nueva_factura">Monto</label>
+						<br>
+						<input name="un_numero_decimal" value="100" type="number"  class="fecha_monto">
+						<br>
+						<section id="cancel_edit">
 
+							<a href="Invoices.html" class="cancel"><u> Cancel</u></a>
+							<br>
+							<br>
+						</section>
+						<section class="save">
+							<a href="#VentanaEditInvoice" class="btn btn-primary " data-toggle="modal" id="confirm_edit_invoice">Save</a>
+						</section>
+						
+						
+						<section class="modal fade" id="VentanaEditInvoice">
+							<section class="modal-dialog">
+								<section class="modal-content">
+									<section class="modal-header">
+										
+										
+										<h3 class="modal-title">Edit</h3>
+									</section>
+									<section class="modal-body">
+										<p>Invoice edit was successful</p>
+									</section>
+									<section class="modal-footer">
+										<a href="Invoices.html">
+											<button class="btn btn-primary">Accept</button>
+										</a>
+										
+									</section>
 
-
-	<a href="#VentanaEditInvoice" class="btn btn-primary " data-toggle="modal" id="confirm_edit_invoice">Save</a>
+								</section>
+							</section>
+							
+						</section>
+						
+					</form>   
+				</section>
 
 				
-					<section class="modal fade" id="VentanaEditInvoice">
-						<section class="modal-dialog">
-							<section class="modal-content">
-								<section class="modal-header">
-
-
-									<h3 class="modal-title">Edit Invoice</h3>
-								</section>
-								<section class="modal-body">
-									<p>Edit the invoice successful</p>
-								</section>
-								<section class="modal-footer">
-									<a href="Invoices.html">
-										<button class="btn btn-primary">Accept</button>
-									</a>
-
-								</section>
-
-							</section>
-						</section>
-
-					</section>
-
-				</section>  
 			</body>
 			</html>

@@ -13,7 +13,7 @@ Login
 	height: 60px;
 	padding-top: 3%;
 	color: white;
-margin-top: -18%;
+	margin-top: -18%;
 	border-radius: 5%;
 }
 #textlogin{
@@ -78,16 +78,9 @@ Menu
 	text-transform: uppercase;
 	color: white;
 }
-.home{
-	position: relative;
-	right: 10%;
-	border: none!important;
-	float: left;
-	padding-bottom: 15%;
 
-}
 
-#sesion{
+.sesion{
 	text-align: right;
 	color: white;
 	margin: 10px;
@@ -118,25 +111,40 @@ a:hover {
 	text-align: center;
 }
 
+/*
+Clients
+*/
+.home{
+	position: relative;
+	right: 10%;
+	border: none!important;
+	float: left;
+	padding-bottom: 15%;
 
+}
+.home p{
+	margin: 0 0 1px;
+}
 .new_cliente{
+	float: left;
 	border-radius: 9px;
 	background:#003333;
-	width: 110px;
+	width: 8%;
 	height: 40px;
 	position: relative;
-	left: 1240px;
-	top: -110px;
+	left: 91%;
+	bottom: 104px;
 	color: white;
 }
 
-#icon_clients{
+
+.icon{
 	color: #0B0B61;
 	text-transform: uppercase;
 }
-#basurero{
+.basurero{
 	position: relative;
-	left: 15px;
+	left: 5%;
 }
 .table{
 	text-align: center;
@@ -145,16 +153,16 @@ a:hover {
 th{
 	text-align: center;	
 }
-.cl{
-	position: relative;
-	top: -10px;
-}
+
 .container{
 	
 	float: left;
 	width: 100%;
 
 }
+/*
+new client	
+*/
 .nuevocliente{
 
 	padding-left: 24%;	
@@ -173,9 +181,9 @@ th{
 }
 .cancel{
 	color: red;
-	padding-left: 24%;
+	padding-left: 34%;
 	position: relative;
-	top: 17px;
+	top: 12px;
 
 }
 .cancel:hover{
@@ -185,6 +193,7 @@ th{
 	float: left;
 	position: relative;
 	left: 75%;
+	bottom: 20px;
 }
 
 
@@ -194,16 +203,18 @@ th{
 }
 
 .btn-danger{
-	margin-left: 24%;
-	
+	margin-left: 2%;
 	width: 5%;
 	height: 40px;
 	text-align: center;
+position: relative;
+top: 124px;
 }
 #saveClients{
 	position: relative;
-	left: 780px;
-	margin-left: 3%;
+	left: 41%;
+top: 124px;
+	margin-left: 15%;
 	width: 5%;
 	height: 40px;
 	
@@ -211,8 +222,9 @@ th{
 }
 #save_delete_invoice{
 	position: relative;
-	left: 780px;
-	margin-left: 3%;
+	left: 42%;
+	top: 124px;
+	margin-left: 14%;
 	width: 5%;
 	height: 40px;
 	
@@ -230,14 +242,14 @@ th{
 }
 #description{
 	width: 45%;
-	margin-left: 36%;
+	margin-left: 35%;
 	border: 1px solid gray; 
 	border-radius: 9px;
 	margin-bottom: 2%;
 }
 #description_chambas{
 	width: 45%;
-	margin-left: 36%;
+	margin-left: 35%;
 	border: 1px solid gray; 
 	border-radius: 9px;
 	margin-bottom: 2%;
@@ -286,6 +298,8 @@ th{
 #confirm_edit_invoice{
 	float:right;
 	margin-right: 22%;
+	position: relative;
+	bottom: 10px;
 }
 #confirm_chambas{
 	margin-left: 37%;
