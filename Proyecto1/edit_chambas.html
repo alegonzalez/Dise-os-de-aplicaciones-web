@@ -9,7 +9,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
+  
   <link rel="stylesheet" href="Diseño Proyecto.css">
 
 </head>
@@ -41,9 +41,9 @@
  <section class="container">
   <label class="nueva_factura">Select the client</label>
   <br>
-  <input list="client_invoice" id="lista" value="Alejandro Alvarado">
+  <input list="client_chambas" class="lista" value="Alejandro Alvarado">
 
-  <datalist id="client_invoice">
+  <datalist class="client_chambas">
     <option value="Alejandro Alvarado">
       <option value="Nicole Barrantes">
       </datalist>
@@ -51,25 +51,31 @@
       <br>
       <label class="nueva_factura">Description of work</label>
       <br>
-      <textarea   id="description_chambas">Software engineer </textarea>
+      <textarea   class="description">Software engineer </textarea>
       <label class="nueva_factura">Date</label>
       <br>
       <input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2015-01-07T11:30" class="fecha_monto"> 
       <br>
       <label class="nueva_factura">Note</label>
       <br>
-      <input type="text" value="Hello word" value class="monto">
-<br>
-<a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
+      <input type="text" value="Hello word" value class="note">
+      <br>
+      <section class="cancel_edit_chambas">
+ <a href="chambas.html"> Cancel</a>
+      </section>
+     
+<section class="save_edit_chambas">
+    <a href="#Ventanaeditchambas"  class="btn btn-primary " data-toggle="modal" >Save</a>
+</section>
+     
 
-      <a href="#VentanaNewInvoice" id="confirm_chambas" class="btn btn-primary " data-toggle="modal" >Save</a>
-      <section class="modal fade" id="VentanaNewInvoice">
+      <section class="modal fade" id="Ventanaeditchambas">
        <section class="modal-dialog">
         <section class="modal-content">
           <section class="modal-header">
 
 
-            <h3 class="modal-title">Create Invoice</h3>
+            <h3 class="modal-title">Edit Chambas</h3>
           </section>
           <section class="modal-body">
             <p>Edit the chambas successful</p>
@@ -87,5 +93,9 @@
    </section>
 
  </section>  
+
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <!-- Latest compiled and minified JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

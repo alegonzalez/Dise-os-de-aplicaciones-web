@@ -9,7 +9,6 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
   <link rel="stylesheet" href="Diseño Proyecto.css">
 
 </head>
@@ -30,7 +29,7 @@
 
 <section class="imagen_Cliente"> 
   <h2 class="icon">
-    <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" id="cl"> 
+    <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png"> 
     New Invoice</h2>  
 
     <a href="New Invoice.html">
@@ -41,7 +40,7 @@
  <section class="container">
   <label class="nueva_factura">Select the client</label>
   <br>
-  <input list="client_invoice" id="lista">
+  <input list="client_invoice" class="lista">
 
   <datalist id="client_invoice">
     <option value="Alejandro Alvarado">
@@ -51,7 +50,7 @@
       <br>
       <label class="nueva_factura">Description of work</label>
       <br>
-      <textarea   id="description"> </textarea>
+      <textarea   class="description"> </textarea>
       <label class="nueva_factura">Fecha</label>
       <br>
       <input type="datetime-local" name="fechahora" step="1" min="2013-01-01T00:00" max="2013-12-31T12:00" value="2013-01-01T12:00" class="fecha_monto">
@@ -59,10 +58,20 @@
       <label class="nueva_factura">Monto</label>
       <br>
       <input name="un_numero_decimal" value="" type="number"  class="fecha_monto">
-<br>
-<a href="Invoices.html" id="cancel_newInvoice"><u> Cancel</u></a>
+      <br>
+    <section class="cancel_new_Invoice">
+              <a href="Invoices.html"><u> Cancel</u></a>
+    </section>
+  
 
-      <a href="#VentanaNewInvoice" id="confirm_Invoice" class="btn btn-primary " data-toggle="modal" >Save</a>
+
+
+      <section class="save_edit_new_invoice">
+
+
+        <a href="#VentanaNewInvoice" class="btn btn-primary " data-toggle="modal">Save</a>
+      </section>
+
       <section class="modal fade" id="VentanaNewInvoice">
        <section class="modal-dialog">
         <section class="modal-content">

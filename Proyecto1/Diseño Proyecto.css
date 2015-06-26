@@ -181,7 +181,7 @@ new client
 }
 .cancel{
 	color: red;
-	padding-left: 34%;
+	padding-left: 23%;
 	position: relative;
 	top: 12px;
 
@@ -193,67 +193,53 @@ new client
 	float: left;
 	position: relative;
 	left: 75%;
-	bottom: 20px;
+	bottom: 15px;
 }
 
-
-
-#question,#name{
-	text-align: center;
-}
 
 .btn-danger{
 	margin-left: 2%;
 	width: 5%;
 	height: 40px;
 	text-align: center;
-position: relative;
-top: 124px;
+	position: relative;
+	top: 124px;
 }
 #saveClients{
 	position: relative;
 	left: 41%;
-top: 124px;
+	top: 124px;
 	margin-left: 15%;
 	width: 5%;
 	height: 40px;
 	
 	text-align: center;
 }
-#save_delete_invoice{
-	position: relative;
-	left: 42%;
-	top: 124px;
-	margin-left: 14%;
-	width: 5%;
-	height: 40px;
-	
+/*
+Invoice 
+*/
+.question{
 	text-align: center;
 }
 .nueva_factura{
+	
 	padding-left: 36%;
 
 }
-#lista{
+.lista{
 	margin-left: 35%;
 	border: 1px solid gray; 
 	border-radius: 9px;
 	margin-bottom: 2%;
 }
-#description{
+.description{
 	width: 45%;
 	margin-left: 35%;
 	border: 1px solid gray; 
 	border-radius: 9px;
 	margin-bottom: 2%;
 }
-#description_chambas{
-	width: 45%;
-	margin-left: 35%;
-	border: 1px solid gray; 
-	border-radius: 9px;
-	margin-bottom: 2%;
-}
+
 .fecha_monto{
 	border: 1px solid gray; 
 	border-radius: 9px;
@@ -261,47 +247,86 @@ top: 124px;
 	margin-left: 35%;
 
 }
-.monto{
+.save_edit_new_invoice{
+	float: left;
+	display: block;
+	position: relative;
+	bottom: 4px;
+	margin-left: 37%;
+	
+}
+.cancel_edit_invoice a{
+	float: left;
+	padding-left: 35%;
+	color: red!important;
+padding-top: 2%;
+
+text-decoration: underline;
+}
+.cancel_new_Invoice a{
+	float: left;
+	padding-left: 35%;
+	color: red!important;
+
+}
+#save_delete_invoice{
+	position: relative;
+	left: 41%;
+	top: 124px;
+	margin-left: 15%;
+	width: 5%;
+	height: 40px;
+	
+	text-align: center;
+}
+/*
+Chambas
+*/
+.cancel_edit_chambas a{
+	float: left;
+
+	color: red;
+	padding-left: 35%;
+	text-decoration: underline;
+	margin-top: 3%;
+}
+.save_edit_chambas {
+float: left;
+	display: block;
+padding-left: 75%;
+position: relative;
+bottom: 25px;
+
+}
+.nueva_chamba{
+	padding-left: 36%;
+}
+.note{
 	border: 1px solid gray; 
 	border-radius: 9px;
 	width: 45%;
 	margin-left: 35%;
 	height: 45px;
 }
-#confirm_Invoice{
-	position: relative;
-	left: 34%;
-	top: 80%;
-	bottom: 4px;
-
-}
-
-#cancel_newInvoice  {
-	color: red;
-	padding-left: 36%;
-}
-
-
-}
-
-#cancel_edit{
+.cancel_new_chambas a{
 	float: left;
-	color: red;
-	padding-left: 22%;
-	width: 10%!important ;
-	height: 25px;
-
+padding-left: 35%;
+margin-top: 2%;
+color: red;
+text-decoration: inline;
 }
-#cancelar{
-	text-decoration: underline;
+.save_new_chambas{
+	float: left;
+margin-left: 37%;
+margin-top: 1%;
 }
-#confirm_edit_invoice{
-	float:right;
-	margin-right: 22%;
+#save_delete_chambas{
 	position: relative;
-	bottom: 10px;
-}
-#confirm_chambas{
-	margin-left: 37%;
-	margin-top: 1%;
+	left: 41%;
+	top: 124px;
+	margin-left: 15%;
+	width: 5%;
+	height: 40px;
+	
+	text-align: center;
 }

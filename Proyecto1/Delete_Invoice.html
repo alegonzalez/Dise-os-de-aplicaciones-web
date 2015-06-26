@@ -8,8 +8,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-  <meta name="viewport" content="width=device width, user-scalable=no, initial scale=1.0,maximum scale=1.0,minimum-scale=1.0">
-  <link rel="stylesheet" href="Diseño Proyecto.css">
+ <link rel="stylesheet" href="Diseño Proyecto.css">
 </head>
 <body>
  <header class="principal_Clientes">
@@ -27,7 +26,7 @@
 
 <section class="imagen_Cliente"> 
   <h2 class="icon">
-    <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" id="cl"> 
+    <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-and-business-icon-set/128/invoice.png" > 
     DELETE Invoice</h2>  
 
     <a href="New Invoice.html">
@@ -35,7 +34,7 @@
    </a>
  </section>             
  <section class="container">
-   <h3 id="question">Are you sure want to delete the Invoice with name<br> 
+   <h3 class="question">Are you sure want to delete the Invoice with name<br> 
     Nicole Barrantes Zuñiga?
 
   </h3>
@@ -44,14 +43,14 @@
 
 
 
-<a href="#VentanaEliminarCliente" class="btn btn-primary " data-toggle="modal" id="save_delete_invoice">Yes</a>
-<section class="modal fade" id="VentanaEliminarCliente">
+<a href="#ventanaeliminarfactura" class="btn btn-primary " data-toggle="modal" id="save_delete_invoice">Yes</a>
+<section class="modal fade" id="ventanaeliminarfactura">
  <section class="modal-dialog">
   <section class="modal-content">
     <section class="modal-header">
 
 
-      <h3 class="modal-title">Delete</h3>
+      <h3 class="modal-title">Delete Invoice</h3>
     </section>
     <section class="modal-body">
       <p>Invoice removal was successful</p>
@@ -70,7 +69,7 @@
 
 
 <a href="Invoices.html">
-  <button class="btn btn-danger" class="cancelDelete">No</button> 
+  <button class="btn btn-danger">No</button> 
 </a>
 
 
