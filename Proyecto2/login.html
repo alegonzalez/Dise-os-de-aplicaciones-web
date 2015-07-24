@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chamberos.net-login</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+
+$(document).ready(function() {
+	$("body").hide().fadeIn(4000);
+});
+	</script>
+</head>
+<body id="show">
+	
+	<section class="container">
+
+		<section class="row" align>
+			<section class="col-xs-12">
+				<h1>Welcome to Chamberos</h1>
+
+				<section class="login" >
+					<header class="encabezado_login">
+						<h3>Login</h3>
+					</header>
+
+					<form class="form-group">
+						<label>User</label>
+						<br>
+						<input type="text" placeholder="Username" class="form-control" id="usuario">
+						<br>				
+						<label>Password</label>
+						<br>			
+						<input type="password" placeholder="password" class="form-control" id="password">
+						<br>
+						<button class="btn btn-primary" id="ingresar" onClick="validacion_usuario();">Ingresar</button>
+						<a href="" class="separar_chk">Create a account</a>
+
+					</form>
+				</section>
+			</section>
+		</section>
+	</section>
+	<script type="text/javascript" src="code.js"></script>
+	
+</body>
+</html>

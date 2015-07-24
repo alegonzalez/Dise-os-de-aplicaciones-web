@@ -1,0 +1,112 @@
+
+body{
+	background: #E0E0E0 ;
+	/*
+	#CCFFEB
+*/
+}
+h1{
+	text-align: center;
+	color: black;
+	font-family: monospace;
+}
+
+
+.login{
+
+	border: ridge;
+	width: 22%;
+	height: 321px;
+	border-radius: 12px 12px 9px 13px;
+	background: #909090;
+	border-width: 5px;
+	font-family: monospace;
+	position: relative;
+	margin-left: 37%;
+	margin-top: 30px;
+	
+}
+.separar_chk,#ingresar{
+	margin: 3%;
+	margin-top: 20px;
+	display:inline;
+	font-family: monospace;
+}
+.form-group .form-control{
+	width: 80%;
+}
+.separar_chk{
+	margin-top: 5px;
+}
+.encabezado_login{
+	text-align: center;
+	background: #505050 ;
+	
+	border-radius: 8px 8px 8px 8px;*/
+	width: 100%;
+	padding: 2%;
+	font-family: monospace;
+}
+
+@media screen and (max-width:320px) {
+	.login{
+		width: 92%;	
+		margin-left: 10%;
+		padding-left: 0%;
+		font-size: 125%;
+	}
+	.separar_chk,#ingresar{
+
+		margin: 0%;
+		margin-top: -1px;
+		margin-bottom: 0px;
+		display:inline;
+		font-family: monospace;
+	}
+
+
+
+} 
+
+@media screen and (min-width: 1024px){
+	.login{
+		width: 40%;
+		margin-left: 32%;
+		padding-left: 0%;
+		font-size: 125%;
+	}
+
+	.separar_chk,#ingresar{
+
+		margin: 0%;
+		margin-top: -1px;
+		margin-bottom: 0px;
+		display:inline;
+		font-family: monospace;
+	}
+	.separar_chk{
+		padding-left: 11%;
+	}
+
+}
+@media screen and (min-width: 1366px){
+	.login{
+		width: 35%;
+		margin-left: 32%;
+		padding-left: 0%;
+		font-size: 125%;
+	}
+
+	.separar_chk,#ingresar{
+
+		margin: 0%;
+		margin-top: -1px;
+		margin-bottom: 0px;
+		display:inline;
+		font-family: monospace;
+	}
+	.separar_chk{
+		padding-left: 16%;
+	}
+
+}
