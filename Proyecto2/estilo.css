@@ -3,7 +3,7 @@ body{
 	background: #E0E0E0 ;
 	/*
 	#CCFFEB
-*/
+	*/
 }
 h1{
 	text-align: center;
@@ -109,4 +109,38 @@ h1{
 		padding-left: 16%;
 	}
 
+}
+/*Menu*/
+
+ul li a{
+	border:ridge;
+	font-size: 125%;
+}
+ul li {
+	display: inline-block;
+
+}
+
+.navbar-brand img{
+	margin-bottom: 11%;
+	display: inline;
+}
+#session{
+	font-size: 125%;
+}
+.row img{
+	width: 60%;
+	border: double;
+	border-color: black;
+
+}
+
+.categoria{
+	text-align: center;
+	font-size: 125%;
+	text-decoration: none;
+}
+.container{
+	margin: 6%;
+	padding: 6%;
 }
