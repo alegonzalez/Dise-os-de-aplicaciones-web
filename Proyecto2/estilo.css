@@ -1,8 +1,10 @@
 
 body{
-	background: #E0E0E0 ;
+
+	background: #33cc66;
 	/*
 	#CCFFEB
+	background: #E0E0E0 ;
 	*/
 }
 h1{
@@ -21,7 +23,7 @@ h1{
 	background: #909090;
 	border-width: 5px;
 	font-family: monospace;
-	position: relative;
+	
 	margin-left: 37%;
 	margin-top: 30px;
 	
@@ -113,12 +115,15 @@ h1{
 /*Menu*/
 
 ul li a{
-	border:ridge;
+	border-bottom: 1px solid #33cc99;
 	font-size: 125%;
 }
 ul li {
 	display: inline-block;
 
+}
+.menu{
+	background-color:#33cc99; 
 }
 
 .navbar-brand img{
@@ -147,23 +152,109 @@ ul li {
 /*User*/
 .table{
 	border-color: black;
-	margin-top: 3%;
+	margin-top: 19%;
+}
+.encabezado_tabla{
+	background:#383838;
+	background-color:#383838; 
+	color: #383838;
+	color: white;
+	font-family: monospace!important;
+	font-size: 125%!important;
+}
+.fila{
+	font-family: monospace!important;
+	font-size: 122%!important;
 }
 .delete{
 	margin-left: 18%;
 
 }
-.img-thumbnail{
-margin-left: 3%;
-	border:double;
+.img-responsive{
+	margin-left: 3%;
+	
+	float: left;
+	
+	max-width: 17%;
+	min-width: 10%;
 
+	-webkit-box-shadow: 2px 2px 151px #000000; 
+	-moz-box-shadow: 2px 2px 151px #000000;
+	border-radius: 150px; 
+	-webkit-border-radius: 150px;
 }
 .name_main{
-display: inline;
+	display: inline;
+	text-align: middle;
+	margin-top: 5%;
+	text-transform: uppercase;
 }
-.btn-primary {
+.new_user {
+	float: right;
+	width: 11%;
+	margin-right: 5%; 
+}
+@media screen and (max-width: 320px){
+	.name_main{
+		display: inline;
+
+		text-transform: uppercase;
+		margin-top: 5%;
+		font-size: 105%;
+		font-weight: bold;
+	}
+	.new_user{
+		width: 26%;
+		margin-right: 2%;
+	}
+	.confirmar_yes{
+		margin-left: 5%!important;
+		width: 20%!important;
+	}
+	.confirmar_no{
+		margin-left: 29%!important;
+		width: 20%!important;
+	}
+
+	.encabezado_tabla{
+		background:#383838;
+		background-color:#383838; 
+		color: #383838;
+		color: white;
+		font-family: monospace;
+		font-size: 111%!important;
+	}
+	.fila{
+		font-family: monospace;
+		font-size: 85%!important;
+	}
+}
+
+.confirmar_no
+{
+	margin-left: 26%;
+	width: 10%;
+
+}
+
+.confirmar_yes
+{
+	margin-left: 17%;
+	width: 10%;
+
+}
+
+
+
+
+/*
+.panel-primary{
+	width: 25%;
 float: right;
-
+margin-left: 15%;
 }
-
+.form_usuario{
+	float: left;
+width: 60%;
+}
 
