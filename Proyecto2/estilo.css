@@ -135,14 +135,22 @@ ul li {
 }
 .row img{
 	width: 60%;
-	border: double;
-	border-color: black;
-
+	-webkit-box-shadow: 2px 2px 151px #000000; 
+	-moz-box-shadow: 2px 2px 151px #000000;
+	border-radius: 150px; 
+	-webkit-border-radius: 150px;
+	color: white;
 }
+
 
 .categoria{
 	text-align: center;
 	font-size: 125%;
+	text-decoration: none;
+	color: white;
+}
+.categoria:hover{
+	color: black;
 	text-decoration: none;
 }
 .container{
