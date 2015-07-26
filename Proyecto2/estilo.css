@@ -242,27 +242,16 @@ ul li {
 {
 	margin-left: 26%;
 	width: 10%;
-
+margin-top: 1%;
 }
 
 .confirmar_yes
 {
 	margin-left: 17%;
 	width: 10%;
-
+margin-top: 1%;
 }
 
 
 
-
-/*
-.panel-primary{
-	width: 25%;
-float: right;
-margin-left: 15%;
-}
-.form_usuario{
-	float: left;
-width: 60%;
-}
 
