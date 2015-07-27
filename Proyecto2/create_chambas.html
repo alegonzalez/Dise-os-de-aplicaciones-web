@@ -45,55 +45,59 @@
 
 	<h3 class="name_main">
 
-		Create client
-		<img src="https://cdn2.iconfinder.com/data/icons/dellipack/128/folder.png" class="img-responsive" alt="Responsive image">
+		Create chambas
+		<img src="https://cdn4.iconfinder.com/data/icons/Pretty_office_icon_part_2/256/Briefcase.png" class="img-responsive" id="img-responsive-chamba" alt="Responsive image">
 
 		
+		<datalist id="listaCliente">
+			<option value ="Angie Gonzalez"></option>
+			<option value ="Alejandro Alvaras"></option>
+		</datalist>
 		
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Client</button>
+	<button class="new_user btn btn-primary btn-md">New Chamba</button>
 	<section class="container">
 		<form class="form_usuario">
 
 			<section class="form-group">
-				<label for="createfistnameclient">First Name</label>
-				<input type="text" class="form-control" id="createfistnameclient" placeholder="First Name">
+				<label for="createselectclientchamba">Clients</label>
+				<input type="text" list="listaCliente"  class="form-control" id="createselectclientchamba" placeholder="Selection clients">
 			</section>
 
 			<section class="form-group">
-				<label for="createlastnameclient">Last Name</label>
-				<input type="text" class="form-control" id="createlastnameclient" placeholder="Last Name">
+				<label for="createjobdescriptionchamba">Job Description</label>
+				<input type="text" class="form-control" id="createjobdescriptionchamba" placeholder="Enter Description">
 			</section>
 			<section class="form-group">
-				<label for="createcedulaclient">ID</label>
-				<input type="text" class="form-control" id="createcedulaclient" placeholder="ID">
+				<label for="createdatechamba">Date</label>
+				<input type="date" class="form-control" id="createdatechamba">
 			</section>
 			<section class="form-group">
-				<label for="createphoneclient">Phone</label>
-				<input type="tel" class="form-control" id="createphoneclient" placeholder="Phone">
+				<label for="createnotechamba">Note</label>
+				<input type="tel" class="form-control" id="createnotechamba" placeholder="Enter note">
 			</section>
 
-			<button class="confirmar_yes btn btn-primary">Yes</button>
-			<button class="confirmar_no btn btn-danger">No</button>
-		</form>
+				<button class="confirmar_yes btn btn-primary">Yes</button>
+				<button class="confirmar_no btn btn-danger">No</button>
+			</form>
 
-	</section>
-
-
-
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-
-	<script type="text/javascript" src="code.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script>
-	$(".mypop").popover({
-		placement:"bottom",
-		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
-		html:true,
-	});
-	</script>
+		</section>
 
 
-</body>
-</html>
+
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+		<script type="text/javascript" src="code.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>
+		$(".mypop").popover({
+			placement:"bottom",
+			title:"Close session",
+			content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+			html:true,
+		});
+		</script>
+
+
+	</body>
+	</html>

@@ -45,32 +45,35 @@
 
 	<h3 class="name_main">
 
-		Create client
-		<img src="https://cdn2.iconfinder.com/data/icons/dellipack/128/folder.png" class="img-responsive" alt="Responsive image">
+		Create invoice
+		<img src="https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/receipt-paid-paper-128.png" class="img-responsive" alt="Responsive image">
 
-		
+		<datalist id="listaCliente">
+			<option value ="Angie Gonzalez"></option>
+			<option value ="Alejandro Alvaras"></option>
+		</datalist>
 		
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Client</button>
+	<button class="new_user btn btn-primary btn-md">New Invoice</button>
 	<section class="container">
 		<form class="form_usuario">
 
 			<section class="form-group">
-				<label for="createfistnameclient">First Name</label>
-				<input type="text" class="form-control" id="createfistnameclient" placeholder="First Name">
+				<label for="createselectclient">Clients</label>
+				<input type="text" list="listaCliente"  class="form-control" id="createselectclient" placeholder="Selection clients">
 			</section>
 
 			<section class="form-group">
-				<label for="createlastnameclient">Last Name</label>
-				<input type="text" class="form-control" id="createlastnameclient" placeholder="Last Name">
+				<label for="createjobdescriptioninvoice">Job Description</label>
+				<input type="text" class="form-control" id="createjobdescriptioninvoice" placeholder="Enter Description">
 			</section>
 			<section class="form-group">
-				<label for="createcedulaclient">ID</label>
-				<input type="text" class="form-control" id="createcedulaclient" placeholder="ID">
+				<label for="createdateinvoice">Date</label>
+				<input type="date" class="form-control" id="createdateinvoice">
 			</section>
 			<section class="form-group">
-				<label for="createphoneclient">Phone</label>
-				<input type="tel" class="form-control" id="createphoneclient" placeholder="Phone">
+				<label for="createamontinvoice">Amont</label>
+				<input type="number" class="form-control" id="createamontinvoice" placeholder="Enter Amount">
 			</section>
 
 			<button class="confirmar_yes btn btn-primary">Yes</button>
