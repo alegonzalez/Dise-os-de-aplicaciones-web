@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chamberos.net-User</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+	<header class="encabezado_menu">
+		<nav class="navbar navbar-default navbar-inverse">
+			<section class="container-fluid">
+				<section class="navbar-header">
+					<button  class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img src="https://cdn4.iconfinder.com/data/icons/cologne/32x32/home.png">Home</a>
+				</section>
+				<section class="collapse navbar-collapse" id="navbar1" >
+					<!--Esta clase  es para los items-->
+					<ul class="nav navbar-nav">
+						<li><a href="">Clients</a></li>
+						<li><a href="">Invoice</a></li>
+						<li><a href="">Chambas</a></li>
+						<li><a href="">User</a></li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#" class="btn mypop" id="session"> Alejandro
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+						</li>
+
+
+					</ul>
+				</section>
+			</section>
+		</nav>
+	</header>
+
+	<h3 class="name_main">
+		<img src="https://cdn4.iconfinder.com/data/icons/Pretty_office_icon_part_2/256/Briefcase.png" class="img-responsive" id="img-responsive-chamba">
+		User
+	</h3>
+	<button class="new_user btn btn-primary btn-md">New Chamba</button>
+
+
+
+</section>
+
+<section class="container-fluid">
+	<table class="table table-striped table-bordered table-hover">
+		<tr>
+			<th class="encabezado_tabla">Clients</th>
+			<th  class="encabezado_tabla">Job Description</th>
+			<th  class="encabezado_tabla">Date</th>
+			<th  class="encabezado_tabla">Note</th>
+			<th  class="encabezado_tabla">Action</th>
+		</tr>
+		<tr class="success">
+			<td class="fila">Anie Gonzalez</td>
+			<td class="fila">Manteniento de Computadoras</td>
+			<td class="fila">2013/10/08</td>
+			<td class="fila"></td>
+			<td class="fila">
+				<a href=""><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"  ></a>
+
+				<a href=""><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png"></a>
+			</td>
+
+		</tr>
+
+	</table>
+</section>
+
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="code.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+$(".mypop").popover({
+	placement:"bottom",
+	title:"Close session",
+	content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+	html:true,
+});
+</script>
+</body>
+</html>
