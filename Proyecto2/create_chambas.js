@@ -12,7 +12,7 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 		};
 	},
 
-    /*Save es el boton de yes donde guarda la creacion de chambas*/
+	/*Save es el boton de yes donde guarda la creacion de chambas*/
 	save:function()
 	{
 
@@ -32,26 +32,46 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 		var jobDescription = document.getElementById('createjobdescriptionchamba').value;
 		var date = document.getElementById('createdatechamba').value;
 		var note = document.getElementById('createnotechamba').value;
-         
-         /*Arreglo  de los objetos*/
+		/*Arreglo  de los objetos*/
 		var information = {'Client':client , 'Job Description': jobDescription, 'Date': date, 'Note':note};
 		
 		/*Se hizo un if por que el arreglo esta null*/
 		if(datechambas==null)
 		{
-		    datechambas=[];
+			datechambas=[];
 		}
-			/*Push lo que hace es mandar los datos a lo ultimo*/
-			datechambas.push(information);
+		/*Push lo que hace es mandar los datos a lo ultimo*/
+		datechambas.push(information);
 
-	
-			/*Instancia donde se le envia los datos de las facturas*/
-			var datos = new CREATE_CHAMBAS.client(datechambas);
+		
+		/*Instancia donde se le envia los datos de las facturas*/
+		var datos = new INVOICE.client(datechambas);
 
-			/*donde se van a guardar los datos ya en el loca storage en su propio key*/
-			datos.saveDate();
+		/*donde se van a guardar los datos ya en el loca storage en su propio key*/
+		datos.saveDate();
 	},
 
 
 
 };
+/*Trae los nombres de los clientes*/
+(function () {
+
+	var str = ''; 
+
+	var datosClient = localStorage.getItem("Client");
+
+	datosClient = JSON.parse(localStorage.getItem("Client"));
+
+	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
+	for (var i = 0; i < datosClient.length; ++i) {
+		str += '<option value="' + datosClient[i].Identification + '" />'; 
+
+	}
+
+	/*Guarda en my_list una lista*/
+	var my_list = document.getElementById("listaCliente");
+	/*se muestra en el datalist*/
+	my_list.innerHTML = str;
+
+})();
