@@ -27,6 +27,7 @@ var INVOICE = INVOICE ||
 		}
 
 		/*Obtiene la informacion de los input*/
+		var invoice=document.getElementById('createselectinvoice').value;
 		var client = document.getElementById('createselectclient').value;
 		var jobDescription = document.getElementById('createjobdescriptioninvoice').value;
 		var date = document.getElementById('createdateinvoice').value;
@@ -36,7 +37,7 @@ var INVOICE = INVOICE ||
 
 
 		/*Arreglo  de los objetos*/
-		var information = {'Client': client, 'Job Description': jobDescription, 'Date': date, 'Amont': amont};
+		var information = {'invoice':invoice,'Client': client, 'Job_Description': jobDescription, 'Date': date, 'Amont': amont};
 
 		/*Se hizo un if por que el arreglo esta null*/
 		if (datoInvoice == null)
