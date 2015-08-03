@@ -35,7 +35,7 @@ var USER = USER ||
 		var rContrasena = document.getElementById('rPass').value;
 
 		/*Arreglo  de los objetos*/
-		var information = {'User': name, 'Nombre Usuario': usuario, 'Password': contrasena, 'rContrasena':rContrasena};
+		var information = {'User': name, 'Nombre_Usuario': usuario, 'Password': contrasena, 'rContrasena':rContrasena};
 		
 		/*Push lo que hace es mandar los datos a lo ultimo*/
 		datoUser.push(information);
