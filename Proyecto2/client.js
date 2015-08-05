@@ -1,5 +1,7 @@
 var CLIENT=CLIENT||{
-
+/*Esta funcion sirve para saber los datos que se van a obtener segun 
+el la fila seleccionada
+*/
  capturarPosicion: function () {
 
   var table = document.getElementById("table_client");
