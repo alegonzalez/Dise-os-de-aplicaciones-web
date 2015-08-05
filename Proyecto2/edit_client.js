@@ -20,6 +20,7 @@ var EDIT_CLIENT=EDIT_CLIENT||{
 					alert(clients[j].Last_name);
 					clients[j].Phone=document.getElementById('editphoneclient').value;
 					localStorage.setItem("Client",JSON.stringify(clients));
+					window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
 				}
 			}
 		}
