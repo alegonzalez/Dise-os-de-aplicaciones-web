@@ -3,11 +3,13 @@ var CLIENT=CLIENT||{
  capturarPosicion: function () {
 
   var table = document.getElementById("table_client");
+
   var rows = table.getElementsByTagName("tr");
 
   for (i = 1; i < rows.length; i++) {
     row = table.rows[i];
     row.onclick = function(){
+
       var cell0 = this.getElementsByTagName("td")[0];
       var cell1= this.getElementsByTagName("td")[1];
       var cell2= this.getElementsByTagName("td")[2];
@@ -19,13 +21,14 @@ var CLIENT=CLIENT||{
       var phone=cell3.innerHTML;
 
       
-      var datos=new Array();
-      datos[0]=id;
-      datos[1]=firts_name;
-      datos[2]=last_Name;
-      datos[3]=phone;
+      var dato=new Array();
+      var elementos_edit={'Identification':id,'Firts_name':firts_name,'Last_name':last_Name,"Phone":phone};
+      dato.push(elementos_edit);
+
       
-      var edit=new EDIT_CLIENT.datosEdit(datos);
+      localStorage.setItem("temporal",JSON.stringify(dato));
+
+      
       var send=new DELETE_CLIENT.obtenerDatos(firts_name,last_Name);
       
     };

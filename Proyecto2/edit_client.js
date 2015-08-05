@@ -1,13 +1,40 @@
 var EDIT_CLIENT=EDIT_CLIENT||{
-datosEdit:function(datos){
-	this.datos=datos;
-alert("hello wod");
-	document.getElementById('editcedulaclient').innerHTML="hoal";
-	document.getElementById('editfirstnameclient').value=this.datos[1];
-	document.getElementById('editlastnameclient').value=this.datos[2];
-	document.getElementById('editphoneclient').value=this.datos[3];
-	
-}
+	datosEdit:function(){
+
+		var date = localStorage.getItem("temporal");
+		var date = JSON.parse(localStorage.getItem("temporal"));
+
+		var clients=localStorage.getItem("Client");
+		var clients = JSON.parse(localStorage.getItem("Client"));
+		
+
+		for (var i = 0; i <date.length; i++) {
+			for (var j = 0; j <clients.length; j++) {
+
+				if(date[i].Identification==clients[j].Identification)
+				{
+					
+					clients[j].Identification=date[i].Identification;
+					clients[j].Firts_name=document.getElementById('editfirstnameclient').value;
+					clients[j].Last_name=document.getElementById('editlastnameclient').value;
+					alert(clients[j].Last_name);
+					clients[j].Phone=document.getElementById('editphoneclient').value;
+					localStorage.setItem("Client",JSON.stringify(clients));
+				}
+			}
+		}
+
+	}
 
 
 };
+(function(){
+	var date = localStorage.getItem("temporal");
+	var date = JSON.parse(localStorage.getItem("temporal"));
+
+	document.getElementById('editcedulaclient').value=date[0].Identification;
+	document.getElementById('editfirstnameclient').value=date[0].Firts_name;
+	document.getElementById('editlastnameclient').value=date[0].Last_name;
+	document.getElementById('editphoneclient').value=date[0].Phone;
+
+})();

@@ -56,7 +56,7 @@
 		<form class="form_usuario">
 			<section class="form-group">
 				<label for="editcedulaclient">Identification</label>
-				<input type="text" class="form-control" id="editcedulaclient">
+				<input type="text" class="form-control" id="editcedulaclient" readonly>
 			</section>
 			<section class="form-group">
 				<label for="editfirstnameclient">First Name</label>
@@ -73,7 +73,7 @@
 				<input type="tel" class="form-control" id="editphoneclient">
 			</section>
 
-			<button class="confirmar_yes btn btn-primary">Yes</button>
+			<button class="confirmar_yes btn btn-primary" onClick="EDIT_CLIENT.datosEdit();">Yes</button>
 			<button class="confirmar_no btn btn-danger">No</button>
 		</form>
 
