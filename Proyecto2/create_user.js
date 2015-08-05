@@ -13,13 +13,14 @@ var USER = USER ||
 		};
 	},
 
-    /*Save es el boton de yes donde guarda el usuario*/
+	/*Save es el boton de yes donde guarda el usuario*/
 	save:function()
 	{
 
 		datoUser = new Array();
 
 		/*La cantidad de key que hay en el local storage*/
+		
 		for (x = 0; x < localStorage.length-1; x++) {
 
 			/*Lo obtiene en un string*/
@@ -33,9 +34,9 @@ var USER = USER ||
 		var usuario = document.getElementById('nameUser').value;
 		var contrasena = document.getElementById('pass').value;
 		var rContrasena = document.getElementById('rPass').value;
-
+		var sesion=0;
 		/*Arreglo  de los objetos*/
-		var information = {'User': name, 'Nombre_Usuario': usuario, 'Password': contrasena, 'rContrasena':rContrasena};
+		var information = {'User': name, 'Nombre_Usuario': usuario, 'Password': contrasena,'Sesion':sesion};
 		
 		/*Push lo que hace es mandar los datos a lo ultimo*/
 		datoUser.push(information);

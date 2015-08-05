@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chamberos.net-Menu</title>
+	<title>Chamberos.net-delete_client</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand"><img src="https://cdn4.iconfinder.com/data/icons/cologne/32x32/home.png">Home</a>
+					<a href="menu.html" class="navbar-brand"><img src="https://cdn4.iconfinder.com/data/icons/cologne/32x32/home.png">Home</a>
 				</section>
 				<section class="collapse navbar-collapse" id="navbar1" >
 					<!--Esta clase  es para los items-->
@@ -31,7 +31,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-							<a href="#" class="btn mypop" id="session"> Alejandro
+							<a href="#" class="btn mypop" id="session"> 
 								<span class="glyphicon glyphicon-user"></span>
 							</a>
 						</li>
@@ -55,11 +55,11 @@
 	<section class="container-fluid">
 		<section class="delete panel panel-primary">
 			<section class="cabecera_delete panel-heading">Delete Client</section>
-			<section class="panel-body">
+			<section class="panel-body"id="nombre">
 				Are you sure want to delete the client with name
 			</section>
 			<section class=" panel-footer">
-				<a href="#VentanaEditCliente" class="confirmar_yes btn btn-primary " data-toggle="modal" >Yes</a>
+				<a href="#VentanaEditCliente" class="confirmar_yes btn btn-primary " data-toggle="modal" onclick="DELETE_CLIENT.obtenerDatos();" >Yes</a>
 
 				<button class="confirmar_no btn btn-danger">No</button>
 			</section>
@@ -92,7 +92,9 @@
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-	<script type="text/javascript" src="code.js"></script>
+	<script type="text/javascript" src="delete_client.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script>
 	$(".mypop").popover({
