@@ -54,15 +54,19 @@
 		<form class="form_usuario">
 
 			<section class="form-group">
-				<label for="exampleInputEmail1">Nombre completo</label>
-				<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Full name">
+				<label for="edit_user_nameFull">Nombre completo</label>
+				<input type="text" class="form-control" id="edit_user_nameFull" placeholder="Full name">
 			</section>
 			<section class="form-group">
-				<label for="exampleInputPassword1">Nombre de usuario</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<label for="edit_userName">Nombre de usuario</label>
+				<input type="text" class="form-control" id="edit_userName" placeholder="Password" readonly>
 
-				<button class="confirmar_yes btn btn-primary">Yes</button>
-				<button class="confirmar_no btn btn-danger">No</button>
+				<input class="confirmar_yes btn btn-primary" value="Yes" onClick="EDIT_USER.datosEdit();">
+				
+				<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html">
+					<input class="confirmar_no btn btn-danger" value="No">
+				</a>
+				
 			</form>
 
 		</section>
@@ -71,7 +75,8 @@
 
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-		<script type="text/javascript" src="code.js"></script>
+		<script type="text/javascript" src="user.js"></script>
+		<script type="text/javascript" src="edit_user.js"></script>
 		<script type="text/javascript" src="menu.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script>
