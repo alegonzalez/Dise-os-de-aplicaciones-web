@@ -49,31 +49,39 @@
 		<img src="https://cdn2.iconfinder.com/data/icons/crystalproject/128x128/apps/Community-Help.png" class="img-responsive" alt="Responsive image">
 		
 	</h3>
+
 	<button class="new_user btn btn-primary btn-md">New user</button>
 	<section class="container">
+		<section class="alert alert-danger" id ="message_createUser"> </section>
 		<form class="form_usuario">
 
 			<section class="form-group">
-				<label for="exampleInputEmail1">Nombre completo</label>
-				<input type="text" class="form-control" id="name" placeholder="Full name">
+				<label for="exampleInputEmail1" class="date_createUser">Nombre completo</label>
+				<section class="col-xs-3">	
+					<input type="text" class="form-control" id="name" placeholder="Full name">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="exampleInputPassword1">Nombre de usuario</label>
-				<input type="text" class="form-control" id="nameUser" placeholder="Username">
-
+				<label for="exampleInputPassword1" class="date_createUser">Nombre de usuario</label>
+				<section class="col-xs-3">	
+					<input type="text" class="form-control" id="nameUser" placeholder="Username">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="exampleInputPassword1">Contraseña</label>
-				<input type="password" class="form-control" id="pass" placeholder="Password">
-
+				<label for="exampleInputPassword1" class="date_createUser">Contraseña</label>
+				<section class="col-xs-3">	
+					<input type="password" class="form-control" id="pass" placeholder="Password">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="exampleInputPassword1">Repetir contraseña</label>
-				<input type="password" class="form-control" id="rPass" placeholder="Repit password">
-
+				<label for="exampleInputPassword1" class="date_createUser">Repetir contraseña</label>
+				<section class="col-xs-3">	
+					<input type="password" class="form-control" id="rPass" placeholder="Repit password">
+				</section>
 			</section>
-			<button class="confirmar_yes btn btn-primary" onclick="USER.save();">Yes</button>
-			<button class="confirmar_no btn btn-danger">No</button>
+			<input type="button" class="confirmar_yes btn btn-primary" id="createUserYes" value="Yes">
+			<input type="button" class="confirmar_no btn btn-danger" id="createUserNo" value="No">
+			
 		</form>
 		
 	</section>
@@ -83,13 +91,13 @@
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
 	<script type="text/javascript" src="create_user.js"></script>
-    <script type="text/javascript" src="menu.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script>
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>

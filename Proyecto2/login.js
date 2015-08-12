@@ -82,7 +82,7 @@ var LOGIN=LOGIN||{
 },
 };
 
-
+/*metodo que contiene el icono de correcto  para agregarlo en el input de User*/
 function correctUser(){
 
   $("#iconotexto").remove();
@@ -91,6 +91,7 @@ function correctUser(){
   $("#usuario").parent().append("<span id='iconotexto' class='glyphicon glyphicon-ok form-control-feedback'></span>");   
 
 }
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de password*/
 function incorrectUser(){
 
   $("#iconotexto").remove();
@@ -100,7 +101,7 @@ function incorrectUser(){
 
 
 }
-
+/*metodo que contiene el icono de correcto  para agregarlo en el input de password*/
 function correctPassword(){
 
   $("#iconopass").remove();
@@ -110,6 +111,7 @@ function correctPassword(){
 
 
 }
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de password*/
 function incorrectPassword(){
   $("#iconopass").remove();
   $("#contraseña").parent().parent().attr("class","form-group has-error has-feedback");
@@ -117,6 +119,7 @@ function incorrectPassword(){
   $("#contraseña").parent().append("<span id='iconopass' class='glyphicon glyphicon-remove form-control-feedback'></span>");
 
 }
+
 $(document).ready(function(){
   $("#ingresar").click(LOGIN.validarCamposBlanco);
   $(".alert-danger").hide();
@@ -125,5 +128,6 @@ $(document).ready(function(){
   })
   $("#contraseña").keyup(function(){
     $(".alert-danger").hide();
-  })
+  });
+
 });

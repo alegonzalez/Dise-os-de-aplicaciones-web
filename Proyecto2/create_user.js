@@ -9,13 +9,17 @@ var USER = USER ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de los usuarios*/
 			localStorage.setItem("LoginUser",  JSON.stringify(datoUser));
-
+			USER.cleanInput();
 		};
 	},
 
 	/*Save es el boton de yes donde guarda el usuario*/
-	save:function()
+	save:function(name,usuario,contrasena,rContrasena)
 	{
+		this.name=name;
+		this.usuario=usuario;
+		this.contrasena=contrasena;
+		this.rContrasena=rContrasena;
 
 		datoUser = new Array();
 
@@ -29,14 +33,10 @@ var USER = USER ||
 			datoUser=JSON.parse(localStorage.getItem("LoginUser"));
 		}
 
-		/*Obtiene la informacion de los input*/
-		var name = document.getElementById('name').value;
-		var usuario = document.getElementById('nameUser').value;
-		var contrasena = document.getElementById('pass').value;
-		var rContrasena = document.getElementById('rPass').value;
+		
 		var sesion=0;
 		/*Arreglo  de los objetos*/
-		var information = {'User': name, 'Nombre_Usuario': usuario, 'Password': contrasena,'Sesion':sesion};
+		var information = {'User': this.name, 'Nombre_Usuario': this.usuario, 'Password': this.contrasena,'Sesion':sesion};
 		
 		/*Push lo que hace es mandar los datos a lo ultimo*/
 		datoUser.push(information);
@@ -48,7 +48,166 @@ var USER = USER ||
 		datos.saveDate();
 
 	},
+	/*Metodo valida de que todos los campos no esten vacios y ademas de que la contraseña coincidan en los 
+	dos input de password y repit password*/
+	validarCamposUser:function(){
 
+		/*Obtiene la informacion de los input*/
+		var name = document.getElementById('name').value;
+		var usuario = document.getElementById('nameUser').value;
+		var contrasena = document.getElementById('pass').value;
+		var rContrasena = document.getElementById('rPass').value;
+		if(name==""||usuario==""||contrasena==""||rContrasena==""){
+			if(name==""){
+				incorrectName();
+				$(".alert-danger").text("Debes llenar el campo Name").show();
+			}else{
+				correctName();
+
+			}
+			if(usuario==""){
+				incorrectNameUser();
+				$(".alert-danger").text("Debes llenar el campo Nombre de usuario").show();
+			}
+			else{
+				correctNameUser();
+
+			}
+			if(contrasena==""){
+				incorrectPassword();
+				$(".alert-danger").text("Debes llenar el campo contraseña").show();
+			}
+			else{
+				correctPassword();
+			}
+			if(rContrasena==""){
+				incorrectRepitPassword();
+				$(".alert-danger").text("Debes llenar el campo repetir contraseña, con la misma que coloco en el campo anterior").show();
+			}else{
+				correctRepitPassword();
+			}
+
+		}else if(contrasena==rContrasena){
+			USER.save(name,usuario,contrasena,rContrasena);
+
+		}
+		else{
+
+			incorrectPassword();
+			incorrectRepitPassword();
+			$(".alert-danger").text("Las contraseñas no coinciden por favor escribir la misma contraseña en ambos campos").show();
+		}
+
+
+
+
+	},
+	/*Limpia los campos de texto*/
+	cleanInput:function(){
+		$("#name").val("");
+		$("#nameUser").val("");
+		$("#pass").val("");
+		$("#rPass").val("");
+	}
 
 
 };
+/*metodo que contiene el icono de correcto  para agregarlo en el input de Name*/
+function correctName(){
+
+	$("#iconoName").remove();
+	$("#name").parent().parent().attr("class","form-group has-success has-feedback");
+	$("#name").parent().append("<span id='iconoName' class='glyphicon glyphicon-ok form-control-feedback'></span>");   
+
+}
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de Name*/
+function incorrectName(){
+
+	$("#iconoName").remove();
+	$("#name").parent().parent().attr("class","form-group has-error has-feedback");
+	$("#name").parent().append("<span id='iconoName' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+}
+/*metodo que contiene el icono de correcto  para agregarlo en el input de Name user*/
+function correctNameUser(){
+
+	$("#iconoNameUser").remove();
+	$("#nameUser").parent().parent().attr("class","form-group has-success has-feedback");
+	$("#nameUser").parent().append("<span id='iconoNameUser' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+
+
+}
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de Name user*/
+function incorrectNameUser(){
+	$("#iconoNameUser").remove();
+	$("#nameUser").parent().parent().attr("class","form-group has-error has-feedback");
+	$("#nameUser").parent().append("<span id='iconoNameUser' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+}
+
+/*metodo que contiene el icono de correcto  para agregarlo en el input de password*/
+function correctPassword(){
+
+	$("#iconPass1").remove();
+	$("#pass").parent().parent().attr("class","form-group has-success has-feedback");
+	$("#pass").parent().append("<span id='iconPass1' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+
+
+}
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de password*/
+function incorrectPassword(){
+	$("#iconPass1").remove();
+	$("#pass").parent().parent().attr("class","form-group has-error has-feedback");
+	$("#pass").parent().append("<span id='iconPass1' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+}
+/*metodo que contiene el icono de correcto  para agregarlo en el input de repit password*/
+function correctRepitPassword(){
+
+	$("#iconoRepPass").remove();
+	$("#rPass").parent().parent().attr("class","form-group has-success has-feedback");
+	$("#rPass").parent().append("<span id='iconoRepPass' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+
+
+}
+/*metodo que contiene el icono de incorrecto  para agregarlo en el input de repit password*/
+function incorrectRepitPassword(){
+	$("#iconoRepPass").remove();
+	$("#rPass").parent().parent().attr("class","form-group has-error has-feedback");
+	$("#rPass").parent().append("<span id='iconoRepPass' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+}
+
+
+
+/*Carga el documento y adentro va a ver un evento click que va hacer cuando la persona de click al boton de yes*/
+$(document).ready(function(){
+	$("#createUserYes").click(USER.validarCamposUser);
+
+	$("#createUserNo").click(function(){
+
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
+	});
+	$(".alert-danger").hide();
+	/*Oculta el mensaje al precionar en un input*/
+	$("#name").keyup(function(){
+		$(".alert-danger").hide();
+		$("#iconoName").hide();
+		$("#name").parent().parent().attr("class","form-group");
+	});
+	$("#nameUser").keyup(function(){
+		$(".alert-danger").hide();
+		$("#iconoNameUser").hide();
+		$("#nameUser").parent().parent().attr("class","form-group");
+	});
+	$("#pass").keyup(function(){
+		$(".alert-danger").hide();
+		$("#iconPass1").hide();
+		$("#pass").parent().parent().attr("class","form-group");
+	});
+	$("#rPass").keyup(function(){
+		$(".alert-danger").hide();
+		$("#iconoRepPass").hide();
+		$("#rPass").parent().parent().attr("class","form-group");
+	});
+
+});
