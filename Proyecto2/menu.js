@@ -39,8 +39,10 @@ logeado*/
 
 	if(adm[0].Sesion==1)
 	{
+
 		
 		document.getElementById('session').innerHTML=adm[0].User;	
+
 	}
 	else
 	{
@@ -53,6 +55,9 @@ logeado*/
 			}
 
 		}
+
+		$("#usuarios").hide();
+		$(".menu_user").hide();
 	}
 
 })();
