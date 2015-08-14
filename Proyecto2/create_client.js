@@ -8,7 +8,7 @@ var CLIENT = CLIENT ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de los clientes*/
 			localStorage.setItem("Client",JSON.stringify(datoClient));
-
+			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
 		};
 	},
 
@@ -186,9 +186,15 @@ function incorrectPhone(){
 
 /*document.ready en la cual tiene unos eventos que se van a ejecutar dependiendo su funcion*/
 $(document).ready(function(){
+	
 	$("#createClientYes").click(CLIENT.validarCampos);
+	$("#createClientYes").click(function(){
+		CLIENT.validarCamposNumericos();
+		
+		
+	});
 	$("#createClientNo").click(function(){
-		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
 	});
 	$(".alert-danger").hide();
 	$("#createcedulaclient").keyup(function(){
@@ -215,4 +221,12 @@ $(document).ready(function(){
 	});
 	$("#createphoneclient").keyup(CLIENT.validarCamposNumericos);
 	$("#createcedulaclient").keyup(CLIENT.validarCamposNumericos);
+/*Oculta la opcion de user si no es el administrador*/
+	 adm=localStorage.getItem("Login");
+  adm = JSON.parse(localStorage.getItem("Login"));
+  if(adm[0].Sesion!=1)
+  {
+    $(".menu_user").hide();
+  }
 });
+ 

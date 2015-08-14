@@ -10,6 +10,7 @@ var USER = USER ||
 			/*Como se va a llamar el key de los usuarios*/
 			localStorage.setItem("LoginUser",  JSON.stringify(datoUser));
 			USER.cleanInput();
+			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
 		};
 	},
 
@@ -181,7 +182,12 @@ function incorrectRepitPassword(){
 
 /*Carga el documento y adentro va a ver un evento click que va hacer cuando la persona de click al boton de yes*/
 $(document).ready(function(){
-	$("#createUserYes").click(USER.validarCamposUser);
+	$("#createUserYes").click(function(){
+		USER.validarCamposUser();
+		
+		
+
+	});
 
 	$("#createUserNo").click(function(){
 
