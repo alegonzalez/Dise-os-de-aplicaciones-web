@@ -54,34 +54,49 @@
 	</h3>
 	<button class="new_user btn btn-primary btn-md">New Invoice</button>
 	<section class="container">
+	<section class="alert alert-danger" id="message_invoice"></section>
 		<form class="form_usuario">
 			
 
 			<section class="form-group">
-				<label for="createselectinvoice">Invoice#</label>
-				<input type="text"  class="form-control" id="createselectinvoice" placeholder="Invoice#">
+				<label for="createselectinvoice" class="date_createInvoice">Invoice#</label>
+				<section class="col-xs-3">
+					<input type="text"  class="form-control" id="createselectinvoice" placeholder="Invoice#">
+				</section>
 			</section>
 
 			<section class="form-group">
-				<label for="createselectclient">Clients</label>
-				<input type="text" list="listaCliente"  class="form-control" id="createselectclient" placeholder="Selection clients">
+				<label for="createselectclient" class="date_createInvoice">Clients</label>
+				<section class="col-xs-3">
+					<input type="text" list="listaCliente"  class="form-control" id="createselectclient" placeholder="Selection clients">
+				</section>
 			</section>
 
 			<section class="form-group">
-				<label for="createjobdescriptioninvoice">Job Description</label>
-				<input type="text" class="form-control" id="createjobdescriptioninvoice" placeholder="Enter Description">
+				<label for="createjobdescriptioninvoice" class="date_createInvoice">Job Description</label>
+				<section class="col-xs-3">
+					<input type="text" class="form-control" id="createjobdescriptioninvoice" placeholder="Enter Description">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="createdateinvoice">Date</label>
-				<input type="date" class="form-control" id="createdateinvoice">
+				<label for="createdateinvoice" class="date_createInvoice">Date</label>
+				<section class="col-xs-3">
+					<input type="date" class="form-control" id="createdateinvoice">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="createamontinvoice">Amont</label>
-				<input type="number" class="form-control" id="createamontinvoice" placeholder="Enter Amount">
+				<label for="createamontinvoice" class="date_createInvoice">Amont</label>
+				<section class="col-xs-3">
+					<input type="number" class="form-control" id="createamontinvoice" placeholder="Enter Amount">
+				</section>
 			</section>
+			
+				<input class="confirmar_yes btn btn-primary" id="createInvoiceYes" type="button" value="Yes">
+			
 
-			<button class="confirmar_yes btn btn-primary" onclick="INVOICE.save();">Yes</button>
-			<button class="confirmar_no btn btn-danger">No</button>
+			
+				<input class="confirmar_no btn btn-danger" id="createInvoiceNo" value="button">
+			
 		</form>
 
 	</section>
@@ -97,7 +112,7 @@
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>

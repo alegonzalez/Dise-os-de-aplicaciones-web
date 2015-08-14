@@ -53,28 +53,37 @@
 	</h3>
 	<button class="new_user btn btn-primary btn-md">New Client</button>
 	<section class="container">
+		<section class="alert alert-danger" id="message_createClient"></section>
 		<form class="form_usuario">
 			<section class="form-group">
-				<label for="createcedulaclient">Identification</label>
-				<input type="text" class="form-control" id="createcedulaclient" placeholder="Identification">
+				<label for="createcedulaclient" class="date_createUser">Identification</label>
+				<section class="col-xs-3">	
+					<input type="text" class="form-control" id="createcedulaclient" placeholder="Identification">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="createfistnameclient">First Name</label>
-				<input type="text" class="form-control" id="createfistnameclient" placeholder="First Name">
+				<label for="createfistnameclient" class="date_createUser">First Name</label>
+				<section class="col-xs-3">	
+					<input type="text" class="form-control" id="createfistnameclient" placeholder="First Name">
+				</section>
 			</section>
 
 			<section class="form-group">
-				<label for="createlastnameclient">Last Name</label>
-				<input type="text" class="form-control" id="createlastnameclient" placeholder="Last Name">
+				<label for="createlastnameclient" class="date_createUser">Last Name</label>
+				<section class="col-xs-3">		
+					<input type="text" class=" hola form-control" id="createlastnameclient" placeholder="Last Name">
+				</section>
 			</section>
 			
 			<section class="form-group">
-				<label for="createphoneclient">Phone</label>
-				<input type="tel" class="form-control" id="createphoneclient" placeholder="Phone">
+				<label for="createphoneclient" class="date_createUser">Phone</label>
+				<section class="col-xs-3">	
+					<input type="tel" class="form-control" id="createphoneclient" placeholder="Phone">
+				</section>
 			</section>
 
-			<button class="confirmar_yes btn btn-primary" onclick="CLIENT.save();">Yes</button>
-			<button class="confirmar_no btn btn-danger">No</button>
+			<input type="button" class="confirmar_yes btn btn-primary" value="Yes" id="createClientYes">
+			<input type="button" class="confirmar_no btn btn-danger" value="No" id="createClientNo">
 		</form>
 
 	</section>
@@ -90,7 +99,7 @@
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>

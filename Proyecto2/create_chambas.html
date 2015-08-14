@@ -50,54 +50,70 @@
 
 		
 		<datalist id="listaCliente">
-		
+
 		</datalist>
 		
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Chamba</button>
+	
+		<button class="new_user btn btn-primary btn-md" id="newChamba">New Chamba</button>
+	
+	
 	<section class="container">
+		<section class="alert alert-danger" id="messageChamba"></section>
 		<form class="form_usuario">
 
 			<section class="form-group">
-				<label for="createselectclientchamba">Clients</label>
-				<input type="text" list="listaCliente"  class="form-control" id="createselectclientchamba" placeholder="Selection clients">
+				<label for="createselectclientchamba" class="invoiceCreate">Clients</label>
+				<section class="col-xs-3">
+					<input type="text" list="listaCliente"  class="form-control" id="createselectclientchamba" placeholder="Selection clients">
+				</section>
 			</section>
 
 			<section class="form-group">
-				<label for="createjobdescriptionchamba">Job Description</label>
-				<input type="text" class="form-control" id="createjobdescriptionchamba" placeholder="Enter Description">
+				<label for="createjobdescriptionchamba" class="invoiceCreate">Job Description</label>
+				<section class="col-xs-3">
+					<input type="text" class="form-control" id="createjobdescriptionchamba" placeholder="Enter Description">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="createdatechamba">Date</label>
-				<input type="date" class="form-control" id="createdatechamba">
+				<label for="createdatechamba" class="invoiceCreate">Date</label>
+				<section class="col-xs-3">
+					<input type="date" class="form-control" id="createdatechamba">
+				</section>
 			</section>
 			<section class="form-group">
-				<label for="createnotechamba">Note</label>
-				<input type="tel" class="form-control" id="createnotechamba" placeholder="Enter note">
+				<label for="createnotechamba" class="invoiceCreate">Note</label>
+				<section class="col-xs-3">
+					<input type="tel" class="form-control" id="createnotechamba" placeholder="Enter note">
+				</section>
 			</section>
+			
+			<input class="confirmar_yes btn btn-primary" id="createChambasYes" value="Yes" type="button">
 
-				<button class="confirmar_yes btn btn-primary" onClick="CREATE_CHAMBAS.save();">Yes</button>
-				<button class="confirmar_no btn btn-danger">No</button>
-			</form>
-
-		</section>
-
+			
+			<input class="confirmar_no btn btn-danger" id="createChambasNo" value="No" type="button">
 
 
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		</form>
 
-		<script type="text/javascript" src="create_chambas.js"></script>
-		<script type="text/javascript" src="menu.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script>
-		$(".mypop").popover({
-			placement:"bottom",
-			title:"Close session",
-			content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
-			html:true,
-		});
-		</script>
+	</section>
 
 
-	</body>
-	</html>
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript" src="create_chambas.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+	$(".mypop").popover({
+		placement:"bottom",
+		title:"Close session",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
+		html:true,
+	});
+	</script>
+
+
+</body>
+</html>
