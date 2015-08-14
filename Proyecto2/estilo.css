@@ -7,18 +7,24 @@ body{
 	background: #E0E0E0 ;
 	*/
 }
+
 h1{
 	text-align: center;
 	color: black;
 	font-family: monospace;
 }
 
+.messageDelete
+{
+	text-align: center;
+}
+
 
 .login{
 
 	border: ridge;
-	width: 22%;
-	height: 321px;
+	
+	height: 387px;
 	border-radius: 12px 12px 9px 13px;
 	background: #909090;
 	border-width: 5px;
@@ -28,18 +34,32 @@ h1{
 	margin-top: 30px;
 	
 }
-.separar_chk,#ingresar{
+
+#ingresar{
 	margin: 3%;
 	margin-top: 20px;
 	display:inline;
 	font-family: monospace;
 }
-.form-group .form-control{
-	width: 80%;
+.form-control{
+	width: 100%;
+	margin-bottom: -5px;
 }
-.separar_chk{
-	margin-top: 5px;
+.form-horizontal .form-group{
+	margin-left: 5%!important;
+	margin-right: 5%!important;
 }
+.col-xs-3 {
+	width: 100%;
+}
+#iconopass,#iconotexto{
+	margin-left: 5%!important;
+}
+.date{
+	margin-left: 5%;
+}
+
+
 .encabezado_login{
 	text-align: center;
 	background: #505050 ;
@@ -49,29 +69,84 @@ h1{
 	padding: 2%;
 	font-family: monospace;
 }
+.alert-danger{
+	width: 50%;
+	margin-left: 25%;
+	font-size: 150%;
+}
+#name,#nameUser,#pass,#rPass{
+	width: 101%;
+	margin-bottom:22px; 
 
+}
+#createcedulaclient,#createfistnameclient,#createlastnameclient,#createphoneclient{
+	width: 101%;
+	margin-bottom: 22px;
+
+}
+
+.date_createUser{
+	margin-left: 2%;
+}
 @media screen and (max-width:320px) {
 	.login{
-		width: 92%;	
-		margin-left: 10%;
+		width: 95%;	
+		margin-left: 5%;
 		padding-left: 0%;
 		font-size: 125%;
+		height: 405px;
+		font-size: 110%;
 	}
-	.separar_chk,#ingresar{
+	#ingresar{
 
-		margin: 0%;
-		margin-top: -1px;
-		margin-bottom: 0px;
-		display:inline;
+		margin: 30%;
+		margin-top: -3%;
+		margin-bottom: 1%;
 		font-family: monospace;
 	}
+	.form-control{
+		width: 100%;
 
-	table, thead, tbody, th, td, tr { 
-		display: block; 
+	}
+	.alert-danger{
+		width: 100%;
+		margin-left: 0%;
+		font-size: 100%;
+	}
+	h1{
+		text-align: center;
+		color: black;
+		font-family: monospace;
+		font-size: 150%;
+	}
+	#name,#nameUser,#pass,#rPass{
+		width: 105%;
+		margin-bottom:11px!important; 
+
+	}
+	.date_createUser{
+		margin-left: 6%;
 	}
 
+	#createcedulaclient,#createfistnameclient,#createlastnameclient,#createphoneclient{
+		width: 105%;
+		margin-bottom: 11px!important;
 
-} 
+	}
+	.date_createInvoice{
+		margin-left: 7%;
+		padding-bottom: 0%;
+		padding-top: 2%;
+
+	}
+	#createselectinvoice,#createjobdescriptioninvoice,#createamontinvoice,#createselectclient,#createdateinvoice{
+		width: 104%;
+		padding-top: 2%;
+	}
+#img-responsive-chamba{
+	width: 14%!important;
+}
+}
 
 @media screen and (min-width: 1024px){
 	.login{
@@ -79,44 +154,100 @@ h1{
 		margin-left: 32%;
 		padding-left: 0%;
 		font-size: 125%;
+		height: 405px;
 	}
 
-	.separar_chk,#ingresar{
+	#ingresar{
 
 		margin: 0%;
-		margin-top: -1px;
-		margin-bottom: 0px;
+		margin-top: -3%;
+		margin-bottom: 1%;
 		display:inline;
 		font-family: monospace;
+		margin-left: 35%;
 	}
-	.separar_chk{
-		padding-left: 11%;
+	.alert-danger{
+		width: 62%;
+		margin-left: 23%;
+		font-size: 100%;
+		padding-left: 9%;
 	}
+	#message_createUser{
+		width: 82%;
+		margin-left: 9%;
+		margin-top: -6%;
 
+	}
+	#message_createClient{
+		margin-top: -7%;
+	}
+	.date_createInvoice{
+		margin-left: 2%;
+		padding-bottom: 0%;
+		padding-top: 2%;
+
+	}
+	#createselectinvoice,#createjobdescriptioninvoice,#createamontinvoice,#createselectclient,#createdateinvoice{
+		width: 101%;
+	}
+	#message_invoice{
+		margin-top: -11%;
+		margin-bottom: 0%;
+	}
+	.invoiceCreate{
+		margin-left: 2%!important;
+		padding-bottom: 0%;
+		padding-top: 3%;
+	}
 }
 @media screen and (min-width: 1366px){
 	.login{
-		width: 35%;
+		width: 37%;
 		margin-left: 32%;
 		padding-left: 0%;
 		font-size: 125%;
 	}
 
-	.separar_chk,#ingresar{
+	#ingresar{
 
 		margin: 0%;
 		margin-top: -1px;
 		margin-bottom: 0px;
+		margin-left: 5%;
 		display:inline;
 		font-family: monospace;
+		margin-left: 35%;
 	}
-	.separar_chk{
-		padding-left: 16%;
+	#message_createClient{
+		margin-top: -7%;
 	}
+	.date_createInvoice{
+		margin-left: 2%;
+		padding-bottom: 0%;
+		padding-top: 1%;
 
+	}
+	#createselectinvoice,#createjobdescriptioninvoice,#createamontinvoice,#createselectclient,#createdateinvoice{
+		width: 101%;
+	}
+	.invoiceCreate{
+		margin-left: 2%!important;
+		padding-bottom: 0%;
+		padding-top: 3%;
+	}
+	#messageChamba{
+		margin-bottom: 3%;
+		margin-top: -5%;
+	}
+#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
+	width: 101%;
+}
 }
 /*Menu*/
 
+.table-responsive{
+	border:none;
+}
 ul li a{
 	border-bottom: 1px solid #33cc99;
 	font-size: 125%;
@@ -135,6 +266,7 @@ ul li {
 }
 #session{
 	font-size: 125%;
+	color: white;
 }
 .row img{
 	width: 60%;
@@ -151,7 +283,9 @@ ul li {
 	font-size: 125%;
 	text-decoration: none;
 	color: white;
+
 }
+
 .categoria:hover{
 	color: black;
 	text-decoration: none;
@@ -183,13 +317,13 @@ ul li {
 }
 .img-responsive{
 	margin-left: 3%;
-    float: left;
-    max-width: 17%;
-    min-width: 10%;
-    -webkit-box-shadow: 2px 2px 151px #000000;
-    -moz-box-shadow: 2px 2px 151px #000000;
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
+	float: left;
+	max-width: 17%;
+	min-width: 10%;
+	-webkit-box-shadow: 2px 2px 151px #000000;
+	-moz-box-shadow: 2px 2px 151px #000000;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
 }
 
 #img-responsive-chamba
@@ -215,7 +349,7 @@ ul li {
 
 		text-transform: uppercase;
 		margin-top: 5%;
-		font-size: 105%;
+		font-size: 94%;
 		font-weight: bold;
 	}
 	.new_user{
@@ -225,10 +359,12 @@ ul li {
 	.confirmar_yes{
 		margin-left: 5%!important;
 		width: 20%!important;
+		
 	}
 	.confirmar_no{
 		margin-left: 29%!important;
 		width: 20%!important;
+		
 	}
 
 	.encabezado_tabla{
@@ -246,40 +382,49 @@ ul li {
 
 	.delete
 	{
-	    width: 85%!important;
-        margin-left: 8%!important;
+		width: 85%!important;
+		margin-left: 8%!important;
 	}
 
 	.cabecera_delete
 	{
 		max-width: 100%!important;
 	}
+	.invoiceCreate{
+		margin-left: 7%!important;
+		padding-bottom: 0%;
+		padding-top: 3%;
+	}
+	#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
+	width: 103%;
+}
 }
 
 .confirmar_no
 {
 	margin-left: 26%;
 	width: 10%;
-    margin-top: 1%;
+	margin-top: 1%;
 }
 
 .confirmar_yes
 {
 	margin-left: 17%;
 	width: 10%;
-margin-top: 1%;
+	margin-top: 1%;
 }
 
 .delete{
 	margin-top: 15%;
 	width: 47%;
-    margin-left: 28%;
+	margin-left: 28%;
 }
 
 .panel-footer
 {
 	height: 48%;
 }
+
 
 
 
