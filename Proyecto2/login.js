@@ -39,7 +39,7 @@ var LOGIN=LOGIN||{
         if(dato[i].User==this.user&&dato[i].Password==this.contrasena){
           dato[i].Sesion=1;
           localStorage.setItem("LoginUser", JSON.stringify(dato));
-          window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/menu_sinAdmin.html","_self").value;
+          window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/menu.html","_self").value;
         }
       }
 
