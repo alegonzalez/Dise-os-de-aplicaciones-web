@@ -56,10 +56,10 @@
 		<section class="delete panel panel-primary">
 			<section class="cabecera_delete panel-heading">Delete Client</section>
 			<section class="panel-body"id="nombre">
-				Are you sure want to delete the client with name
+				 <h5>	Are you sure want to delete the client with <h5 id="name"></h5> </h5>
 			</section>
 			<section class=" panel-footer">
-				<a href="#VentanaEditCliente" class="confirmar_yes btn btn-primary " data-toggle="modal" onclick="DELETE_CLIENT.obtenerDatos();" >Yes</a>
+				<a href="#ventanaDeleteCliente" class="confirmar_yes btn btn-primary " data-toggle="modal" >Yes</a>
 
 				<button class="confirmar_no btn btn-danger">No</button>
 			</section>
@@ -67,7 +67,7 @@
 
 	</section>
 	
-	<section class="modal fade" id="VentanaEditCliente">
+	<section class="modal fade" id="ventanaDeleteCliente">
 		<section class="modal-dialog">
 			<section class="modal-content">
 				<section class="modal-header">
@@ -76,10 +76,10 @@
 					<h3 class="modal-title">Edit</h3>
 				</section>
 				<section class="modal-body">
-					<p>Client edit was successful</p>
+					<p>Client delete was successful</p>
 				</section>
 				<section class="modal-footer">
-					<a href="cliente.html">
+					<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html">
 						<button class="btn btn-primary">Accept</button>
 					</a>
 
@@ -100,7 +100,7 @@
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>

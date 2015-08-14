@@ -56,10 +56,10 @@
 		<section class="delete panel panel-primary">
 			<section class="cabecera_delete panel-heading">Delete user</section>
 			<section class="panel-body">
-				Are you sure want to delete the user with name
+				<h5 class="messageDelete">	Are you sure want to delete the user with <h5 id="name"></h5> </h5>
 			</section>
 			<section class=" panel-footer">
-				<a href="#VentanaEditCliente" class="confirmar_yes btn btn-primary " data-toggle="modal" >Yes</a>
+				<a href="#VentanaEditCliente" class="confirmar_yes btn btn-primary " data-toggle="modal"  >Yes</a>
 
 				<button class="confirmar_no btn btn-danger">No</button>
 			</section>
@@ -73,13 +73,13 @@
 				<section class="modal-header">
 
 
-					<h3 class="modal-title">Edit</h3>
+					<h3 class="modal-title">Delete</h3>
 				</section>
 				<section class="modal-body">
-					<p>Client edit was successful</p>
+					<p>User delete was successful</p>
 				</section>
 				<section class="modal-footer">
-					<a href="cliente.html">
+					<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html">
 						<button class="btn btn-primary">Accept</button>
 					</a>
 
@@ -92,14 +92,14 @@
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-	<script type="text/javascript" src="code.js"></script>
+	<script type="text/javascript" src="delete_user.js"></script>
 	<script type="text/javascript" src="menu.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script>
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>
