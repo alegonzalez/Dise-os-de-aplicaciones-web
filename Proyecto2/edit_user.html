@@ -61,10 +61,10 @@
 				<label for="edit_userName">Nombre de usuario</label>
 				<input type="text" class="form-control" id="edit_userName" placeholder="Password" readonly>
 
-				<input class="confirmar_yes btn btn-primary" value="Yes" onClick="EDIT_USER.datosEdit();">
+				<input class="confirmar_yes btn btn-primary" value="Yes" onClick="" id="edituserYes">
 				
 				<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html">
-					<input class="confirmar_no btn btn-danger" value="No">
+					<input class="confirmar_no btn btn-danger" value="No" id="edituserNo">
 				</a>
 				
 			</form>
@@ -83,7 +83,7 @@
 		$(".mypop").popover({
 			placement:"bottom",
 			title:"Close session",
-			content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+			content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 			html:true,
 		});
 		</script>

@@ -73,8 +73,9 @@
 				<input type="tel" class="form-control" id="editphoneclient">
 			</section>
 
-			<input class="confirmar_yes btn btn-primary" onClick="EDIT_CLIENT.datosEdit();" value="Yes">
-			<input class="confirmar_no btn btn-danger" value="No">
+			<input class="confirmar_yes btn btn-primary" id="edit_clientYes" value="Yes">
+			<input class="confirmar_no btn btn-danger" value="No" id="edit_clientNo">
+
 		</form>
 
 	</section>
@@ -91,7 +92,7 @@
 	$(".mypop").popover({
 		placement:"bottom",
 		title:"Close session",
-		content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+		content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 		html:true,
 	});
 	</script>
