@@ -3,8 +3,8 @@ var EDIT_USER=EDIT_USER||{
 	*/
 	datosEdit:function(){
 
-		var date = localStorage.getItem("temporal");
-		var date = JSON.parse(localStorage.getItem("temporal"));
+		var date = localStorage.getItem("Temporal");
+		var date = JSON.parse(localStorage.getItem("Temporal"));
 		
 		var user=localStorage.getItem("LoginUser");
 		var user = JSON.parse(localStorage.getItem("LoginUser"));
@@ -16,9 +16,11 @@ var EDIT_USER=EDIT_USER||{
 				/*El if sirve para ver si la cedula coinciden*/
 				if(date[i].UserName==user[j].Nombre_Usuario)
 				{
+
+					user[j].User=document.getElementById('edit_user_nameFull').value;
 					
-					user[j].Nombre_Usuario=document.getElementById('edit_user_nameFull').value;
-					user[j].User=date[i].Name;
+					
+
 					
 					localStorage.setItem("LoginUser",JSON.stringify(user));
 					window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
@@ -32,9 +34,16 @@ var EDIT_USER=EDIT_USER||{
 };
 /*Asigna los datos a los input*/
 (function(){
-	var date = localStorage.getItem("temporal");
-	var date = JSON.parse(localStorage.getItem("temporal"));
+	var date = localStorage.getItem("Temporal");
+	var date = JSON.parse(localStorage.getItem("Temporal"));
+	$("#edituserYes").click(function(){
+		EDIT_USER.datosEdit();
 
+	});
+	$("#edituserNo").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
+
+	});
 	document.getElementById('edit_user_nameFull').value=date[0].Name;
 	document.getElementById('edit_userName').value=date[0].UserName;
 
