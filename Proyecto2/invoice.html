@@ -24,10 +24,10 @@
 				<section class="collapse navbar-collapse" id="navbar1" >
 					<!--Esta clase  es para los items-->
 					<ul class="nav navbar-nav">
-						<li><a href="">Clients</a></li>
-						<li><a href="">Invoice</a></li>
-						<li><a href="">Chambas</a></li>
-						<li><a href="">User</a></li>
+						<li><a href="client.html">Clients</a></li>
+						<li><a href="invoice.html">Invoice</a></li>
+						<li><a href="chamba.html">Chambas</a></li>
+						<li><a href="user.html">User</a></li>
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -46,27 +46,33 @@
 
 	<h3 class="name_main">
 		<img src="https://cdn4.iconfinder.com/data/icons/banking-and-finance/500/receipt-paid-paper-128.png" class="img-responsive">
-		User
+		Invoice
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Invoice</button>
+	<a href="create_invoice.html">
+		<button class="new_user btn btn-primary btn-md">New Invoice</button>
+	</a>
+	
 
 
 
 </section>
 
 <section class="container-fluid">
-	<table class="table table-bordered table-hover " id="table_invoice">
-		<tr>
-			<th class="encabezado_tabla">Invoice#</th>
-			<th  class="encabezado_tabla">Client</th>
-			<th  class="encabezado_tabla">Job Description</th>
-			<th  class="encabezado_tabla">Date</th>
-			<th  class="encabezado_tabla">Amount</th>
-			<th  class="encabezado_tabla">Action</th>
-		</tr>
-	
+	<section class="table-responsive">
 
-	</table>
+		<table class="table table-bordered table-hover " id="table_invoice">
+			<tr>
+				<th class="encabezado_tabla">Invoice#</th>
+				<th  class="encabezado_tabla">Client</th>
+				<th  class="encabezado_tabla">Job Description</th>
+				<th  class="encabezado_tabla">Date</th>
+				<th  class="encabezado_tabla">Amount</th>
+				<th  class="encabezado_tabla">Action</th>
+			</tr>
+
+
+		</table>
+	</section>
 </section>
 
 
@@ -78,7 +84,7 @@
 $(".mypop").popover({
 	placement:"bottom",
 	title:"Close session",
-	content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+	content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 	html:true,
 });
 </script>

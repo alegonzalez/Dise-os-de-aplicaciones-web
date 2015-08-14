@@ -24,6 +24,7 @@
 				<section class="collapse navbar-collapse" id="navbar1" >
 					<!--Esta clase  es para los items-->
 					<ul class="nav navbar-nav">
+
 						<li><a href="client.html">Clients</a></li>
 						<li><a href="invoice.html">Invoice</a></li>
 						<li><a href="chamba.html">Chambas</a></li>
@@ -48,13 +49,20 @@
 		<img src="https://cdn4.iconfinder.com/data/icons/Pretty_office_icon_part_2/256/Briefcase.png" class="img-responsive" id="img-responsive-chamba">
 		Chambas
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Chamba</button>
+	<a href="create_chambas.html">
+		<button class="new_user btn btn-primary btn-md">New Chamba</button>
+	</a>
+	
 
 
 
 </section>
 
 <section class="container-fluid">
+	<section class="table-responsive">
+
+
+
 	<table class="table table-bordered table-hover" id="table_chamba">
 		<tr>
 			<th class="encabezado_tabla">Clients</th>
@@ -65,6 +73,7 @@
 		</tr>
 		
 	</table>
+	</section>
 </section>
 
 
@@ -74,9 +83,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 $(".mypop").popover({
-	placement:"bottom",s
+	placement:"bottom",
 	title:"Close session",
-	content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+	content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 	html:true,
 });
 </script>

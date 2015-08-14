@@ -24,10 +24,10 @@
 				<section class="collapse navbar-collapse" id="navbar1" >
 					<!--Esta clase  es para los items-->
 					<ul class="nav navbar-nav">
-						<li><a href="">Clients</a></li>
-						<li><a href="">Invoice</a></li>
-						<li><a href="">Chambas</a></li>
-						<li><a href="">User</a></li>
+						<li><a href="client.html">Clients</a></li>
+						<li><a href="invoice.html">Invoice</a></li>
+						<li><a href="chamba.html">Chambas</a></li>
+						<li><a href="user.html">User</a></li>
 
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,10 @@
 		<img src="https://cdn2.iconfinder.com/data/icons/crystalproject/128x128/apps/Community-Help.png" class="img-responsive">
 		User
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New user</button>
+	<a href="user_create.html">
+		<button class="new_user btn btn-primary btn-md">New user</button>
+	</a>
+	
 
 
 </section>
@@ -76,7 +79,7 @@
 $(".mypop").popover({
 	placement:"bottom",
 	title:"Close session",
-	content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+	content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 	html:true,
 });
 </script>
