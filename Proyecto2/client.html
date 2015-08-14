@@ -25,8 +25,8 @@
 					<!--Esta clase  es para los items-->
 					<ul class="nav navbar-nav">
 						<li><a href="client.html">Clients</a></li>
-						<li><a href="invice.html">Invoice</a></li>
-						<li><a href="chambas.html">Chambas</a></li>
+						<li><a href="invoice.html">Invoice</a></li>
+						<li><a href="chamba.html">Chambas</a></li>
 						<li><a href="user.html">User</a></li>
 
 					</ul>
@@ -48,7 +48,10 @@
 		<img src="https://cdn2.iconfinder.com/data/icons/dellipack/128/folder.png" class="img-responsive">
 		Client
 	</h3>
-	<button class="new_user btn btn-primary btn-md">New Client</button>
+	<a href="create_client.html">
+		<button class="new_user btn btn-primary btn-md">New Client</button>
+	</a>
+	
 
 
 
@@ -79,7 +82,7 @@
 $(".mypop").popover({
 	placement:"bottom",
 	title:"Close session",
-	content:"If you want to log out please press the botton <br><a href='login.html' class='btn btn-primary'>Yes</a> ",
+	content:"If you want to log out please press the botton <br><input class='btn btn-primary' onClick='MENU.cerrarSesion();' value='Yes'>",
 	html:true,
 });
 </script>
