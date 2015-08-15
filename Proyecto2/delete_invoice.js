@@ -3,16 +3,19 @@ var DELETE = DELETE ||
 
 	delete:function()
 	{
+
+		
 		datosTemporales=localStorage.getItem("Temporal");
 		datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
 
 		datoinvoice=localStorage.getItem("Invoice");
 		datoinvoice=JSON.parse(localStorage.getItem("Invoice"));
 
-		for (var i = 0; i <=datoinvoice.length; i++)
+		for (var i = 0; i < datoinvoice.length; i++)
 		{
-			if(datoinvoice[i].NumberInvoice==datosTemporales[0].invoice)
+			if(datoinvoice[i].invoice==datosTemporales[0].NumberInvoice)
 			{	
+
 				
 				datoinvoice.splice(i,1);
 				localStorage.setItem("Invoice",JSON.stringify(datoinvoice));
@@ -29,10 +32,15 @@ var DELETE = DELETE ||
 	evento:function(){
 
 		$(".confirmar_yes").click(DELETE.delete());
-	}
+	},
 };
 
 $( document ).ready(function() {
+	$(".confirmar_yes").click(function(){
+       
+        DELETE.delete();
+	});
+
 	DELETE.evento();
 });
 
