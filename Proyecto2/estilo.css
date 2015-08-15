@@ -66,11 +66,6 @@ h1{
 		font-family: monospace;
 	}
 
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-
-
 } 
 
 @media screen and (min-width: 1024px){
@@ -163,7 +158,7 @@ ul li {
 /*User*/
 .table{
 	border-color: black;
-	margin-top: 19%;
+	margin-top: -24%;
 }
 .encabezado_tabla{
 	background:#383838;
@@ -280,6 +275,33 @@ margin-top: 1%;
 {
 	height: 48%;
 }
+
+#listClient , #listInvoice , #listChamba, #listUser{
+	position:absolute;
+	left: 18%;
+	bottom: 69%;
+}
+
+#mostrarDatos
+{
+    width: 10%;
+    height: 29px;
+    margin-left: 77%;
+   position:absolute;
+   bottom:69%;
+	content:#3b5997;
+	background-color:#FFFFCC;
+	-webkit-border-radius: 15px 15px 15px 15px;
+}
+
+#date_client , #date_invoice ,#date_chamba , #date_user
+{
+ margin-top: 34%;
+}
+
+
+
+
 
 
 
