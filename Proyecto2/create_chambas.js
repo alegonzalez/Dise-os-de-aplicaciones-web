@@ -8,7 +8,11 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de las facturas*/
 			localStorage.setItem("chambas",JSON.stringify(datechambas));
-			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/chamba.html","_self").value;
+			$("#messageConfirmCreateChamba").click(function(){
+ alert("lkajdlkñajdlkñas");
+				window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/chamba.html","_self").value;
+			});
+			
 		};
 	},
 
@@ -150,6 +154,7 @@ function incorrectNote(){
 $(document).ready(function(){
 	$(".alert-danger").hide();
 	$("#createChambasYes").click(function(){
+	
 		CREATE_CHAMBAS.validarCampos();
 	});
 	
