@@ -402,6 +402,31 @@ ul li {
 	#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
 		width: 103%;
 	}
+
+	#date_client , #date_invoice ,#date_chamba , #date_user
+	{
+		margin-top: 0%;
+		position: relative;
+		top: -44px;
+	}
+
+	#listClient , #listInvoice , #listChamba, #listUser{
+		position: relative;
+		left: 18%;
+		bottom: 72px;
+	}
+
+	#mostrarDatos
+	{
+		width: 10%;
+		height: 29px;
+		margin-left: 77%;
+		position: relative;
+		top: 21px;
+		background-color:#FFFFCC;
+		-webkit-border-radius: 15px 15px 15px 15px;
+	}
+
 }
 
 .confirmar_no
@@ -413,6 +438,7 @@ ul li {
 
 .confirmar_yes
 {
+
 	margin-left: 17%;
 	width: 10%;
 	margin-top: 1%;
@@ -429,29 +455,12 @@ ul li {
 	height: 48%;
 }
 
-#listClient , #listInvoice , #listChamba, #listUser{
-	position: relative;
-	left: 18%;
-	bottom: 12px;
-}
 
-#mostrarDatos
-{
-	width: 10%;
-	height: 29px;
-	margin-left: 77%;
-	position: relative;
-	bottom: -16px;
-	content:#3b5997;
-	background-color:#FFFFCC;
-	-webkit-border-radius: 15px 15px 15px 15px;
-}
 
-#date_client , #date_invoice ,#date_chamba , #date_user
+
+#table_client
 {
-	margin-top: 0%;
-	position: relative;
-	top: 12px;
+	margin-top: 14%;
 }
 
 
