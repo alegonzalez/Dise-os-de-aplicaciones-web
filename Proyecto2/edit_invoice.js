@@ -54,7 +54,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 
 	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
 	for (var i = 0; i < datosClient.length; ++i) {
-		str += '<option value="' + datosClient[i].Identification + '" />'; 
+		str += '<option value="' + datosClient[i].Firts_name + '" />'; 
 
 	}
 

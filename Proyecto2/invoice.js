@@ -88,7 +88,7 @@ var INVOICE=INVOICE||{
      job_Description.innerHTML =datoInvoice[i].Job_Description;
      date.innerHTML =datoInvoice[i].Date;
      amount.innerHTML=datoInvoice[i].Amont;
-     action.innerHTML ='<a href="delete_invoice.html" onClick="INVOICE.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_invoice.html" onClick="INVOICE.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+     action.innerHTML ='<a href="delete_invoice.html" onClick="INVOICE.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img ></a><a href="edit_invoice.html" onClick="INVOICE.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
    }
 /*Oculta la opcion de user si no es el administrador*/
   adm=localStorage.getItem("Login");

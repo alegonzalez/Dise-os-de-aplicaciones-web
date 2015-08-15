@@ -22,14 +22,13 @@ var DELETE = DELETE ||
 		}
 
 	},
-
-	evento:function(){
-		$(".confirmar_yes").click(DELETE.delete());
-	}
 };
 
 $( document ).ready(function() {
-	DELETE.evento();
+	$(".confirmar_yes").click(function(){
+		DELETE.delete();
+	});
+	
 });
 
 (function()
@@ -37,7 +36,7 @@ $( document ).ready(function() {
 	datosTemporales=localStorage.getItem("Temporal");
 	datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
 	document.getElementById('name').innerHTML = datosTemporales[0].client;
-/*Oculta la opcion de user si no es el administrador*/
+	/*Oculta la opcion de user si no es el administrador*/
 	adm=localStorage.getItem("Login");
 	adm = JSON.parse(localStorage.getItem("Login"));
 	if(adm[0].Sesion!=1)
