@@ -3,7 +3,7 @@ var DELETE = DELETE ||
 
 	delete:function()
 	{
-		alert("asdasd");
+		
 		datosTemporales=localStorage.getItem("Temporal");
 		datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
 
@@ -13,11 +13,10 @@ var DELETE = DELETE ||
 		for (var i = 0; i <=user.length; i++)
 		{
 			if(user[i].Nombre_Usuario==datosTemporales[0].UserName)
-			{	
-				alert("Hola");		 
+			{		 
 
 				user.splice(i,1);
-				torage.setItem("LoginUser",JSON.stringify(user));
+				localStorage.setItem("LoginUser",JSON.stringify(user));
 				
 
 			}
@@ -25,14 +24,11 @@ var DELETE = DELETE ||
 
 		}
 
-	
+
 
 
 	},
-	evento:function(){
 
-		$(".confirmar_yes").click(DELETE.delete());
-	}
 
 };
 (function()
@@ -47,6 +43,10 @@ var DELETE = DELETE ||
 })();
 
 $( document ).ready(function() {
-  DELETE.evento();
+	$(".confirmar_yes").click(function(){
+
+		DELETE.delete();	
+	});
+
 });
 
