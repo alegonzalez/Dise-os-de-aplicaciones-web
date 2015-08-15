@@ -50,8 +50,8 @@ var CLIENT = CLIENT ||
 	/*Valida los campos de texto*/
 	validarCampos:function(){
 		/*Obtiene la informacion de los input*/
-		this.phone=phone;
-		this.identification=identification;
+		
+		
 		var firstName=$("#createfistnameclient").val();
 		var lastName=$("#createlastnameclient").val();
 		var phone=$("#createphoneclient").val();
@@ -108,6 +108,8 @@ var CLIENT = CLIENT ||
 			else if(isNaN(phone)){
 				incorrectPhone();
 				$(".alert-danger").text("El campo phone solo adminite numero").show();	
+			}else{
+				CLIENT.validarCampos();
 			}
 
 
@@ -221,12 +223,11 @@ $(document).ready(function(){
 	});
 	$("#createphoneclient").keyup(CLIENT.validarCamposNumericos);
 	$("#createcedulaclient").keyup(CLIENT.validarCamposNumericos);
-/*Oculta la opcion de user si no es el administrador*/
-	 adm=localStorage.getItem("Login");
-  adm = JSON.parse(localStorage.getItem("Login"));
-  if(adm[0].Sesion!=1)
-  {
-    $(".menu_user").hide();
-  }
+	/*Oculta la opcion de user si no es el administrador*/
+	adm=localStorage.getItem("Login");
+	adm = JSON.parse(localStorage.getItem("Login"));
+	if(adm[0].Sesion!=1)
+	{
+		$(".menu_user").hide();
+	}
 });
- 

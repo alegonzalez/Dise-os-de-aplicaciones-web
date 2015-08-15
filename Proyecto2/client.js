@@ -51,6 +51,7 @@ localStorageTemporal :function(id,firts_name,last_Name,phone)
 
 function obtenerInformacion(option)
 {
+  this.valor=option.value;
 
   var datosClient = localStorage.getItem("Client");
   datosClient = JSON.parse(localStorage.getItem("Client"));
@@ -67,7 +68,7 @@ var header = table.createTHead();
 
 for (var i = 0; i < datosClient.length; ++i) {
 
-  if(option.value==datosClient[i].Identification)
+  if(this.valor==datosClient[i].Identification)
   {
 
    var row = header.insertRow(0);
@@ -81,12 +82,12 @@ for (var i = 0; i < datosClient.length; ++i) {
    radio.setAttribute('onclick','radio(this);');
    celda.appendChild(radio);
 
-   action.innerHTML ='<a href="http://localhost/Proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
+   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
 
    cell.innerHTML = "Name=" + datosClient[i].Firts_name + "<br> Last_name ="  + datosClient[i].Last_name +  "<br> Phone =" + datosClient[i].Phone;
 
 
-}
+ }
 
 }
 
@@ -101,8 +102,8 @@ function radio(t) {
 
    if(t.id==datosClient[i].Identification)
    {
-    alert(datosClient[i].Firts_name , datosClient[i].Last_name , datosClient[i].Phone);
-    CLIENT.localStorageTemporal(datosClient[i].Firts_name , datosClient[i].Last_name , datosClient[i].Phone);
+
+    CLIENT.localStorageTemporal(datosClient[i].Identification,datosClient[i].Firts_name , datosClient[i].Last_name , datosClient[i].Phone);
   }
 }
 
@@ -111,9 +112,9 @@ function radio(t) {
 
 (function() {
 
-   var mq = window.matchMedia( "(max-width:320px)" ); 
+ var mq = window.matchMedia( "(max-width:320px)" ); 
 
-  if (mq.matches) {
+ if (mq.matches) {
 //Oculta la tabla de la pantalla grande
 var table = document.getElementById('table_client'); 
   // suponiendo que la tabla contiene ID='t1' 
@@ -144,7 +145,7 @@ datalist.innerHTML =option;
 }else
 {
   document.getElementById("table_client").style.visibility = 'visible' ;
-    $("#mostrarDatos").hide();
+  $("#mostrarDatos").hide();
 
 
   /*Lo obtiene en un string*/
@@ -175,22 +176,20 @@ datalist.innerHTML =option;
      phone.innerHTML=datoclient[i].Phone;
      action.innerHTML ='<a href="delete_client.html" onClick="CLIENT.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
    }
-/*Oculta la opcion de user si no es el administrador*/
-  adm=localStorage.getItem("Login");
-  adm = JSON.parse(localStorage.getItem("Login"));
-  if(adm[0].Sesion!=1)
-  {
+   /*Oculta la opcion de user si no es el administrador*/
+   adm=localStorage.getItem("Login");
+   adm = JSON.parse(localStorage.getItem("Login"));
+   if(adm[0].Sesion!=1)
+   {
     $(".menu_user").hide();
   }
 }
- })();
+})();
 
 
 
 
- 
- 
- 
 
- 
+
+
 

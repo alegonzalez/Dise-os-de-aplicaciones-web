@@ -107,7 +107,7 @@ h1{
 	.form-control{
 		width: 100%;
 
-<<<<<<< HEAD
+
 	}
 	.alert-danger{
 		width: 100%;
@@ -144,13 +144,13 @@ h1{
 		width: 104%;
 		padding-top: 2%;
 	}
-#img-responsive-chamba{
-	width: 14%!important;
+	#img-responsive-chamba{
+		width: 14%!important;
+	}
 }
-}
-=======
+
 } 
->>>>>>> origin/master
+
 
 @media screen and (min-width: 1024px){
 	.login{
@@ -243,9 +243,9 @@ h1{
 		margin-bottom: 3%;
 		margin-top: -5%;
 	}
-#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
-	width: 101%;
-}
+	#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
+		width: 101%;
+	}
 }
 /*Menu*/
 
@@ -400,8 +400,8 @@ ul li {
 		padding-top: 3%;
 	}
 	#createselectclientchamba,#createjobdescriptionchamba,#createdatechamba,#createnotechamba{
-	width: 103%;
-}
+		width: 103%;
+	}
 }
 
 .confirmar_no
@@ -430,18 +430,18 @@ ul li {
 }
 
 #listClient , #listInvoice , #listChamba, #listUser{
-	position:absolute;
+	position: relative;
 	left: 18%;
-	bottom: 69%;
+	bottom: 12px;
 }
 
 #mostrarDatos
 {
-    width: 10%;
-    height: 29px;
-    margin-left: 77%;
-   position:absolute;
-   bottom:69%;
+	width: 10%;
+	height: 29px;
+	margin-left: 77%;
+	position: relative;
+	bottom: -16px;
 	content:#3b5997;
 	background-color:#FFFFCC;
 	-webkit-border-radius: 15px 15px 15px 15px;
@@ -449,7 +449,9 @@ ul li {
 
 #date_client , #date_invoice ,#date_chamba , #date_user
 {
- margin-top: 34%;
+	margin-top: 0%;
+	position: relative;
+	top: 12px;
 }
 
 

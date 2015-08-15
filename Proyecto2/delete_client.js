@@ -49,3 +49,13 @@ $( document ).ready(function() {
 
 })();
 
+$(document).ready(function(){
+
+$("#deleteClientNo").click(function(){
+
+window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
+});
+$("#aceptarDeleteClient").click(function(){
+window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
+});
+});
