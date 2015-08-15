@@ -403,19 +403,45 @@ ul li {
 		width: 103%;
 	}
 
-	#date_client , #date_invoice ,#date_chamba , #date_user
+	#date_client
 	{
 		margin-top: 0%;
 		position: relative;
 		top: -44px;
 	}
+	#date_invoice{
 
-	#listClient , #listInvoice , #listChamba, #listUser{
+
+	} 
+
+	#date_chamba{
+
+	} 
+
+	#date_user{
+
+		margin-top: 0%;
+		position: relative;
+		bottom: 41px;
+	}
+
+	#listClient {
 		position: relative;
 		left: 18%;
 		bottom: 72px;
 	}
+	#listUser{
+		position: relative;
+		bottom: 65px;
+		margin-left: 18%;
 
+	}
+	#listInvoice {
+
+	}
+	#listChamba{
+
+	}
 	#mostrarDatos
 	{
 		width: 10%;
@@ -458,7 +484,7 @@ ul li {
 
 
 
-#table_client
+#table_client,#table_user,#table_invoice,#table_chamba
 {
 	margin-top: 14%;
 }
