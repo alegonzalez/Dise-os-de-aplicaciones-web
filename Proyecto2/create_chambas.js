@@ -141,7 +141,9 @@ function incorrectNote(){
 
 	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
 	for (var i = 0; i < datosClient.length; ++i) {
-		str += '<option value="' + datosClient[i].Firts_name + '" />'; 
+
+   str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
+
 
 	}
 

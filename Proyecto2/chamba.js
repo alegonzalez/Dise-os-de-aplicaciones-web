@@ -53,10 +53,106 @@ localStorageTemporal :function(client,job_Description,date,note)
 };
 
 
+function obtenerInformacion(option)
+{
+
+  var datosChamba = localStorage.getItem("chambas");
+  datosChamba = JSON.parse(localStorage.getItem("chambas"));
+
+  var id=document.getElementById('chambaList').value;
+
+  $("#date_chamba").html("");
+
+// Find a <table> element with id="myTable":
+var table = document.getElementById("date_chamba");
+
+// Create an empty <thead> element and add it to the table:
+var header = table.createTHead();
+
+
+for (var i = 0; i < datosChamba.length; i++) {
+  
+  if(datosChamba[i].Client == option.value)
+  {
+     var row = header.insertRow(0);
+   var cell = row.insertCell(0);
+   var action = row.insertCell(1);
+
+   var celda = row.insertCell(0);
+   var radio = document.createElement("input");
+   radio.type = "radio";
+   //Es para poder seleccionar solo uno de los radio button
+   radio.name="chkbox[]";
+   radio.id=datosChamba[i].Client;
+   radio.setAttribute('onclick','radio(this);');
+   celda.appendChild(radio);
+
+   action.innerHTML ='<a href="delete_chamba.html" onClick="CHAMBA.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_chamba.html" onClick="CHAMBA.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+
+   cell.innerHTML = "Client=" + datosChamba[i].Client + "<br> Job Description ="  + datosChamba[i].Job_Description +  "<br> Date =" + datosChamba[i].Date +  "<br> Note =" + datosChamba[i].Note ;
+
+  }
+};
+
+
+};
+
+function radio(t) {
+
+ var datosChamba = localStorage.getItem("chambas");
+ datosChamba = JSON.parse(localStorage.getItem("chambas"));
+
+ for (var i = 0; i < datosChamba.length; ++i) {
+
+   if(t.id==datosChamba[i].Client)
+   {  
+    CHAMBA.localStorageTemporal(datosChamba[i].Client,datosChamba[i].Job_Description , datosChamba[i].Date , datosChamba[i].Note , datosChamba[i].Id);
+  }
+}
+
+};
 
 
 
-(function() {
+
+
+ (function() {
+
+     var mq = window.matchMedia( "(max-width:320px)" ); 
+
+     if (mq.matches) {
+//Oculta la tabla de la pantalla grande
+var table = document.getElementById('table_chamba'); 
+  // suponiendo que la tabla contiene ID='t1' 
+  table.removeChild(table.tBodies[0]); 
+
+//////////////////////////////////////////////////////////////////////////
+var datosClient = localStorage.getItem("Client");
+datosClient = JSON.parse(localStorage.getItem("Client"));
+
+var form = document.body.appendChild(document.createElement('form')),
+input = form.appendChild(document.createElement('input')),
+datalist = form.appendChild(document.createElement('datalist'));
+
+datalist.id = 'chambaList';
+input.id="listChamba";
+input.type="text";
+
+input.setAttribute('list','chambaList');
+input.setAttribute('onblur','obtenerInformacion(this);');
+
+var option = "";
+for (var i = 0; i < datosClient.length; ++i) {
+  option += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
+};
+
+datalist.innerHTML =option;
+
+}else
+{
+  document.getElementById("table_chamba").style.visibility = 'visible' ;
+  $("#mostrarDatos").hide();
+
 
   /*Lo obtiene en un string*/
   var datoChamba = localStorage.getItem("chambas");
@@ -94,5 +190,6 @@ localStorageTemporal :function(client,job_Description,date,note)
    {
     $(".menu_user").hide();
   }
+}
 
 })();

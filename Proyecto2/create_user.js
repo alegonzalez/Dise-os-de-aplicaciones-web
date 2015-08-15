@@ -38,6 +38,11 @@ var USER = USER ||
 		var sesion=0;
 		/*Arreglo  de los objetos*/
 		var information = {'User': this.name, 'Nombre_Usuario': this.usuario, 'Password': this.contrasena,'Sesion':sesion};
+
+		if (datoUser == null)
+		{
+			datoUser = [];
+		}
 		
 		/*Push lo que hace es mandar los datos a lo ultimo*/
 		datoUser.push(information);
