@@ -348,6 +348,11 @@ ul li {
 	margin-right: 5%; 
 }
 @media screen and (max-width: 320px){
+	#mensajeInvoice{
+		margin-top: -16%;
+		width: 83%;
+		margin-left: 9%;
+	}
 	.name_main{
 		display: inline;
 
@@ -410,7 +415,9 @@ ul li {
 		top: -44px;
 	}
 	#date_invoice{
-
+		margin-top: 0%;
+		position: relative;
+		top: -49px;
 
 	} 
 
@@ -437,6 +444,9 @@ ul li {
 
 	}
 	#listInvoice {
+		position: relative;
+		left: 18%;
+		bottom: 71px;
 
 	}
 	#listChamba{
@@ -448,7 +458,7 @@ ul li {
 		height: 29px;
 		margin-left: 77%;
 		position: relative;
-		top: 21px;
+		top:21px;
 		background-color:#FFFFCC;
 		-webkit-border-radius: 15px 15px 15px 15px;
 	}
@@ -484,8 +494,12 @@ ul li {
 
 
 
-#table_client,#table_user,#table_invoice,#table_chamba
+#table_client,#table_user,#table_chamba
 {
+	margin-top: 14%;
+}
+
+#table_invoice{
 	margin-top: 14%;
 }
 
