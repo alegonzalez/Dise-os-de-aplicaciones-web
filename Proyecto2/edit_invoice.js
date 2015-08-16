@@ -21,6 +21,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 					
 					factura[j].invoice=date[i].NumberInvoice;
 					factura[j].Client= document.getElementById('editselectclientinvoice').value;	    
+				
 					factura[j].Job_Description=document.getElementById('editjobdescriptioninvoice').value;
 					factura[j].Date=document.getElementById('editdateinvoice').value;
 					factura[j].Amont=document.getElementById('editamontinvoice').value;
@@ -39,6 +40,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 (function(){
 	var date = localStorage.getItem("Temporal");
 	var date = JSON.parse(localStorage.getItem("Temporal"));
+	
 	document.getElementById('editNumberFactura').value=date[0].NumberInvoice;
 	document.getElementById('listaCliente').value=date[0].Client;
 	document.getElementById('editjobdescriptioninvoice').value=date[0].JobDescription;
@@ -54,7 +56,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 
 	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
 	for (var i = 0; i < datosClient.length; ++i) {
-		str += '<option value="' + datosClient[i].Firts_name + '" />'; 
+		  str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
 
 	}
 
