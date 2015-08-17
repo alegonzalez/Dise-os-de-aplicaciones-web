@@ -422,7 +422,9 @@ ul li {
 	} 
 
 	#date_chamba{
-
+		margin-top: 0%;
+		position: relative;
+		bottom: 47px;
 	} 
 
 	#date_user{
@@ -439,7 +441,7 @@ ul li {
 	}
 	#listUser{
 		position: relative;
-		bottom: 65px;
+		bottom: 71px;
 		margin-left: 18%;
 
 	}
@@ -450,6 +452,9 @@ ul li {
 
 	}
 	#listChamba{
+		position: relative;
+		left: 18%;
+	    bottom: 68px;
 
 	}
 	#mostrarDatos
@@ -502,6 +507,12 @@ ul li {
 #table_invoice{
 	margin-top: 14%;
 }
+
+#table_chamba
+{
+	margin-top: 14%;
+}
+
 
 
 

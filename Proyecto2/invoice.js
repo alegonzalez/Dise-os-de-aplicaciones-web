@@ -78,7 +78,6 @@ for (var i = 0; i < datosInvoice.length; i++) {
   {
     cont="E";
     
-
     var row = header.insertRow(0);
     var cell = row.insertCell(0);
     var action = row.insertCell(1);

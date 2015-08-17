@@ -55,6 +55,7 @@
 	</h3>
 	<button class="new_user btn btn-primary btn-md" id="newInvoiceEdit">New Invoice</button>
 	<section class="container">
+		<section class="alert alert-danger"></section>
 		<form class="form_usuario">
 			<section class="form-group">
 				<label for="editNumberFactura">Number Invoice</label>
@@ -78,11 +79,11 @@
 				<input type="number" class="form-control" id="editamontinvoice" placeholder="Enter Amount">
 			</section>
 
-			<input class="confirmar_yes btn btn-primary"value="Yes" onclick="EDIT_INVOICE.datosEdit();">
+			<input class="confirmar_yes btn btn-primary"value="Yes" id="editInvoiceYes" type="button">
 			
-			<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html">
-				<input class="confirmar_no btn btn-danger" value="No">
-			</a>
+			
+				<input class="confirmar_no btn btn-danger" value="No" type="button">
+			
 			
 		</form>
 

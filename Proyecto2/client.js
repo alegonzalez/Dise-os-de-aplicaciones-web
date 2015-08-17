@@ -51,8 +51,9 @@ localStorageTemporal :function(id,firts_name,last_Name,phone)
 
 function obtenerInformacion(option)
 {
-  this.valor=option.value;
 
+  this.valor=option.value;
+debugger;
   var datosClient = localStorage.getItem("Client");
   datosClient = JSON.parse(localStorage.getItem("Client"));
 
@@ -65,24 +66,18 @@ var table = document.getElementById("date_client");
 
 // Create an empty <thead> element and add it to the table:
 var header = table.createTHead();
+var cont="N";
 
 for (var i = 0; i < datosClient.length; ++i) {
 
   if(this.valor==datosClient[i].Identification)
   {
-
+   cont="E";
    var row = header.insertRow(0);
    var cell = row.insertCell(0);
    var action = row.insertCell(1);
 
-   var celda = row.insertCell(0);
-   var radio = document.createElement("input");
-   radio.type = "radio";
-   radio.id=datosClient[i].Identification;
-   radio.setAttribute('onclick','radio(this);');
-   celda.appendChild(radio);
-
-   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
+   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion(); radio('+datosClient[i].Identification+')"><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion(); radio('+datosClient[i].Identification+')"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
 
    cell.innerHTML = "Name=" + datosClient[i].Firts_name + "<br> Last_name ="  + datosClient[i].Last_name +  "<br> Phone =" + datosClient[i].Phone;
 
@@ -90,6 +85,13 @@ for (var i = 0; i < datosClient.length; ++i) {
  }
 
 }
+
+if(cont=="N")
+{
+
+  $("#mensajeClient").text("Don't client").show();
+}
+
 
 };
 
@@ -100,7 +102,7 @@ function radio(t) {
 
  for (var i = 0; i < datosClient.length; ++i) {
 
-   if(t.id==datosClient[i].Identification)
+   if(t==datosClient[i].Identification)
    {
 
     CLIENT.localStorageTemporal(datosClient[i].Identification,datosClient[i].Firts_name , datosClient[i].Last_name , datosClient[i].Phone);
@@ -185,6 +187,14 @@ datalist.innerHTML =option;
   }
 }
 })();
+
+
+$(document).ready(function(){
+  $("#mensajeClient").hide();
+  $("#listClient").click(function(){
+    $("#mensajeClient").hide();
+  });
+});
 
 
 

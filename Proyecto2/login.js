@@ -119,8 +119,10 @@ function incorrectPassword(){
   $("#contraseña").parent().append("<span id='iconopass' class='glyphicon glyphicon-remove form-control-feedback'></span>");
 
 }
-
+//carga los eventos del login
 $(document).ready(function(){
+  
+  $("body").hide().fadeIn(4000);
   $("#ingresar").click(LOGIN.validarCamposBlanco);
   $(".alert-danger").hide();
   $("#usuario").keyup(function(){

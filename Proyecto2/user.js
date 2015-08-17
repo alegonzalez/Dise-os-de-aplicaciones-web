@@ -27,7 +27,7 @@ var USER=USER||{
 localStorageTemporal :function(name,user_name)
 {
   var datosTemporales=new Array();
-
+  
 
   this.name=name;
   this.user_name=user_name;
@@ -42,16 +42,18 @@ localStorageTemporal :function(name,user_name)
 
 };
 
-
+var nombreUsuario;
 function obtenerInformacion(option)
 {
+ this.valor=option.value;
+ 
+ 
+ var datosUser = localStorage.getItem("LoginUser");
+ datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
-  var datosUser = localStorage.getItem("LoginUser");
-  datosUser = JSON.parse(localStorage.getItem("LoginUser"));
+ var id=document.getElementById('userList').value;
 
-  var id=document.getElementById('userList').value;
-
-  $("#date_user").html("");
+ $("#date_user").html("");
 
 // Find a <table> element with id="myTable":
 var table = document.getElementById("date_user");
@@ -62,42 +64,42 @@ var header = table.createTHead();
 
 for (var i = 0; i < datosUser.length; i++) {
 
-  if(datosUser[i].Nombre_Usuario == option.value)
+  if(datosUser[i].Nombre_Usuario == this.valor)
   {
    var row = header.insertRow(0);
    var cell = row.insertCell(0);
    var action = row.insertCell(1);
+   nombreUsuario=this.valor;
 
-   var celda = row.insertCell(0);
-   var radio = document.createElement("input");
-   radio.type = "radio";
-   //Es para poder seleccionar solo uno de los radio button
-   radio.name="chkbox[]";
-   radio.id=datosUser[i].Nombre_Usuario;
-   radio.setAttribute('onclick','radio(this);');
-   celda.appendChild(radio);
+   action.innerHTML ='<a href="delete_user.html" id="delete" onclick="radio('+nombreUsuario+'); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_user.html" onClick="radio('+datosUser[i].Nombre_Usuario+'); "><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
 
-    action.innerHTML ='<a href="delete_user.html" onClick="USER.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_user.html" onClick="USER.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+   cell.innerHTML = "Nombre Completo=" + datosUser[i].User + "<br> Nombre de Usuario ="  + datosUser[i].Nombre_Usuario +  "<br> Password =" + datosUser[i].Password ;
 
-    cell.innerHTML = "Nombre Completo=" + datosUser[i].User + "<br> Nombre de Usuario ="  + datosUser[i].Nombre_Usuario +  "<br> Password =" + datosUser[i].Password ;
+   $("#delete").click(function(){
 
+    radio(nombreUsuario);
+  });
  }
 };
 
-
 };
 
+
+
 function radio(t) {
+  
+  this.nameUser=t;
+  alert(this.nameUser);
 
- var datosUser = localStorage.getItem("LoginUser");
- datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
- for (var i = 0; i < datosUser.length; ++i) {
+  var datosUser = localStorage.getItem("LoginUser");
+  datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
-   if(t.id==datosUser[i].Nombre_Usuario)
+  for (var i = 0; i < datosUser.length; ++i) {
+
+   if(this.nameUser==datosUser[i].Nombre_Usuario)
    {  
-
-    USER.localStorageTemporal(datosUser[i].User,datosUser[i].Nombre_Usuario , datosUser[i].Password , datosUser[i].Sesion);
+    USER.localStorageTemporal(datosUser[i].User,datosUser[i].Nombre_Usuario);
   }
 }
 

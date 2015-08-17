@@ -21,7 +21,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 					
 					factura[j].invoice=date[i].NumberInvoice;
 					factura[j].Client= document.getElementById('editselectclientinvoice').value;	    
-				
+
 					factura[j].Job_Description=document.getElementById('editjobdescriptioninvoice').value;
 					factura[j].Date=document.getElementById('editdateinvoice').value;
 					factura[j].Amont=document.getElementById('editamontinvoice').value;
@@ -32,8 +32,8 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 		}
 
 	}
-
 	
+
 
 };
 /*Asigna los datos a los input*/
@@ -56,7 +56,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 
 	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
 	for (var i = 0; i < datosClient.length; ++i) {
-		  str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
+		str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
 
 	}
 
@@ -72,7 +72,17 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 		$(".menu_user").hide();
 	}
 })();
-$("#newInvoiceEdit").click(function(){
-	window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/create_invoice.html","_self").value;
+$(document).ready(function(){
+	$(".alert-danger").hide();
+	$("#newInvoiceEdit").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/create_invoice.html","_self").value;
+
+	});
+	$("#editInvoiceYes").click(function(){
+		EDIT_INVOICE.datosEdit();
+	});
+	$("#editInvoiceNo").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/invoice.html","_self").value;
+	});
 
 });
