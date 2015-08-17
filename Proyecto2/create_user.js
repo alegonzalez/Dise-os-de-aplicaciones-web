@@ -108,6 +108,27 @@ var USER = USER ||
 
 
 	},
+	//Valida si ya existe un usuario en el localstorage
+	validarUsuario:function(){
+		
+		var user=new Array();
+		var usuario=$("#nameUser").val();
+		user=localStorage.getItem("LoginUser");
+		user=JSON.parse(localStorage.getItem("LoginUser"));
+		contador=0;
+		for (var i = 0; i < user.length; i++) {
+			if(usuario==user[i].Nombre_Usuario){
+				$(".alert-danger").text("El usuario ingresado ya existe por favor ingrese otro").show();	
+				incorrectNameUser();
+				contador=1;
+				break;
+			}
+		}
+		if(contador!=1){
+			USER.validarCamposUser();
+		}
+
+	},
 	/*Limpia los campos de texto*/
 	cleanInput:function(){
 		$("#name").val("");
@@ -187,8 +208,10 @@ function incorrectRepitPassword(){
 
 /*Carga el documento y adentro va a ver un evento click que va hacer cuando la persona de click al boton de yes*/
 $(document).ready(function(){
+
 	$("#createUserYes").click(function(){
-		USER.validarCamposUser();
+		
+		USER.validarUsuario();
 		
 		
 
@@ -197,6 +220,9 @@ $(document).ready(function(){
 	$("#createUserNo").click(function(){
 
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
+	});
+	$("#nuevoUsuario").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/user_create.html","_self").value;
 	});
 	$(".alert-danger").hide();
 	/*Oculta el mensaje al precionar en un input*/

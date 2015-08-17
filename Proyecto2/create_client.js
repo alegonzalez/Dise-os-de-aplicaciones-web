@@ -119,6 +119,25 @@ var CLIENT = CLIENT ||
 
 		}
 
+	},
+	validarExistenciaCedula:function(){
+		debugger;
+		var cedulaCliente=new Array();
+		var identification=$("#createcedulaclient").val();
+		cedulaCliente=localStorage.getItem("Client");
+		cedulaCliente=JSON.parse(localStorage.getItem("Client"));
+		contador=0;
+		for (var i = 0; i < cedulaCliente.length; i++) {
+			if(identification==cedulaCliente[i].Identification){
+				$(".alert-danger").text("La cedula ingresada ya existe por favor ingrese otra").show();	
+				incorrectIdentification();
+				contador=1;
+				break;
+			}
+		}
+		if(contador!=1){
+			CLIENT.validarCamposNumericos();
+		}
 	}
 };
 /*metodo que contiene el icono de correcto  para agregarlo en el input de Identification*/
@@ -189,9 +208,9 @@ function incorrectPhone(){
 /*document.ready en la cual tiene unos eventos que se van a ejecutar dependiendo su funcion*/
 $(document).ready(function(){
 	
-	$("#createClientYes").click(CLIENT.validarCampos);
+	//$("#createClientYes").click(CLIENT.validarCampos);
 	$("#createClientYes").click(function(){
-		CLIENT.validarCamposNumericos();
+		CLIENT.validarExistenciaCedula();
 		
 		
 	});

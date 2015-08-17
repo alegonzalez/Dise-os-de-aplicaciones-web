@@ -105,7 +105,6 @@ var INVOICE = INVOICE ||
 		
 		var invoice=$("#createselectinvoice").val();
 		
-		
 
 		if(isNaN(invoice)){
 			incorrectNumbreInvoice();
@@ -181,7 +180,7 @@ function incorrectAmount(){
 	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
 	for (var i = 0; i < datosClient.length; ++i) {
 		
-		  str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
+		str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
 
 
 	}
