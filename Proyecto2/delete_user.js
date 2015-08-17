@@ -47,6 +47,9 @@ $( document ).ready(function() {
 
 		DELETE.delete();	
 	});
+	$(".confirmar_no").click(function(){
 
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/user.html","_self").value;
+	});
 });
 
