@@ -8,10 +8,10 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de las facturas*/
 			localStorage.setItem("chambas",JSON.stringify(datechambas));
-			$("#messageConfirmCreateChamba").click(function(){
- alert("lkajdlkñajdlkñas");
-				window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/chamba.html","_self").value;
-			});
+			
+
+				window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
+		
 			
 		};
 	},
@@ -20,6 +20,7 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 	save:function(client,jobDescription,date,note)
 	{
 		this.client=client;
+	
 		this.jobDescription=jobDescription;
 		this.date=date;
 		this.note=note;
@@ -41,7 +42,7 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 		var id=datechambas.length+1;
 		/*Arreglo  de los objetos*/
 		
-		var information = {'Client':client , 'Job_Description': jobDescription, 'Date': date, 'Note':note,'Id':id};
+		var information = {'Client':this.client , 'Job_Description': this.jobDescription, 'Date': this.date, 'Note':this.note,'Id':id};
 
 		/*Se hizo un if por que el arreglo esta null*/
 		
@@ -161,7 +162,7 @@ $(document).ready(function(){
 	});
 	
 	$("#createChambasNo").click(function(){
-		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/chamba.html","_self").value;
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
 	});
 	$("#createjobdescriptionchamba").keyup(function(){
 		$(".alert-danger").hide();	
