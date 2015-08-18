@@ -7,7 +7,7 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 		var date = JSON.parse(localStorage.getItem("Temporal"));
 
 		var factura=localStorage.getItem("Invoice");
-		var factura = JSON.parse(localStorage.getItem("Invoice"));
+		var factura = cliJSON.parse(localStorage.getItem("Invoice"));
 
 
 
