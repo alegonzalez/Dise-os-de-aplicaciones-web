@@ -45,6 +45,7 @@ localStorageTemporal :function(name,user_name)
 var nombreUsuario;
 function obtenerInformacion(option)
 {
+  alert("Etsa dentro el ratilla");
  this.valor=option.value;
  
  
@@ -87,6 +88,8 @@ for (var i = 0; i < datosUser.length; i++) {
 
 
 function radio(t) {
+
+  debugger;
   
   this.nameUser=t;
   alert(this.nameUser);

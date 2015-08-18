@@ -69,13 +69,15 @@ var table = document.getElementById("date_chamba");
 
 // Create an empty <thead> element and add it to the table:
 var header = table.createTHead();
+var cont="N";
 
 
 for (var i = 0; i < datosChamba.length; i++) {
 
   if(datosChamba[i].Client == option.value)
   {
-  
+    cont="E";
+    
 
    var row = header.insertRow(0);
    var cell = row.insertCell(0);
@@ -86,6 +88,12 @@ for (var i = 0; i < datosChamba.length; i++) {
    cell.innerHTML = "Client=" + datosChamba[i].Client + "<br> Job Description ="  + datosChamba[i].Job_Description +  "<br> Date =" + datosChamba[i].Date +  "<br> Note =" + datosChamba[i].Note ;
 
  }
+}
+
+if(cont=="N")
+{
+
+$("#mensajeChamba").text("The client don't have Chambas").show();
 }
 
 
@@ -112,9 +120,11 @@ function radio(t) {
 
 (function() {
 
+
  var mq = window.matchMedia( "(max-width:320px)" ); 
 
  if (mq.matches) {
+
 //Oculta la tabla de la pantalla grande
 var table = document.getElementById('table_chamba'); 
   // suponiendo que la tabla contiene ID='t1' 
@@ -173,12 +183,16 @@ datalist.innerHTML =option;
      var date = row.insertCell(2);
      var note=row.insertCell(3);
      var action = row.insertCell(4);
+     
      for (var x = 0; x <dateClient.length; x++) {
+
        if(dateClient[x].Identification==datoChamba[i].Client){
 
         client.innerHTML=dateClient[x].Firts_name;
       }
+
     }
+
     job_Description.innerHTML =datoChamba[i].Job_Description;
     date.innerHTML =datoChamba[i].Date;
     note.innerHTML=datoChamba[i].Note;
@@ -197,5 +211,13 @@ datalist.innerHTML =option;
   }
 }
 
+
 })();
+
+$(document).ready(function(){
+  $("#mensajeChamba").hide();
+  $("#listChamba").click(function(){
+$("#mensajeChamba").hide();
+  });
+});
 

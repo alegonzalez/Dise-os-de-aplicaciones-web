@@ -26,13 +26,13 @@ var EDIT_INVOICE=EDIT_INVOICE||{
 					factura[j].Date=document.getElementById('editdateinvoice').value;
 					factura[j].Amont=document.getElementById('editamontinvoice').value;
 					localStorage.setItem("Invoice",JSON.stringify(factura));
-					window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html","_self").value;
+					$('.modal').attr('id','VentanaEditInvoice');
 				}
 			}
 		}
 
 	}
-	
+
 
 
 };
@@ -82,6 +82,9 @@ $(document).ready(function(){
 		EDIT_INVOICE.datosEdit();
 	});
 	$("#editInvoiceNo").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/invoice.html","_self").value;
+	});
+	$("#editInvoiceMessage").click(function(){
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/invoice.html","_self").value;
 	});
 

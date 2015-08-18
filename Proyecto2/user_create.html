@@ -79,13 +79,36 @@
 					<input type="password" class="form-control" id="rPass" placeholder="Repit password">
 				</section>
 			</section>
-			<input type="button" class="confirmar_yes btn btn-primary" id="createUserYes" value="Yes">
+			
+			<a href="#VentanaCreateUser" class="confirmar_yes btn btn-primary "  data-toggle="modal" >Yes</a>
+
 			<input type="button" class="confirmar_no btn btn-danger" id="createUserNo" value="No">
 			
 		</form>
 		
 	</section>
+	<section class="modal fade" id="VentanaCreateUser">
+		<section class="modal-dialog">
+			<section class="modal-content">
+				<section class="modal-header">
 
+
+					<h3 class="modal-title">Create</h3>
+				</section>
+				<section class="modal-body">
+					<p>User create was successful</p>
+				</section>
+				<section class="modal-footer">
+					
+					<input class="btn btn-primary" id="createUserYes" value="Accept">
+					
+
+				</section>
+
+			</section>
+		</section>
+
+	</section>
 
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

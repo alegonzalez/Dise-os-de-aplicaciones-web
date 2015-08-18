@@ -73,13 +73,32 @@
 				<input type="tel" class="form-control" id="editphoneclient">
 			</section>
 
-			<input class="confirmar_yes btn btn-primary" id="edit_clientYes" value="Yes">
+			<a href="#VentanaEditClient" class="confirmar_yes btn btn-primary "  data-toggle="modal">Yes</a>
+			
 			<input class="confirmar_no btn btn-danger" value="No" id="edit_clientNo">
 
 		</form>
 
 	</section>
+	<section class="modal fade" id="VentanaEditClient">
+		<section class="modal-dialog">
+			<section class="modal-content">
+				<section class="modal-header">
+					<h3 class="modal-title">Edit</h3>
+				</section>
+				<section class="modal-body">
+					<p>Client edit was successful</p>
+				</section>
+				<section class="modal-footer">
 
+					<input class="btn btn-primary" id="edit_clientYes" value="Accept">
+
+				</section>
+
+			</section>
+		</section>
+
+	</section>
 
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

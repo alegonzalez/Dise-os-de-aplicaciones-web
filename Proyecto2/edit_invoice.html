@@ -79,13 +79,36 @@
 				<input type="number" class="form-control" id="editamontinvoice" placeholder="Enter Amount">
 			</section>
 
-			<input class="confirmar_yes btn btn-primary"value="Yes" id="editInvoiceYes" type="button">
 			
 			
-				<input class="confirmar_no btn btn-danger" value="No" type="button">
+			
+			<a href="#VentanaEditInvoice" class="confirmar_yes btn btn-primary "  data-toggle="modal" id="editInvoiceYes">Yes</a>
+
+			<input class="confirmar_no btn btn-danger" value="No" type="button">
 			
 			
 		</form>
+
+	</section>
+	<section class="modal fade">
+		<section class="modal-dialog">
+			<section class="modal-content">
+				<section class="modal-header">
+
+
+					<h3 class="modal-title">Edit</h3>
+				</section>
+				<section class="modal-body">
+					<p>Invoice edit was successful</p>
+				</section>
+				<section class="modal-footer">
+
+					<input class="btn btn-primary" id="editInvoiceMessage" value="Accept">
+
+				</section>
+
+			</section>
+		</section>
 
 	</section>
 

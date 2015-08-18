@@ -18,12 +18,8 @@ var EDIT_USER=EDIT_USER||{
 				{
 
 					user[j].User=document.getElementById('edit_user_nameFull').value;
-					
-					
-
-					
 					localStorage.setItem("LoginUser",JSON.stringify(user));
-					window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
+					
 				}
 			}
 		}
@@ -44,6 +40,9 @@ var EDIT_USER=EDIT_USER||{
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html","_self").value;
 
 	});
+	$("#edituserYesMessage").click(function(){
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/user.html","_self").value;		
+	})
 	document.getElementById('edit_user_nameFull').value=date[0].Name;
 	document.getElementById('edit_userName').value=date[0].UserName;
 

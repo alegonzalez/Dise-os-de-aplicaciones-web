@@ -22,8 +22,7 @@ var EDIT_CLIENT=EDIT_CLIENT||{
 					clients[j].Last_name=document.getElementById('editlastnameclient').value;
 
 					clients[j].Phone=document.getElementById('editphoneclient').value;
-					localStorage.setItem("Client",JSON.stringify(clients));
-					window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
+					localStorage.setItem("Client",JSON.stringify(clients));	
 				}
 			}
 		}
@@ -45,6 +44,7 @@ var EDIT_CLIENT=EDIT_CLIENT||{
 		EDIT_CLIENT.datosEdit();
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
 	});
+	
 	$("#edit_clientNo").click(function(){
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
 	});
@@ -55,4 +55,9 @@ var EDIT_CLIENT=EDIT_CLIENT||{
 	{
 		$(".menu_user").hide();
 	}
+
 })();
+
+
+
+

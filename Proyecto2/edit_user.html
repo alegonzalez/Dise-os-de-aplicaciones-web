@@ -61,13 +61,35 @@
 				<label for="edit_userName">Nombre de usuario</label>
 				<input type="text" class="form-control" id="edit_userName" placeholder="Password" readonly>
 
-				<input class="confirmar_yes btn btn-primary" value="Yes" onClick="" id="edituserYes">
 				
-				<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/user.html">
+				<a href="#VentanaEditUser" datos-target = "#myModal" class="confirmar_yes btn btn-primary "id="edituserYes"  data-toggle="modal"  >Yes</a>
+				
+				
 					<input class="confirmar_no btn btn-danger" value="No" id="edituserNo">
-				</a>
+				
 				
 			</form>
+
+		</section>
+		<section class="modal fade" id="VentanaEditUser">
+			<section class="modal-dialog">
+				<section class="modal-content">
+					<section class="modal-header">
+
+
+						<h3 class="modal-title">Edit</h3>
+					</section>
+					<section class="modal-body">
+						<p>User edit was successful</p>
+					</section>
+					<section class="modal-footer">
+
+						<input class="btn btn-primary" type="button" id="edituserYesMessage" value="Accept">
+
+					</section>
+
+				</section>
+			</section>
 
 		</section>
 
