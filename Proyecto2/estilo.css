@@ -11,7 +11,9 @@ body{
 h1{
 	text-align: center;
 	color: black;
-	font-family: monospace;
+	font-family: "Edwardian Script ITC";
+	font-size: 550%;
+	font-style: oblique;
 }
 
 .messageDelete
@@ -20,20 +22,7 @@ h1{
 }
 
 
-.login{
 
-	border: ridge;
-	
-	height: 387px;
-	border-radius: 12px 12px 9px 13px;
-	background: #909090;
-	border-width: 5px;
-	font-family: monospace;
-	
-	margin-left: 37%;
-	margin-top: 30px;
-	
-}
 
 #ingresar{
 	margin: 3%;
@@ -42,37 +31,37 @@ h1{
 	font-family: monospace;
 }
 .form-control{
-	width: 100%;
+	width: 59%;
 	margin-bottom: -5px;
+	margin-left: 41%;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	
+	border-color: #00CED1;
 }
 .form-horizontal .form-group{
 	margin-left: 5%!important;
 	margin-right: 5%!important;
 }
 .col-xs-3 {
-	width: 100%;
+	width: 74%;
 }
 #iconopass,#iconotexto{
-	margin-left: 5%!important;
+	margin-left: 47%!important;
 }
 .date{
-	margin-left: 5%;
+	margin-left: 47%;
+	font-family: "Curlz MT";
+	font-size: 175%;
+}
+.message{
+	margin-left: 55%;
 }
 
 
-.encabezado_login{
-	text-align: center;
-	background: #505050 ;
-	
-	border-radius: 8px 8px 8px 8px;*/
-	width: 100%;
-	padding: 2%;
-	font-family: monospace;
-}
-.alert-danger{
-	width: 50%;
-	margin-left: 25%;
-	font-size: 150%;
+.alert-danger {
+	width: 47%;
+	margin-left: 29%;
+	font-size: 136%;
 }
 #name,#nameUser,#pass,#rPass{
 	width: 101%;
@@ -220,7 +209,9 @@ h1{
 		margin-left: 5%;
 		display:inline;
 		font-family: monospace;
-		margin-left: 35%;
+		margin-left: 38%;
+		width: 28%;
+		-webkit-border-radius: 25px 25px 25px 25px;
 	}
 	#message_createClient{
 		margin-top: -7%;
@@ -454,7 +445,7 @@ ul li {
 	#listChamba{
 		position: relative;
 		left: 18%;
-	    bottom: 68px;
+		bottom: 68px;
 
 	}
 	#mostrarDatos
