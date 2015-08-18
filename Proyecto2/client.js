@@ -53,7 +53,7 @@ function obtenerInformacion(option)
 {
 
   this.valor=option.value;
-debugger;
+
   var datosClient = localStorage.getItem("Client");
   datosClient = JSON.parse(localStorage.getItem("Client"));
 
