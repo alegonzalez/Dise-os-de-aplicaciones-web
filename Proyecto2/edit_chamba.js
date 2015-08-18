@@ -116,7 +116,7 @@ if(adm[0].Sesion!=1)
 })();
 
 
-
+//Eventos de botones
 
 $("#newChambasEdit").click(function(){
 	window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/create_chambas.html","_self").value;

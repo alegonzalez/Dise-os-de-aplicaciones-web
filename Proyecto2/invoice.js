@@ -1,6 +1,6 @@
 
 var INVOICE=INVOICE||{
-
+//Captura los datos del row  al dar click en un action
  capturarPosicion: function () {
 
   var table = document.getElementById("table_invoice");
@@ -30,7 +30,7 @@ var INVOICE=INVOICE||{
 
 
 },
-
+//Guarda los datos de la tabla en temporal
 localStorageTemporal :function(invoice,client,job_Description,date,amount)
 {
   var datosTemporales=new Array();
@@ -54,7 +54,7 @@ localStorageTemporal :function(invoice,client,job_Description,date,amount)
 
 
 
-
+//Obtiene la informacion en resolucion de 320px de la tabla
 function obtenerInformacion(option)
 {
 
@@ -99,6 +99,7 @@ $("#mensajeInvoice").text("The client don't have Invoice").show();
 
 
 };
+//Guarda los datosde la resolucion de 320px
 
 function radio(t) {
  var datosInvoice = localStorage.getItem("Invoice");
@@ -115,7 +116,7 @@ function radio(t) {
 };
 
 
-
+//Es la que carga los datos de la tabla tanto para 320px como para las demas resoluciones
 (function() {
 
  

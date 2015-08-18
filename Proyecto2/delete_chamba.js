@@ -1,6 +1,7 @@
 
 var DELETE = DELETE ||
 {
+	//Elimina la chamba
 	delete:function()
 	{
 
@@ -46,7 +47,7 @@ var DELETE = DELETE ||
 
 	},
 };
-
+//obtiene el nombre para mostrarlo en el mensaje
 $( document ).ready(function() {
 
 	$(".confirmar_yes").click(function(){

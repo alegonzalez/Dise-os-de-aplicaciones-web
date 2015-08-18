@@ -1,5 +1,5 @@
 var CLIENT=CLIENT||{
-
+//Captura los datos del row  al dar click en un action
  capturarPosicion: function () {
 
   var table = document.getElementById("table_client");
@@ -27,7 +27,7 @@ var CLIENT=CLIENT||{
 
 
 },
-
+//Guarda los datos de la tabla en temporal
 localStorageTemporal :function(id,firts_name,last_Name,phone)
 {
 
@@ -48,7 +48,7 @@ localStorageTemporal :function(id,firts_name,last_Name,phone)
 
 
 };
-
+//Obtiene la informacion en resolucion de 320px de la tabla
 function obtenerInformacion(option)
 {
 
@@ -94,7 +94,7 @@ if(cont=="N")
 
 
 };
-
+//Guarda los datosde la resolucion de 320px
 function radio(t) {
 
  var datosClient = localStorage.getItem("Client");
@@ -111,7 +111,7 @@ function radio(t) {
 
 };
 
-
+//Es la que carga los datos de la tabla tanto para 320px como para las demas resoluciones
 (function() {
 
  var mq = window.matchMedia( "(max-width:320px)" ); 

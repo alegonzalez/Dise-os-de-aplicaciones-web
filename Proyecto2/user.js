@@ -1,5 +1,5 @@
 var USER=USER||{
-
+//Captura los datos del row  al dar click en un action
  capturarPosicion: function () {
 
   var table = document.getElementById("table_user");
@@ -23,7 +23,7 @@ var USER=USER||{
 
 
 },
-
+//Guarda los datos de la tabla en temporal
 localStorageTemporal :function(name,user_name)
 {
   var datosTemporales=new Array();
@@ -43,6 +43,7 @@ localStorageTemporal :function(name,user_name)
 };
 
 var nombreUsuario;
+//Obtiene la informacion en resolucion de 320px de la tabla
 function obtenerInformacion(option)
 {
   alert("Etsa dentro el ratilla");
@@ -86,13 +87,13 @@ for (var i = 0; i < datosUser.length; i++) {
 };
 
 
-
+//Guarda los datosde la resolucion de 320px
 function radio(t) {
 
-  debugger;
+ 
   
   this.nameUser=t;
-  alert(this.nameUser);
+ 
 
 
   var datosUser = localStorage.getItem("LoginUser");
@@ -108,7 +109,7 @@ function radio(t) {
 
 };
 
-
+//Es la que carga los datos de la tabla tanto para 320px como para las demas resoluciones
 
 (function() {
 

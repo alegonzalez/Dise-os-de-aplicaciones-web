@@ -1,5 +1,5 @@
 var MENU=MENU||{
-	
+	//cierra session si es el administrador o un user
 	cerrarSesion:function() {
 		log=localStorage.getItem("LoginUser");
 		log = JSON.parse(localStorage.getItem("LoginUser"));

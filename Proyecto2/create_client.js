@@ -123,6 +123,7 @@ var CLIENT = CLIENT ||
 		
 
 	},
+	//Valida que la cedula no exista
 	validarExistenciaCedula:function(){
 		
 		var cedulaCliente=new Array();

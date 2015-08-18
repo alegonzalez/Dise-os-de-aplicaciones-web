@@ -1,6 +1,6 @@
 var DELETE = DELETE ||
 {
-
+//Elimina el datos seleccionado por la persona
 	delete:function()
 	{
 
@@ -33,7 +33,7 @@ $( document ).ready(function() {
 	
 });
 
-
+//obtiene el nombre para mostrarlo en el mensaje
 (function()
 {
 	datosTemporales=localStorage.getItem("Temporal");
