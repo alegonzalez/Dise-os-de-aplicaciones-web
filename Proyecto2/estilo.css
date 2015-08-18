@@ -153,7 +153,9 @@ h1{
 		margin-bottom: 1%;
 		display:inline;
 		font-family: monospace;
-		margin-left: 35%;
+		margin-left: 38%;
+		width: 28%;
+		-webkit-border-radius: 25px 25px 25px 25px;
 	}
 	.alert-danger{
 		width: 62%;
