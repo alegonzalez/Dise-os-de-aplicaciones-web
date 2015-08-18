@@ -118,7 +118,7 @@ function radio(t) {
 
 (function() {
 
-  alert("rme");
+ 
 
  var mq = window.matchMedia( "(max-width:320px)" ); 
 
