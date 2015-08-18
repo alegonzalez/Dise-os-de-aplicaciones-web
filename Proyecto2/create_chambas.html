@@ -55,7 +55,7 @@
 		
 	</h3>
 	
-		<button class="new_user btn btn-primary btn-md" id="newChamba">New Chamba</button>
+	<button class="new_user btn btn-primary btn-md" id="newChamba">New Chamba</button>
 	
 	
 	<section class="container">
@@ -88,16 +88,41 @@
 				</section>
 			</section>
 			
-			<input class="confirmar_yes btn btn-primary" id="createChambasYes" value="Yes" type="button">
+			
+
+			<a href="#VentanaCreateChamba"class="confirmar_yes btn btn-primary" id="createChamba" data-toggle="modal" datos-target = "#myModal">Yes</a>
 
 			
 			<input class="confirmar_no btn btn-danger" id="createChambasNo" value="No" type="button">
+
+
 
 
 		</form>
 
 	</section>
 
+	<section class="modal fade" >
+		<section class="modal-dialog">
+			<section class="modal-content">
+				<section class="modal-header">
+
+
+					<h3 class="modal-title">Create</h3>
+				</section>
+				<section class="modal-body">
+					<p>Chamba create was successful</p>
+				</section>
+				<section class="modal-footer">
+
+					<input class="btn btn-primary" id="createChambaYes" value="Accept" type="button">
+
+				</section>
+
+			</section>
+		</section>
+
+	</section>
 
 
 

@@ -8,7 +8,8 @@ var INVOICE = INVOICE ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de las facturas*/
 			localStorage.setItem("Invoice", JSON.stringify(datoInvoice));
-			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html","_self").value;
+
+			$('.modal').attr('id','VentanaCreateChamba');
 		};
 	},
 	/*Save es el boton de yes donde guarda la factura*/
@@ -112,120 +113,148 @@ var INVOICE = INVOICE ||
 		}else{
 			INVOICE.validarCamposVacios(invoice);
 		}
+	},
+	validarInvoice:function(){
+		var invoice=new Array();
+		var numberInvoice=$("#createselectinvoice").val();
+		invoice=localStorage.getItem("Invoice");
+		invoice=JSON.parse(localStorage.getItem("Invoice"));
+		var pasada=0;
+		for (var i = 0; i < invoice.length; i++) {
+			if(invoice[i].invoice==numberInvoice){
+				$(".alert-danger").text("El numero de invoice ya existe por favor ingrese otro numero").show();
+				pasada=1;
+			}
+		}
+		if(pasada==0){
+
+			INVOICE.validarCamposNumericos();
+		}
+
+}
+	};
+	/*metodo que contiene el icono de correcto  para agregarlo en el input de Identification*/
+	function correctNumberInvoice(){
+
+		$("#iconoNumeroFactura").remove();
+		$("#createselectinvoice").parent().parent().attr("class","form-group has-success has-feedback");
+		$("#createselectinvoice").parent().append("<span id='iconoNumeroFactura' class='glyphicon glyphicon-ok form-control-feedback'></span>");   
+
 	}
+	/*metodo que contiene el icono de incorrecto  para agregarlo en el input de Identification*/
+	function incorrectNumbreInvoice(){
 
-};
-/*metodo que contiene el icono de correcto  para agregarlo en el input de Identification*/
-function correctNumberInvoice(){
-
-	$("#iconoNumeroFactura").remove();
-	$("#createselectinvoice").parent().parent().attr("class","form-group has-success has-feedback");
-	$("#createselectinvoice").parent().append("<span id='iconoNumeroFactura' class='glyphicon glyphicon-ok form-control-feedback'></span>");   
-
-}
-/*metodo que contiene el icono de incorrecto  para agregarlo en el input de Identification*/
-function incorrectNumbreInvoice(){
-
-	$("#iconoNumeroFactura").remove();
-	$("#createselectinvoice").parent().parent().attr("class","form-group has-error has-feedback");
-	$("#createselectinvoice").parent().append("<span id='iconoNumeroFactura' class='glyphicon glyphicon-remove form-control-feedback'></span>");
-
-}
-
-/*metodo que contiene el icono de correcto  para agregarlo en el input de Firs name*/
-
-function correctJobDescription(){
-
-	$("#iconoDescripcionTrabajo").remove();
-	$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group has-success has-feedback");
-	$("#createjobdescriptioninvoice").parent().append("<span id='iconoDescripcionTrabajo' class='glyphicon glyphicon-ok form-control-feedback'></span>");
-
-
-}
-/*metodo que contiene el icono de incorrecto  para agregarlo en el input de First name*/
-function incorrectJobDescription(){
-	$("#iconoDescripcionTrabajo").remove();
-	$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group has-error has-feedback");
-	$("#createjobdescriptioninvoice").parent().append("<span id='iconoDescripcionTrabajo' class='glyphicon glyphicon-remove form-control-feedback'></span>");
-
-}
-
-
-/*metodo que contiene el icono de correcto  para agregarlo en el input de Firs name*/
-
-function correctAmount(){
-
-	$("#iconoSaldo").remove();
-	$("#createamontinvoice").parent().parent().attr("class","form-group has-success has-feedback");
-	$("#createamontinvoice").parent().append("<span id='iconoSaldo' class='glyphicon glyphicon-ok form-control-feedback'></span>");
-
-
-}
-/*metodo que contiene el icono de incorrecto  para agregarlo en el input de First name*/
-function incorrectAmount(){
-	$("#iconoSaldo").remove();
-	$("#createamontinvoice").parent().parent().attr("class","form-group has-error has-feedback");
-	$("#createamontinvoice").parent().append("<span id='iconoSaldo' class='glyphicon glyphicon-remove form-control-feedback'></span>");
-
-}
-/*Trae los nombres de los clientes*/
-(function(){
-
-	var str = ''; 
-
-	var datosClient = localStorage.getItem("Client");
-
-	datosClient = JSON.parse(localStorage.getItem("Client"));
-
-	/*For acomula en el str las identificaciones de cada cliente para el datalist*/
-	for (var i = 0; i < datosClient.length; ++i) {
-		
-		str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
-
+		$("#iconoNumeroFactura").remove();
+		$("#createselectinvoice").parent().parent().attr("class","form-group has-error has-feedback");
+		$("#createselectinvoice").parent().append("<span id='iconoNumeroFactura' class='glyphicon glyphicon-remove form-control-feedback'></span>");
 
 	}
 
-	/*Guarda en my_list una lista*/
-	var my_list = document.getElementById("listaCliente");
-	/*se muestra en el datalist*/
-	my_list.innerHTML = str;
+	/*metodo que contiene el icono de correcto  para agregarlo en el input de Firs name*/
 
-})();
-$(document).ready(function(){
-	$("#createInvoiceNo").click(function(){
-		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html","_self").value;
-	});
-	$(".alert-danger").hide();
+	function correctJobDescription(){
 
-	$("#createInvoiceYes").click(function(){
-		
-		INVOICE.validarCamposNumericos();
+		$("#iconoDescripcionTrabajo").remove();
+		$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group has-success has-feedback");
+		$("#createjobdescriptioninvoice").parent().append("<span id='iconoDescripcionTrabajo' class='glyphicon glyphicon-ok form-control-feedback'></span>");
 
-	});
-	$("#createselectinvoice").keyup(function(){
-		$(".alert-danger").hide();	
-		$("#createselectinvoice").parent().parent().attr("class","form-group");
-		$("#iconoNumeroFactura").hide();
 
-	});
-	$("#createjobdescriptioninvoice").keyup(function(){
-		$(".alert-danger").hide();	
-		$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group");
-		$("#iconoDescripcionTrabajo").hide();
-
-	});
-
-	$("#createamontinvoice").keyup(function(){
-		$(".alert-danger").hide();	
-		$("#createamontinvoice").parent().parent().attr("class","form-group");
-		$("#iconoSaldo").hide();
-
-	});
-	/*Oculta la opcion de user si no es el administrador*/
-	adm=localStorage.getItem("Login");
-	adm = JSON.parse(localStorage.getItem("Login"));
-	if(adm[0].Sesion!=1)
-	{
-		$(".menu_user").hide();
 	}
-});
+	/*metodo que contiene el icono de incorrecto  para agregarlo en el input de First name*/
+	function incorrectJobDescription(){
+		$("#iconoDescripcionTrabajo").remove();
+		$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group has-error has-feedback");
+		$("#createjobdescriptioninvoice").parent().append("<span id='iconoDescripcionTrabajo' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+	}
+
+
+	/*metodo que contiene el icono de correcto  para agregarlo en el input de Firs name*/
+
+	function correctAmount(){
+
+		$("#iconoSaldo").remove();
+		$("#createamontinvoice").parent().parent().attr("class","form-group has-success has-feedback");
+		$("#createamontinvoice").parent().append("<span id='iconoSaldo' class='glyphicon glyphicon-ok form-control-feedback'></span>");
+
+
+	}
+	/*metodo que contiene el icono de incorrecto  para agregarlo en el input de First name*/
+	function incorrectAmount(){
+		$("#iconoSaldo").remove();
+		$("#createamontinvoice").parent().parent().attr("class","form-group has-error has-feedback");
+		$("#createamontinvoice").parent().append("<span id='iconoSaldo' class='glyphicon glyphicon-remove form-control-feedback'></span>");
+
+	}
+	/*Trae los nombres de los clientes*/
+	(function(){
+
+		var str = ''; 
+
+		var datosClient = localStorage.getItem("Client");
+
+		datosClient = JSON.parse(localStorage.getItem("Client"));
+
+		/*For acomula en el str las identificaciones de cada cliente para el datalist*/
+		for (var i = 0; i < datosClient.length; ++i) {
+
+			str += "<option  label= '" + datosClient[i].Firts_name + "' value= '" + datosClient[i].Identification + "'>";
+
+
+		}
+
+		/*Guarda en my_list una lista*/
+		var my_list = document.getElementById("listaCliente");
+		/*se muestra en el datalist*/
+		my_list.innerHTML = str;
+
+	})();
+	$(document).ready(function(){
+
+		$("#createInvoice").click(function(){
+			$('#myModal').modal('hide');
+			INVOICE.validarInvoice();
+		});
+
+
+		$("#createInvoiceYes").click(function(){
+
+			$('#myModal').modal('show');
+
+			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html","_self").value;	
+
+		});
+
+		$("#createInvoiceNo").click(function(){
+			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/invoice.html","_self").value;
+		});
+
+		$(".alert-danger").hide();
+
+		$("#createselectinvoice").keyup(function(){
+			$(".alert-danger").hide();	
+			$("#createselectinvoice").parent().parent().attr("class","form-group");
+			$("#iconoNumeroFactura").hide();
+
+		});
+		$("#createjobdescriptioninvoice").keyup(function(){
+			$(".alert-danger").hide();	
+			$("#createjobdescriptioninvoice").parent().parent().attr("class","form-group");
+			$("#iconoDescripcionTrabajo").hide();
+
+		});
+
+		$("#createamontinvoice").keyup(function(){
+			$(".alert-danger").hide();	
+			$("#createamontinvoice").parent().parent().attr("class","form-group");
+			$("#iconoSaldo").hide();
+
+		});
+		/*Oculta la opcion de user si no es el administrador*/
+		adm=localStorage.getItem("Login");
+		adm = JSON.parse(localStorage.getItem("Login"));
+		if(adm[0].Sesion!=1)
+		{
+			$(".menu_user").hide();
+		}
+	});

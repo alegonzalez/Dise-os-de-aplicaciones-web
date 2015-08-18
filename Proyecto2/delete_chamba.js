@@ -3,7 +3,7 @@ var DELETE = DELETE ||
 {
 	delete:function()
 	{
-		debugger;
+
 		datosTemporales=localStorage.getItem("Temporal");
 		datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
 
@@ -36,8 +36,8 @@ var DELETE = DELETE ||
 			}else if(dateClient[j].Identification==datosTemporales[0].client)
 			{
 				chamba.splice(i,1);
-						localStorage.setItem("chambas",JSON.stringify(chamba));
-						window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
+				localStorage.setItem("chambas",JSON.stringify(chamba));
+				window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
 
 
 			}
@@ -50,12 +50,12 @@ var DELETE = DELETE ||
 $( document ).ready(function() {
 
 	$(".confirmar_yes").click(function(){
-	
+
 		DELETE.delete();
 	});
 
 
-$(".confirmar_no").click(function(){
+	$(".confirmar_no").click(function(){
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;		
 	});
 
@@ -66,19 +66,25 @@ $(".confirmar_no").click(function(){
 	
 });
 
-(function()
-{
+$(document).ready(function(){
 	datosTemporales=localStorage.getItem("Temporal");
 	datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
 
 	var dateClient=localStorage.getItem("Client");
-		dateClient=JSON.parse(localStorage.getItem("Client"));
-		for (var i = 0; i < dateClient.length; i++) {
-			if(dateClient[i].Identification==datosTemporales[0].client)
-			{
-			document.getElementById('name').innerHTML = dateClient[i].Firts_name;
+	dateClient=JSON.parse(localStorage.getItem("Client"));
+
+
+	for (var i = 0; i < dateClient.length; i++) {
+		
+		if(dateClient[i].Identification==datosTemporales[0].client)
+		{
+
+			document.getElementById('name').innerHTML = dateClient[0].Firts_name;
+
 		}
-		};
+	};
+
+	
 	
 	/*Oculta la opcion de user si no es el administrador*/
 	adm=localStorage.getItem("Login");
@@ -87,7 +93,7 @@ $(".confirmar_no").click(function(){
 	{
 		$(".menu_user").hide();
 	}
+});
 
-})();
 
 

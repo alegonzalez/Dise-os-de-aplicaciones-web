@@ -212,9 +212,6 @@ $(document).ready(function(){
 	$("#createUserYes").click(function(){
 		
 		USER.validarUsuario();
-		
-		
-
 	});
 
 	$("#createUserNo").click(function(){

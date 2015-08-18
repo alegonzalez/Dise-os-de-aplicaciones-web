@@ -8,13 +8,16 @@ var CLIENT = CLIENT ||
 		this.saveDate = function () {
 			/*Como se va a llamar el key de los clientes*/
 			localStorage.setItem("Client",JSON.stringify(datoClient));
-			window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/client.html","_self").value;
+
+			$('.modal').attr('id','VentanaCreateClient');
+
 		};
 	},
 
 	/*Save es el boton de yes donde guarda el cliente*/
 	save:function(identification,firstName,lastName,phone)
 	{
+		
 		this.identification=identification;
 		this.firstName=firstName;
 		this.lastName=lastName;
@@ -50,7 +53,7 @@ var CLIENT = CLIENT ||
 	/*Valida los campos de texto*/
 	validarCampos:function(){
 		/*Obtiene la informacion de los input*/
-		
+		debugger;
 		
 		var firstName=$("#createfistnameclient").val();
 		var lastName=$("#createlastnameclient").val();
@@ -96,6 +99,8 @@ var CLIENT = CLIENT ||
 	/*Valida que los campos numericos*/
 	validarCamposNumericos:function()
 	{
+		
+		var pasada=0;
 		var phone=$("#createphoneclient").val();
 		var identification=$("#createcedulaclient").val();
 		if(isNaN(identification)||isNaN(phone)){
@@ -103,25 +108,23 @@ var CLIENT = CLIENT ||
 			if(isNaN(identification)){
 				incorrectIdentification();
 				$(".alert-danger").text("El campo Identification solo adminite numero").show();
+				pasada=1;
 			}
 			
 			else if(isNaN(phone)){
 				incorrectPhone();
 				$(".alert-danger").text("El campo phone solo adminite numero").show();	
-			}else{
-				CLIENT.validarCampos();
+				pasada=1;
 			}
-
-
-
-
-
-
+		}else if(pasada==0){
+			CLIENT.validarCampos();
 		}
+
+		
 
 	},
 	validarExistenciaCedula:function(){
-		debugger;
+		
 		var cedulaCliente=new Array();
 		var identification=$("#createcedulaclient").val();
 		cedulaCliente=localStorage.getItem("Client");
@@ -209,8 +212,16 @@ function incorrectPhone(){
 $(document).ready(function(){
 	
 	//$("#createClientYes").click(CLIENT.validarCampos);
-	$("#createClientYes").click(function(){
+	$("#createClient").click(function(){
+		$('#myModal').modal('hide');
 		CLIENT.validarExistenciaCedula();
+	});
+	$("#createClientYes").click(function(){
+
+		$('#myModal').modal('show');
+
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/client.html","_self").value;
+
 		
 		
 	});
@@ -240,8 +251,11 @@ $(document).ready(function(){
 		$("#createphoneclient").parent().parent().attr("class","form-group");
 
 	});
-	$("#createphoneclient").keyup(CLIENT.validarCamposNumericos);
+	/*
+$("#createphoneclient").keyup(CLIENT.validarCamposNumericos);
 	$("#createcedulaclient").keyup(CLIENT.validarCamposNumericos);
+	*/
+	
 	/*Oculta la opcion de user si no es el administrador*/
 	adm=localStorage.getItem("Login");
 	adm = JSON.parse(localStorage.getItem("Login"));

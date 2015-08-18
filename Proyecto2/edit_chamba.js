@@ -15,7 +15,7 @@ var EDIT_CHAMBA=EDIT_CHAMBA||{
 			for (var j = 0; j <=chamba.length; j++) {
 				/*El if sirve para ver si la cedula coinciden*/
 				
-
+				debugger;
 				if(date[i].id==chamba[j].Id)
 				{
 					
@@ -37,7 +37,7 @@ var EDIT_CHAMBA=EDIT_CHAMBA||{
 /*Asigna los datos a los input*/
 (function(){
 
-	debugger;
+
 	var date = localStorage.getItem("Temporal");
 	var date = JSON.parse(localStorage.getItem("Temporal"));
 	var dateChamba = localStorage.getItem("chambas");
@@ -122,10 +122,12 @@ $("#newChambasEdit").click(function(){
 	window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/create_chambas.html","_self").value;
 });
 $(document).ready(function(){
+
 	$("#editChambaYes").click(function(){
-		
 		EDIT_CHAMBA.datosEdit();
+		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
 	});
+
 	$("#editChambaNo").click(function(){
 		window.open("http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/Proyecto2/chamba.html","_self").value;
 	});

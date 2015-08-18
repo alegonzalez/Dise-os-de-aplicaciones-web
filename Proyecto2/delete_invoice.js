@@ -43,18 +43,11 @@ $( document ).ready(function() {
 
 (function()
 {
-	datosClient=localStorage.getItem("Client");
-	datosClient=JSON.parse(localStorage.getItem("Client"));
 
 	datosTemporales=localStorage.getItem("Temporal");
 	datosTemporales=JSON.parse(localStorage.getItem("Temporal"));
-	for (var i = 0; i < datosClient.length; i++) {
-		
-		if(datosClient[i].Identification==datosTemporales[0].Client)
-		{
-			document.getElementById('name').innerHTML = datosClient[i].Firts_name;
-		}
-	};
+
+	document.getElementById('name').innerHTML = datosTemporales[0].Client;
 	
 	/*Oculta la opcion de user si no es el administrador*/
 	adm=localStorage.getItem("Login");
