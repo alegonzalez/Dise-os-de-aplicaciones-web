@@ -42,67 +42,73 @@ localStorageTemporal :function(name,user_name)
 
 };
 
-var nombreUsuario;
 //Obtiene la informacion en resolucion de 320px de la tabla
 function obtenerInformacion(option)
 {
-  alert("Etsa dentro el ratilla");
- this.valor=option.value;
- 
- 
- var datosUser = localStorage.getItem("LoginUser");
- datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
- var id=document.getElementById('userList').value;
+  this.valor=option.value;
 
- $("#date_user").html("");
+  var datosUser = localStorage.getItem("LoginUser");
+  datosUser = JSON.parse(localStorage.getItem("LoginUser"));
+
+  var id=document.getElementById('userList').value;
+
+  $("#date_user").html("");
 
 // Find a <table> element with id="myTable":
 var table = document.getElementById("date_user");
 
 // Create an empty <thead> element and add it to the table:
 var header = table.createTHead();
+var cont="N";
 
+for (var i = 0; i < datosUser.length; ++i) {
 
-for (var i = 0; i < datosUser.length; i++) {
-
-  if(datosUser[i].Nombre_Usuario == this.valor)
+  if(this.valor==datosUser[i].Nombre_Usuario)
   {
+   cont="E";
    var row = header.insertRow(0);
    var cell = row.insertCell(0);
    var action = row.insertCell(1);
-   nombreUsuario=this.valor;
 
-   action.innerHTML ='<a href="delete_user.html" id="delete" onclick="radio('+nombreUsuario+'); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_user.html" onClick="radio('+datosUser[i].Nombre_Usuario+'); "><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+    var cell1 = row.insertCell(0);
+   var element1 = document.createElement("input");
+   element1.type = "radio";
+   element1.name="chkbox[]";
+   element1.id=datosUser[i].Nombre_Usuario;
+   element1.setAttribute('onclick','radio(this);');
+   cell1.appendChild(element1);
 
-   cell.innerHTML = "Nombre Completo=" + datosUser[i].User + "<br> Nombre de Usuario ="  + datosUser[i].Nombre_Usuario +  "<br> Password =" + datosUser[i].Password ;
+   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_user.html" onClick="USER.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_user.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
 
-   $("#delete").click(function(){
+   cell.innerHTML = "Name=" + datosUser[i].User + "<br> User Name ="  + datosUser[i].Nombre_Usuario;
 
-    radio(nombreUsuario);
-  });
+
  }
-};
+
+}
+
+if(cont=="N")
+{
+
+  $("#mensajeClient").text("Don't client").show();
+}
+
 
 };
-
-
 //Guarda los datosde la resolucion de 320px
 function radio(t) {
 
- 
-  
-  this.nameUser=t;
- 
+  debugger;
 
+ var datosUser = localStorage.getItem("LoginUser");
+ datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
-  var datosUser = localStorage.getItem("LoginUser");
-  datosUser = JSON.parse(localStorage.getItem("LoginUser"));
+ for (var i = 0; i < datosUser.length; ++i) {
 
-  for (var i = 0; i < datosUser.length; ++i) {
+   if(t.id==datosUser[i].Nombre_Usuario)
+   {
 
-   if(this.nameUser==datosUser[i].Nombre_Usuario)
-   {  
     USER.localStorageTemporal(datosUser[i].User,datosUser[i].Nombre_Usuario);
   }
 }
@@ -110,8 +116,8 @@ function radio(t) {
 };
 
 //Es la que carga los datos de la tabla tanto para 320px como para las demas resoluciones
-
 (function() {
+
 
  var mq = window.matchMedia( "(max-width:320px)" ); 
 
@@ -122,7 +128,7 @@ var table = document.getElementById('table_user');
   table.removeChild(table.tBodies[0]); 
 
 //////////////////////////////////////////////////////////////////////////
-var datosUser = localStorage.getItem("LoginUser");
+var datosUser= localStorage.getItem("LoginUser");
 datosUser = JSON.parse(localStorage.getItem("LoginUser"));
 
 var form = document.body.appendChild(document.createElement('form')),
@@ -149,7 +155,7 @@ datalist.innerHTML =option;
   $("#mostrarDatos").hide();
 
 
-  /*Lo obtiene en un string*/
+ /*Lo obtiene en un string*/
   var datoUser = localStorage.getItem("LoginUser");
   /*Lo convierte en Objeto*/
   datoUser = JSON.parse(localStorage.getItem("LoginUser"));
@@ -174,5 +180,4 @@ datalist.innerHTML =option;
      action.innerHTML ='<a href="delete_user.html" onClick="USER.capturarPosicion(); "><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_user.html" onClick="USER.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
    }
  }
-
 })();
