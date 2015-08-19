@@ -82,18 +82,9 @@ for (var i = 0; i < datosInvoice.length; i++) {
     var cell = row.insertCell(0);
     var action = row.insertCell(1);
 
-    var cell1 = row.insertCell(0);
-    var element1 = document.createElement("input");
-    element1.type = "radio";
-    element1.name="chkbox[]";
-    element1.id=datosInvoice[i].invoice;
-    element1.setAttribute('onclick','radio(this);');
-    cell1.appendChild(element1);
-
-
   
 
-    action.innerHTML ='<a href="delete_invoice.html" onClick="INVOICE.capturarPosicion();" ><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_invoice.html" onClick="INVOICE.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+    action.innerHTML ='<a href="delete_invoice.html" onClick="INVOICE.capturarPosicion(); radio('+ datosInvoice[i].invoice +');" ><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_invoice.html" onClick="INVOICE.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
 
     cell.innerHTML = "Client=" + datosInvoice[i].Client + "<br> Job Description ="  + datosInvoice[i].Job_Description +  "<br> Date =" + datosInvoice[i].Date +  "<br> Amont =" + datosInvoice[i].Amont ;
 
@@ -116,7 +107,7 @@ function radio(t) {
 
  for (var i = 0; i < datosInvoice.length; ++i) {
 
-   if(t.id==datosInvoice[i].invoice)
+   if(t==datosInvoice[i].invoice)
    {  
     INVOICE.localStorageTemporal(datosInvoice[i].invoice,datosInvoice[i].Client , datosInvoice[i].Job_Description , datosInvoice[i].Date , datosInvoice[i].Amont);
   }

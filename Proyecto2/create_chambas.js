@@ -21,7 +21,6 @@ var CREATE_CHAMBAS = CREATE_CHAMBAS ||
 	/*Save es el boton de yes donde guarda la creacion de chambas*/
 	save:function(client,jobDescription,date,note)
 	{
-		
 		this.client=client;
 	
 		this.jobDescription=jobDescription;

@@ -99,7 +99,7 @@ if(cont=="N")
 //Guarda los datosde la resolucion de 320px
 function radio(t) {
 
-  
+  debugger;
 
  var datosUser = localStorage.getItem("LoginUser");
  datosUser = JSON.parse(localStorage.getItem("LoginUser"));

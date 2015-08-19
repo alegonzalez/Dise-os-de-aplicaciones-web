@@ -79,29 +79,21 @@ for (var i = 0; i < datosChamba.length; i++) {
     cont="E";
     
 
-    var row = header.insertRow(0);
-    var cell = row.insertCell(0);
-    var action = row.insertCell(1);
+   var row = header.insertRow(0);
+   var cell = row.insertCell(0);
+   var action = row.insertCell(1);
 
-    var cell1 = row.insertCell(0);
-    var element1 = document.createElement("input");
-    element1.type = "radio";
-    element1.name="chkbox[]";
-    element1.id=datosChamba[i].Id;
-    element1.setAttribute('onclick','radio(this);');
-    cell1.appendChild(element1);
+    action.innerHTML ='<a href="delete_chamba.html" onClick="CHAMBA.capturarPosicion(); radio('+ datosChamba[i].Client +');" ><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_chamba.html" onClick="CHAMBA.capturarPosicion(); radio('+ datosChamba[i].Client +');"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
 
-    action.innerHTML ='<a href="delete_chamba.html" onClick="CHAMBA.capturarPosicion();" ><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:10%;"></img></a><a href="edit_chamba.html" onClick="CHAMBA.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:10%;"></img></a>';
+   cell.innerHTML = "Client=" + datosChamba[i].Client + "<br> Job Description ="  + datosChamba[i].Job_Description +  "<br> Date =" + datosChamba[i].Date +  "<br> Note =" + datosChamba[i].Note ;
 
-    cell.innerHTML = "Client=" + datosChamba[i].Client + "<br> Job Description ="  + datosChamba[i].Job_Description +  "<br> Date =" + datosChamba[i].Date +  "<br> Note =" + datosChamba[i].Note ;
-
-  }
+ }
 }
 
 if(cont=="N")
 {
 
-  $("#mensajeChamba").text("The client don't have Chambas").show();
+$("#mensajeChamba").text("The client don't have Chambas").show();
 }
 
 
@@ -114,9 +106,7 @@ function radio(t) {
 
  for (var i = 0; i < datosChamba.length; ++i) {
 
-  debugger;
-
-   if(t.id==datosChamba[i].Id)
+   if(t==datosChamba[i].Client)
    {  
     CHAMBA.localStorageTemporal(datosChamba[i].Client,datosChamba[i].Job_Description , datosChamba[i].Date , datosChamba[i].Note , datosChamba[i].Id);
   }
@@ -129,6 +119,7 @@ function radio(t) {
 
 
 (function() {
+
 
  var mq = window.matchMedia( "(max-width:320px)" ); 
 
@@ -215,8 +206,8 @@ datalist.innerHTML =option;
 
     $(".menu_user").hide();
 
-
-
+ 
+  
   }
 }
 
@@ -226,7 +217,7 @@ datalist.innerHTML =option;
 $(document).ready(function(){
   $("#mensajeChamba").hide();
   $("#listChamba").click(function(){
-    $("#mensajeChamba").hide();
+$("#mensajeChamba").hide();
   });
 });
 

@@ -77,16 +77,7 @@ for (var i = 0; i < datosClient.length; ++i) {
    var cell = row.insertCell(0);
    var action = row.insertCell(1);
 
-    var cell1 = row.insertCell(0);
-   var element1 = document.createElement("input");
-   element1.type = "radio";
-   element1.name="chkbox[]";
-   element1.id=datosClient[i].Identification;
-   element1.setAttribute('onclick','radio(this);');
-   cell1.appendChild(element1);
-
-
-   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion();"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
+   action.innerHTML ='<a href="http://localhost/Dise-os-de-aplicaciones-web/Dise-os-de-aplicaciones-web/proyecto2/delete_client.html" onClick="CLIENT.capturarPosicion(); radio('+datosClient[i].Identification+')"><img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-70-32.png"style="margin-left:4%;"></img></a><a href="edit_client.html" onClick="CLIENT.capturarPosicion(); radio('+datosClient[i].Identification+')"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/32/edit_user.png" style="margin-left:4%;"></img></a>';
 
    cell.innerHTML = "Name=" + datosClient[i].Firts_name + "<br> Last_name ="  + datosClient[i].Last_name +  "<br> Phone =" + datosClient[i].Phone;
 
@@ -111,7 +102,7 @@ function radio(t) {
 
  for (var i = 0; i < datosClient.length; ++i) {
 
-   if(t.id==datosClient[i].Identification)
+   if(t==datosClient[i].Identification)
    {
 
     CLIENT.localStorageTemporal(datosClient[i].Identification,datosClient[i].Firts_name , datosClient[i].Last_name , datosClient[i].Phone);
